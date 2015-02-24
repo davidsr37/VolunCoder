@@ -27,6 +27,16 @@
 		AB464D691A9C23B10006075B /* CausesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB464D681A9C23B10006075B /* CausesViewController.m */; };
 		AB464D6C1A9C23D00006075B /* SkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB464D6B1A9C23D00006075B /* SkillsViewController.m */; };
 		AB464D6F1A9C23E30006075B /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB464D6E1A9C23E30006075B /* EventsViewController.m */; };
+		AB6FF9C41A9CFCF20044E442 /* VolunCode.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9C31A9CFCF20044E442 /* VolunCode.xcdatamodel */; };
+		AB6FF9C71A9CFD4A0044E442 /* VolunteerProject.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9C61A9CFD4A0044E442 /* VolunteerProject.m */; };
+		AB6FF9CA1A9CFD4B0044E442 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9C91A9CFD4B0044E442 /* Login.m */; };
+		AB6FF9CD1A9CFD4B0044E442 /* Volunteer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9CC1A9CFD4B0044E442 /* Volunteer.m */; };
+		AB6FF9D01A9CFD4B0044E442 /* Cause.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9CF1A9CFD4B0044E442 /* Cause.m */; };
+		AB6FF9D31A9CFD4B0044E442 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9D21A9CFD4B0044E442 /* Event.m */; };
+		AB6FF9D61A9CFD4B0044E442 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9D51A9CFD4B0044E442 /* Organization.m */; };
+		AB6FF9D91A9CFD4B0044E442 /* Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9D81A9CFD4B0044E442 /* Skill.m */; };
+		AB6FF9DC1A9CFD4B0044E442 /* Messenge.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9DB1A9CFD4B0044E442 /* Messenge.m */; };
+		AB6FF9E51A9D039C0044E442 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +86,25 @@
 		AB464D6B1A9C23D00006075B /* SkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillsViewController.m; sourceTree = "<group>"; };
 		AB464D6D1A9C23E30006075B /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		AB464D6E1A9C23E30006075B /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		AB6FF9C31A9CFCF20044E442 /* VolunCode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VolunCode.xcdatamodel; sourceTree = SOURCE_ROOT; };
+		AB6FF9C51A9CFD4A0044E442 /* VolunteerProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolunteerProject.h; sourceTree = "<group>"; };
+		AB6FF9C61A9CFD4A0044E442 /* VolunteerProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolunteerProject.m; sourceTree = "<group>"; };
+		AB6FF9C81A9CFD4B0044E442 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
+		AB6FF9C91A9CFD4B0044E442 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
+		AB6FF9CB1A9CFD4B0044E442 /* Volunteer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Volunteer.h; sourceTree = "<group>"; };
+		AB6FF9CC1A9CFD4B0044E442 /* Volunteer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Volunteer.m; sourceTree = "<group>"; };
+		AB6FF9CE1A9CFD4B0044E442 /* Cause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cause.h; sourceTree = "<group>"; };
+		AB6FF9CF1A9CFD4B0044E442 /* Cause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cause.m; sourceTree = "<group>"; };
+		AB6FF9D11A9CFD4B0044E442 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		AB6FF9D21A9CFD4B0044E442 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		AB6FF9D41A9CFD4B0044E442 /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organization.h; sourceTree = "<group>"; };
+		AB6FF9D51A9CFD4B0044E442 /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organization.m; sourceTree = "<group>"; };
+		AB6FF9D71A9CFD4B0044E442 /* Skill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skill.h; sourceTree = "<group>"; };
+		AB6FF9D81A9CFD4B0044E442 /* Skill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skill.m; sourceTree = "<group>"; };
+		AB6FF9DA1A9CFD4B0044E442 /* Messenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messenge.h; sourceTree = "<group>"; };
+		AB6FF9DB1A9CFD4B0044E442 /* Messenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Messenge.m; sourceTree = "<group>"; };
+		AB6FF9E31A9D039C0044E442 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,11 +153,9 @@
 		AB3CC85A1A9BDDB4005DFDA7 /* VolunCode */ = {
 			isa = PBXGroup;
 			children = (
-				9C3FBC031A9CEDAE006250E3 /* VolunCode.xcdatamodel */,
 				AB3CC85F1A9BDDB4005DFDA7 /* AppDelegate.h */,
 				AB3CC8601A9BDDB4005DFDA7 /* AppDelegate.m */,
-				9C9525771A9C439100FF9174 /* MMPickerView.h */,
-				9C9525781A9C439100FF9174 /* MMPickerView.m */,
+				AB6FF9C21A9CFC7D0044E442 /* Model */,
 				AB3CC8841A9BDDF8005DFDA7 /* Controller */,
 				AB3CC8851A9BDE0C005DFDA7 /* View */,
 				AB3CC85B1A9BDDB4005DFDA7 /* Supporting Files */,
@@ -193,8 +220,36 @@
 				AB3CC8861A9BDF52005DFDA7 /* Main.storyboard */,
 				AB3CC86B1A9BDDB4005DFDA7 /* Images.xcassets */,
 				AB3CC86D1A9BDDB4005DFDA7 /* LaunchScreen.xib */,
+				9C9525771A9C439100FF9174 /* MMPickerView.h */,
+				9C9525781A9C439100FF9174 /* MMPickerView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		AB6FF9C21A9CFC7D0044E442 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB6FF9C31A9CFCF20044E442 /* VolunCode.xcdatamodel */,
+				AB6FF9DA1A9CFD4B0044E442 /* Messenge.h */,
+				AB6FF9DB1A9CFD4B0044E442 /* Messenge.m */,
+				AB6FF9D71A9CFD4B0044E442 /* Skill.h */,
+				AB6FF9D81A9CFD4B0044E442 /* Skill.m */,
+				AB6FF9D41A9CFD4B0044E442 /* Organization.h */,
+				AB6FF9D51A9CFD4B0044E442 /* Organization.m */,
+				AB6FF9D11A9CFD4B0044E442 /* Event.h */,
+				AB6FF9D21A9CFD4B0044E442 /* Event.m */,
+				AB6FF9CE1A9CFD4B0044E442 /* Cause.h */,
+				AB6FF9CF1A9CFD4B0044E442 /* Cause.m */,
+				AB6FF9CB1A9CFD4B0044E442 /* Volunteer.h */,
+				AB6FF9CC1A9CFD4B0044E442 /* Volunteer.m */,
+				AB6FF9C81A9CFD4B0044E442 /* Login.h */,
+				AB6FF9C91A9CFD4B0044E442 /* Login.m */,
+				AB6FF9C51A9CFD4A0044E442 /* VolunteerProject.h */,
+				AB6FF9C61A9CFD4A0044E442 /* VolunteerProject.m */,
+				AB6FF9E31A9D039C0044E442 /* CoreDataStack.h */,
+				AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,15 +352,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB6FF9C71A9CFD4A0044E442 /* VolunteerProject.m in Sources */,
+				AB6FF9C41A9CFCF20044E442 /* VolunCode.xcdatamodel in Sources */,
+				AB6FF9D61A9CFD4B0044E442 /* Organization.m in Sources */,
+				AB6FF9CA1A9CFD4B0044E442 /* Login.m in Sources */,
 				AB3CC88A1A9BE036005DFDA7 /* UserProfileViewController.m in Sources */,
 				79AA943A1A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m in Sources */,
 				AB3CC8611A9BDDB4005DFDA7 /* AppDelegate.m in Sources */,
+				AB6FF9D01A9CFD4B0044E442 /* Cause.m in Sources */,
+				AB6FF9DC1A9CFD4B0044E442 /* Messenge.m in Sources */,
+				AB6FF9D91A9CFD4B0044E442 /* Skill.m in Sources */,
 				AB464D6C1A9C23D00006075B /* SkillsViewController.m in Sources */,
 				AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */,
 				79AA94371A9CFA29002C6177 /* VolunteerSignUpTableViewController.m in Sources */,
 				9C3FBC041A9CEDAE006250E3 /* VolunCode.xcdatamodel in Sources */,
 				AB3CC8671A9BDDB4005DFDA7 /* LoginViewController.m in Sources */,
 				AB3CC88D1A9BE097005DFDA7 /* UserDetailViewController.m in Sources */,
+				AB6FF9E51A9D039C0044E442 /* CoreDataStack.m in Sources */,
 				AB464D691A9C23B10006075B /* CausesViewController.m in Sources */,
 				9C9525791A9C439100FF9174 /* MMPickerView.m in Sources */,
 				AB464D6F1A9C23E30006075B /* EventsViewController.m in Sources */,

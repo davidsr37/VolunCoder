@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SkillsViewController : UIViewController
+@interface SkillsViewController : UITableViewController
 
 @end
