@@ -540,75 +540,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pJ4-e0-uAk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="SFi-6H-k9d">
-                            <rect key="frame" x="0.0" y="64" width="600" height="100"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder_person" translatesAutoresizingMaskIntoConstraints="NO" id="c4j-24-Ynt">
-                                    <rect key="frame" x="255" y="5" width="90" height="90"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="90" id="lsr-hB-s36"/>
-                                    </constraints>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5X1-s0-q6c">
-                                    <rect key="frame" x="360" y="8" width="232" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgR-ew-Tv2">
-                                    <rect key="frame" x="360" y="37" width="232" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Member of:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTa-wd-sgp">
-                                    <rect key="frame" x="360" y="66" width="232" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="5X1-s0-q6c" firstAttribute="leading" secondItem="c4j-24-Ynt" secondAttribute="trailing" constant="15" id="0OQ-k4-LoS"/>
-                                <constraint firstAttribute="trailing" secondItem="5X1-s0-q6c" secondAttribute="trailing" constant="8" id="39G-mS-6PU"/>
-                                <constraint firstItem="5X1-s0-q6c" firstAttribute="top" secondItem="SFi-6H-k9d" secondAttribute="top" constant="8" id="538-eR-ZV1"/>
-                                <constraint firstItem="DgR-ew-Tv2" firstAttribute="leading" secondItem="c4j-24-Ynt" secondAttribute="trailing" constant="15" id="96d-j7-54a"/>
-                                <constraint firstAttribute="trailing" secondItem="DgR-ew-Tv2" secondAttribute="trailing" constant="8" id="Dks-LV-hTI"/>
-                                <constraint firstItem="cTa-wd-sgp" firstAttribute="leading" secondItem="c4j-24-Ynt" secondAttribute="trailing" constant="13" id="FYF-pO-Exm"/>
-                                <constraint firstItem="DgR-ew-Tv2" firstAttribute="top" secondItem="5X1-s0-q6c" secondAttribute="bottom" constant="8" id="WC1-lE-IOv"/>
-                                <constraint firstItem="c4j-24-Ynt" firstAttribute="top" secondItem="SFi-6H-k9d" secondAttribute="top" constant="5" id="Y5q-Kt-JeH"/>
-                                <constraint firstItem="cTa-wd-sgp" firstAttribute="top" secondItem="DgR-ew-Tv2" secondAttribute="bottom" constant="8" id="j4t-Z1-1VD"/>
-                                <constraint firstAttribute="bottom" secondItem="c4j-24-Ynt" secondAttribute="bottom" constant="5" id="mqL-aD-Lqp"/>
-                                <constraint firstAttribute="trailing" secondItem="cTa-wd-sgp" secondAttribute="trailing" constant="8" id="nvQ-nF-IIC"/>
-                                <constraint firstItem="cTa-wd-sgp" firstAttribute="leading" secondItem="c4j-24-Ynt" secondAttribute="trailing" constant="15" id="tAm-8y-aRf"/>
-                                <constraint firstAttribute="centerX" secondItem="c4j-24-Ynt" secondAttribute="centerX" id="v0F-oM-jfx"/>
-                            </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="FYF-pO-Exm"/>
-                                </mask>
-                            </variation>
-                        </view>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="owQ-9Q-Hvy">
-                            <rect key="frame" x="0.0" y="406" width="600" height="196"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKn-cs-aTf">
-                                    <rect key="frame" x="272" y="83" width="56" height="30"/>
-                                    <state key="normal" title="Log Out">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="centerX" secondItem="AKn-cs-aTf" secondAttribute="centerX" id="BXm-RE-ncP"/>
-                                <constraint firstAttribute="centerY" secondItem="AKn-cs-aTf" secondAttribute="centerY" id="Wx4-HG-Vjw"/>
-                            </constraints>
-                        </view>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="yEi-pc-3Xg">
                                 <cells>
