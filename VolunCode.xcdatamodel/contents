@@ -13,16 +13,29 @@
         <attribute name="time" attributeType="Date" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="volunteersNeeded" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="messenge" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Messenge" inverseName="event" inverseEntity="Messenge" syncable="YES"/>
         <relationship name="organization" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="event" inverseEntity="Organization" syncable="YES"/>
         <relationship name="volunteer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Volunteer" inverseName="event" inverseEntity="Volunteer" syncable="YES"/>
         <relationship name="volunteerProject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VolunteerProject" inverseName="event" inverseEntity="VolunteerProject" syncable="YES"/>
     </entity>
-    <entity name="Messenging" representedClassName="Messenging" syncable="YES">
+    <entity name="Login" representedClassName="Login" syncable="YES">
+        <attribute name="email" attributeType="String" syncable="YES"/>
+        <attribute name="password" attributeType="String" syncable="YES"/>
+        <attribute name="role" attributeType="String" syncable="YES"/>
+        <attribute name="type" attributeType="String" syncable="YES"/>
+        <relationship name="organization" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="login" inverseEntity="Organization" syncable="YES"/>
+        <relationship name="volunteer" maxCount="1" deletionRule="Nullify" destinationEntity="Volunteer" inverseName="login" inverseEntity="Volunteer" syncable="YES"/>
+    </entity>
+    <entity name="Messenge" representedClassName="Messenge" syncable="YES">
         <attribute name="text" attributeType="String" syncable="YES"/>
         <attribute name="timeStamp" attributeType="Date" syncable="YES"/>
+        <relationship name="event" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="messenge" inverseEntity="Event" syncable="YES"/>
+        <relationship name="organization" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="messenge" inverseEntity="Organization" syncable="YES"/>
+        <relationship name="volunteer" maxCount="1" deletionRule="Nullify" destinationEntity="Volunteer" inverseName="messenge" inverseEntity="Volunteer" syncable="YES"/>
     </entity>
     <entity name="Organization" representedClassName="Organization" syncable="YES">
         <attribute name="address" attributeType="String" syncable="YES"/>
+        <attribute name="city" attributeType="String" syncable="YES"/>
         <attribute name="email" attributeType="String" syncable="YES"/>
         <attribute name="firstNameContact" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastNameContact" optional="YES" attributeType="String" syncable="YES"/>
@@ -34,11 +47,14 @@
         <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cause" maxCount="1" deletionRule="Nullify" destinationEntity="Cause" inverseName="organization" inverseEntity="Cause" syncable="YES"/>
         <relationship name="event" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="organization" inverseEntity="Event" syncable="YES"/>
+        <relationship name="login" maxCount="1" deletionRule="Nullify" destinationEntity="Login" inverseName="organization" inverseEntity="Login" syncable="YES"/>
+        <relationship name="messenge" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Messenge" inverseName="organization" inverseEntity="Messenge" syncable="YES"/>
     </entity>
     <entity name="Skill" representedClassName="Skill" syncable="YES">
         <attribute name="possessed" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <relationship name="volunteer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Volunteer" inverseName="skill" inverseEntity="Volunteer" syncable="YES"/>
+        <relationship name="volunteerProject" toMany="YES" deletionRule="Nullify" destinationEntity="VolunteerProject" inverseName="skill" inverseEntity="VolunteerProject" syncable="YES"/>
     </entity>
     <entity name="Volunteer" representedClassName="Volunteer" syncable="YES">
         <attribute name="ageReq" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
@@ -51,22 +67,26 @@
         <attribute name="password" attributeType="String" syncable="YES"/>
         <relationship name="cause" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cause" inverseName="volunteer" inverseEntity="Cause" syncable="YES"/>
         <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="volunteer" inverseEntity="Event" syncable="YES"/>
+        <relationship name="login" maxCount="1" deletionRule="Nullify" destinationEntity="Login" inverseName="volunteer" inverseEntity="Login" syncable="YES"/>
+        <relationship name="messenge" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Messenge" inverseName="volunteer" inverseEntity="Messenge" syncable="YES"/>
         <relationship name="skill" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Skill" inverseName="volunteer" inverseEntity="Skill" syncable="YES"/>
         <relationship name="volunteerProject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VolunteerProject" inverseName="volunteer" inverseEntity="VolunteerProject" syncable="YES"/>
     </entity>
     <entity name="VolunteerProject" representedClassName="VolunteerProject" syncable="YES">
-        <attribute name="taskDescription" attributeType="String" syncable="YES"/>
+        <attribute name="numberOfVolunteers" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <relationship name="event" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="volunteerProject" inverseEntity="Event" syncable="YES"/>
+        <relationship name="skill" toMany="YES" deletionRule="Nullify" destinationEntity="Skill" inverseName="volunteerProject" inverseEntity="Skill" syncable="YES"/>
         <relationship name="volunteer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Volunteer" inverseName="volunteerProject" inverseEntity="Volunteer" syncable="YES"/>
     </entity>
     <elements>
         <element name="Cause" positionX="-216" positionY="27" width="128" height="103"/>
-        <element name="Event" positionX="-209" positionY="-331" width="128" height="178"/>
-        <element name="Messenging" positionX="-207" positionY="-423" width="128" height="73"/>
-        <element name="Organization" positionX="43" positionY="-270" width="128" height="223"/>
-        <element name="Skill" positionX="-414" positionY="83" width="128" height="88"/>
-        <element name="Volunteer" positionX="-441" positionY="-207" width="128" height="223"/>
-        <element name="VolunteerProject" positionX="-218" positionY="-103" width="128" height="103"/>
+        <element name="Event" positionX="-209" positionY="-340" width="128" height="193"/>
+        <element name="Login" positionX="-344" positionY="-496" width="128" height="133"/>
+        <element name="Messenge" positionX="-65" positionY="-504" width="128" height="118"/>
+        <element name="Organization" positionX="90" positionY="-172" width="128" height="268"/>
+        <element name="Skill" positionX="-407" positionY="86" width="128" height="103"/>
+        <element name="Volunteer" positionX="-594" positionY="-306" width="128" height="253"/>
+        <element name="VolunteerProject" positionX="-218" positionY="-103" width="128" height="118"/>
     </elements>
 </model>
