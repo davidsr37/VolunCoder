@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Cause" representedClassName="Cause" syncable="YES">
+        <attribute name="isInterested" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="organization" toMany="YES" deletionRule="Nullify" destinationEntity="Organization" inverseName="cause" inverseEntity="Organization" syncable="YES"/>
+        <relationship name="volunteer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Volunteer" inverseName="cause" inverseEntity="Volunteer" syncable="YES"/>
+    </entity>
+    <entity name="Event" representedClassName="Event" syncable="YES">
+        <attribute name="date" attributeType="Date" syncable="YES"/>
+        <attribute name="eventDescription" attributeType="String" syncable="YES"/>
+        <attribute name="location" attributeType="String" syncable="YES"/>
+        <attribute name="time" attributeType="Date" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="volunteersNeeded" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="organization" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="event" inverseEntity="Organization" syncable="YES"/>
+        <relationship name="volunteer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Volunteer" inverseName="event" inverseEntity="Volunteer" syncable="YES"/>
+        <relationship name="volunteerProject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VolunteerProject" inverseName="event" inverseEntity="VolunteerProject" syncable="YES"/>
+    </entity>
+    <entity name="Messenging" representedClassName="Messenging" syncable="YES">
+        <attribute name="text" attributeType="String" syncable="YES"/>
+        <attribute name="timeStamp" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="Organization" representedClassName="Organization" syncable="YES">
+        <attribute name="address" attributeType="String" syncable="YES"/>
+        <attribute name="email" attributeType="String" syncable="YES"/>
+        <attribute name="firstNameContact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastNameContact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logo" attributeType="Transformable" syncable="YES"/>
+        <attribute name="mission" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="password" attributeType="String" syncable="YES"/>
+        <attribute name="phone" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cause" maxCount="1" deletionRule="Nullify" destinationEntity="Cause" inverseName="organization" inverseEntity="Cause" syncable="YES"/>
+        <relationship name="event" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="organization" inverseEntity="Event" syncable="YES"/>
+    </entity>
+    <entity name="Skill" representedClassName="Skill" syncable="YES">
+        <attribute name="possessed" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="volunteer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Volunteer" inverseName="skill" inverseEntity="Volunteer" syncable="YES"/>
+    </entity>
+    <entity name="Volunteer" representedClassName="Volunteer" syncable="YES">
+        <attribute name="ageReq" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="avatar" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" attributeType="String" syncable="YES"/>
+        <attribute name="location" attributeType="String" syncable="YES"/>
+        <attribute name="password" attributeType="String" syncable="YES"/>
+        <relationship name="cause" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cause" inverseName="volunteer" inverseEntity="Cause" syncable="YES"/>
+        <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="volunteer" inverseEntity="Event" syncable="YES"/>
+        <relationship name="skill" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Skill" inverseName="volunteer" inverseEntity="Skill" syncable="YES"/>
+        <relationship name="volunteerProject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VolunteerProject" inverseName="volunteer" inverseEntity="VolunteerProject" syncable="YES"/>
+    </entity>
+    <entity name="VolunteerProject" representedClassName="VolunteerProject" syncable="YES">
+        <attribute name="taskDescription" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="event" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="volunteerProject" inverseEntity="Event" syncable="YES"/>
+        <relationship name="volunteer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Volunteer" inverseName="volunteerProject" inverseEntity="Volunteer" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Cause" positionX="-216" positionY="27" width="128" height="103"/>
+        <element name="Event" positionX="-209" positionY="-331" width="128" height="178"/>
+        <element name="Messenging" positionX="-207" positionY="-423" width="128" height="73"/>
+        <element name="Organization" positionX="43" positionY="-270" width="128" height="223"/>
+        <element name="Skill" positionX="-414" positionY="83" width="128" height="88"/>
+        <element name="Volunteer" positionX="-441" positionY="-207" width="128" height="223"/>
+        <element name="VolunteerProject" positionX="-218" positionY="-103" width="128" height="103"/>
+    </elements>
+</model>

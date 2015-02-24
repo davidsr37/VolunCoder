@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C3FBC041A9CEDAE006250E3 /* VolunCode.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FBC031A9CEDAE006250E3 /* VolunCode.xcdatamodel */; };
 		9C9525761A9C432500FF9174 /* OrganizationProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9525751A9C432500FF9174 /* OrganizationProfileViewController.m */; };
 		9C9525791A9C439100FF9174 /* MMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9525781A9C439100FF9174 /* MMPickerView.m */; };
 		9C95257B1A9C4E2800FF9174 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257A1A9C4E2800FF9174 /* UIKit.framework */; };
@@ -14,7 +15,6 @@
 		9C95257F1A9C4E3C00FF9174 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257E1A9C4E3C00FF9174 /* CoreGraphics.framework */; };
 		AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CC85D1A9BDDB4005DFDA7 /* main.m */; };
 		AB3CC8611A9BDDB4005DFDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CC8601A9BDDB4005DFDA7 /* AppDelegate.m */; };
-		AB3CC8641A9BDDB4005DFDA7 /* VolunCode.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB3CC8621A9BDDB4005DFDA7 /* VolunCode.xcdatamodeld */; };
 		AB3CC8671A9BDDB4005DFDA7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CC8661A9BDDB4005DFDA7 /* LoginViewController.m */; };
 		AB3CC86C1A9BDDB4005DFDA7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB3CC86B1A9BDDB4005DFDA7 /* Images.xcassets */; };
 		AB3CC86F1A9BDDB4005DFDA7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB3CC86D1A9BDDB4005DFDA7 /* LaunchScreen.xib */; };
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C3FBC031A9CEDAE006250E3 /* VolunCode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VolunCode.xcdatamodel; sourceTree = "<group>"; };
 		9C9525741A9C432500FF9174 /* OrganizationProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationProfileViewController.h; sourceTree = "<group>"; };
 		9C9525751A9C432500FF9174 /* OrganizationProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationProfileViewController.m; sourceTree = "<group>"; };
 		9C9525771A9C439100FF9174 /* MMPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPickerView.h; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		AB3CC85D1A9BDDB4005DFDA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB3CC85F1A9BDDB4005DFDA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AB3CC8601A9BDDB4005DFDA7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AB3CC8631A9BDDB4005DFDA7 /* VolunCode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VolunCode.xcdatamodel; sourceTree = "<group>"; };
 		AB3CC8651A9BDDB4005DFDA7 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		AB3CC8661A9BDDB4005DFDA7 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		AB3CC86B1A9BDDB4005DFDA7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -116,13 +116,13 @@
 		AB3CC85A1A9BDDB4005DFDA7 /* VolunCode */ = {
 			isa = PBXGroup;
 			children = (
+				9C3FBC031A9CEDAE006250E3 /* VolunCode.xcdatamodel */,
 				AB3CC85F1A9BDDB4005DFDA7 /* AppDelegate.h */,
 				AB3CC8601A9BDDB4005DFDA7 /* AppDelegate.m */,
 				9C9525771A9C439100FF9174 /* MMPickerView.h */,
 				9C9525781A9C439100FF9174 /* MMPickerView.m */,
 				AB3CC8841A9BDDF8005DFDA7 /* Controller */,
 				AB3CC8851A9BDE0C005DFDA7 /* View */,
-				AB3CC8621A9BDDB4005DFDA7 /* VolunCode.xcdatamodeld */,
 				AB3CC85B1A9BDDB4005DFDA7 /* Supporting Files */,
 			);
 			path = VolunCode;
@@ -289,12 +289,12 @@
 				AB3CC8611A9BDDB4005DFDA7 /* AppDelegate.m in Sources */,
 				AB464D6C1A9C23D00006075B /* SkillsViewController.m in Sources */,
 				AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */,
+				9C3FBC041A9CEDAE006250E3 /* VolunCode.xcdatamodel in Sources */,
 				AB3CC8671A9BDDB4005DFDA7 /* LoginViewController.m in Sources */,
 				AB3CC88D1A9BE097005DFDA7 /* UserDetailViewController.m in Sources */,
 				AB464D691A9C23B10006075B /* CausesViewController.m in Sources */,
 				9C9525791A9C439100FF9174 /* MMPickerView.m in Sources */,
 				AB464D6F1A9C23E30006075B /* EventsViewController.m in Sources */,
-				AB3CC8641A9BDDB4005DFDA7 /* VolunCode.xcdatamodeld in Sources */,
 				9C9525761A9C432500FF9174 /* OrganizationProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,19 +492,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AB3CC8621A9BDDB4005DFDA7 /* VolunCode.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AB3CC8631A9BDDB4005DFDA7 /* VolunCode.xcdatamodel */,
-			);
-			currentVersion = AB3CC8631A9BDDB4005DFDA7 /* VolunCode.xcdatamodel */;
-			path = VolunCode.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AB3CC8501A9BDDB4005DFDA7 /* Project object */;
 }
