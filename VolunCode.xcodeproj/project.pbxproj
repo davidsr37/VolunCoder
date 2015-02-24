@@ -33,6 +33,7 @@
 		AB6FF9D61A9CFD4B0044E442 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9D51A9CFD4B0044E442 /* Organization.m */; };
 		AB6FF9D91A9CFD4B0044E442 /* Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9D81A9CFD4B0044E442 /* Skill.m */; };
 		AB6FF9DC1A9CFD4B0044E442 /* Messenge.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9DB1A9CFD4B0044E442 /* Messenge.m */; };
+		AB6FF9E51A9D039C0044E442 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,8 @@
 		AB6FF9D81A9CFD4B0044E442 /* Skill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skill.m; sourceTree = "<group>"; };
 		AB6FF9DA1A9CFD4B0044E442 /* Messenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messenge.h; sourceTree = "<group>"; };
 		AB6FF9DB1A9CFD4B0044E442 /* Messenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Messenge.m; sourceTree = "<group>"; };
+		AB6FF9E31A9D039C0044E442 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +232,8 @@
 				AB6FF9C91A9CFD4B0044E442 /* Login.m */,
 				AB6FF9C51A9CFD4A0044E442 /* VolunteerProject.h */,
 				AB6FF9C61A9CFD4A0044E442 /* VolunteerProject.m */,
+				AB6FF9E31A9D039C0044E442 /* CoreDataStack.h */,
+				AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 				AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */,
 				AB3CC8671A9BDDB4005DFDA7 /* LoginViewController.m in Sources */,
 				AB3CC88D1A9BE097005DFDA7 /* UserDetailViewController.m in Sources */,
+				AB6FF9E51A9D039C0044E442 /* CoreDataStack.m in Sources */,
 				AB464D691A9C23B10006075B /* CausesViewController.m in Sources */,
 				9C9525791A9C439100FF9174 /* MMPickerView.m in Sources */,
 				AB464D6F1A9C23E30006075B /* EventsViewController.m in Sources */,
