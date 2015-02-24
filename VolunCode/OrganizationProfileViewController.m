@@ -23,17 +23,20 @@
 
 @implementation OrganizationProfileViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-  _stringsArray = @[@"Please Select Cause", @"Animals", @"Arts", @"Children", @"Education", @"Elderly", @"Environment", @"Homelessness", @"Hunger", @"Religious", @"Political", @"Sports", @"Women"];
+  _stringsArray = @[@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts"];
   
-  _selectedObject = [_objectsArray objectAtIndex:0];
-  _selectedString = [_stringsArray objectAtIndex:0];
   
   
     // Uncomment the following line to preserve selection between presentations.
      self.clearsSelectionOnViewWillAppear = NO;
+  
+  
+  
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -41,6 +44,17 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
+  
+  if (_selectedObject == nil) {
+    _selectedObject = [_objectsArray objectAtIndex:0];
+    
+  }
+  
+  if (_selectedString == nil) {
+    _selectedString = [_stringsArray objectAtIndex:0];
+  }
+
+  
 }
 
 - (IBAction)showPickerViewButtonPressed:(id)sender {
