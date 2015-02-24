@@ -1,0 +1,61 @@
+userSchema {
+    basic: {
+        email: String,
+        password: String
+    },
+    username: String,
+    role: {
+        type: String,
+        enum: ['volunteer', 'organizer']
+    }
+}
+
+organizerSchema {
+    email: String,
+    username: String,
+    contactPerson: {
+        firstname: String,
+        lastname: String
+    },
+    logo: {
+        data: Buffer,
+        contentType: String
+    },
+    type: {
+        type: String,
+        enum: ['Animal', 'Enviornment', 'Sports', 'Education', 'Poverty', 'Religion', 'Children', 'Christian', 'homelessness']
+    }, // type of organization
+    mission: String,
+    address: {
+        line: String,
+        state: String,
+        zip: String
+    },
+    phone: String,
+    createdSince: {
+        type: Date,
+        default: Date.now
+    },
+}
+
+var mongoose = require('mongoose'),
+    eventSchema = new mongoose.Schema({
+        eventId: String,
+        title: String,
+        date: Date,
+        time: Date,
+        location: String,
+        description: String,
+        volunteerJobs: [{
+            title: String,
+            number: Number,
+            skills: [String]
+        }],
+        messages: [{
+            username: String,
+            body: String,
+            date: Date
+        }],
+        createdSince: { type : Date, default: Date.now },
+        closed: Boolean
+    });
