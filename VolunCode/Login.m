@@ -16,6 +16,7 @@
 @dynamic email;
 @dynamic password;
 @dynamic type;
+@dynamic role;
 @dynamic organization;
 @dynamic volunteer;
 

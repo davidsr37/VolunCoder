@@ -1,0 +1,10 @@
+{
+  "userSchema": [
+  {
+                 "firstName": "Clint",
+                 "lastName" : "Akins",
+                 "location" : "Seattle"
+                 
+                 }
+                 ]
+}

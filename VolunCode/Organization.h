@@ -23,6 +23,7 @@
 @property (nonatomic, retain) NSString * password;
 @property (nonatomic, retain) NSString * phone;
 @property (nonatomic, retain) NSString * website;
+@property (nonatomic, retain) NSString * city;
 @property (nonatomic, retain) Cause *cause;
 @property (nonatomic, retain) NSSet *event;
 @property (nonatomic, retain) Login *login;
