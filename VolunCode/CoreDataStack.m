@@ -38,6 +38,7 @@
     if (!seedError) {
       NSArray *jsonArray = seedDictionary[@"userSchema"];
       for (NSDictionary *volunteerDictionary in jsonArray) {
+        NSLog(@"%@", jsonArray);
         Volunteer *volunteer = [NSEntityDescription insertNewObjectForEntityForName:@"Volunteer" inManagedObjectContext:self.managedObjectContext];
         volunteer.firstName = volunteerDictionary[@"firstName"];
         volunteer.lastName = volunteerDictionary[@"lastName"];
@@ -71,8 +72,7 @@
   if (_managedObjectModel != nil) {
     return _managedObjectModel;
   }
-  NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"VolunCode" withExtension:@"momd"];
-  _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+ _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
   return _managedObjectModel;
 }
 
