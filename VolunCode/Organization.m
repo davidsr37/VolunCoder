@@ -25,6 +25,7 @@
 @dynamic password;
 @dynamic phone;
 @dynamic website;
+@dynamic city;
 @dynamic cause;
 @dynamic event;
 @dynamic login;

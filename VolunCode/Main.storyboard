@@ -708,6 +708,10 @@
                             <outlet property="delegate" destination="8LC-v5-6IS" id="92F-it-muL"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="volunteerLocationLabel" destination="DgR-ew-Tv2" id="13P-FN-X0c"/>
+                        <outlet property="volunteerNameLabel" destination="5X1-s0-q6c" id="E7H-My-B7T"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iqg-5f-aKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

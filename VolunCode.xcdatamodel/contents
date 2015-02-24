@@ -21,6 +21,7 @@
     <entity name="Login" representedClassName="Login" syncable="YES">
         <attribute name="email" attributeType="String" syncable="YES"/>
         <attribute name="password" attributeType="String" syncable="YES"/>
+        <attribute name="role" attributeType="String" syncable="YES"/>
         <attribute name="type" attributeType="String" syncable="YES"/>
         <relationship name="organization" maxCount="1" deletionRule="Nullify" destinationEntity="Organization" inverseName="login" inverseEntity="Organization" syncable="YES"/>
         <relationship name="volunteer" maxCount="1" deletionRule="Nullify" destinationEntity="Volunteer" inverseName="login" inverseEntity="Volunteer" syncable="YES"/>
@@ -34,6 +35,7 @@
     </entity>
     <entity name="Organization" representedClassName="Organization" syncable="YES">
         <attribute name="address" attributeType="String" syncable="YES"/>
+        <attribute name="city" attributeType="String" syncable="YES"/>
         <attribute name="email" attributeType="String" syncable="YES"/>
         <attribute name="firstNameContact" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastNameContact" optional="YES" attributeType="String" syncable="YES"/>
@@ -80,9 +82,9 @@
     <elements>
         <element name="Cause" positionX="-216" positionY="27" width="128" height="103"/>
         <element name="Event" positionX="-209" positionY="-340" width="128" height="193"/>
-        <element name="Login" positionX="-344" positionY="-496" width="128" height="118"/>
+        <element name="Login" positionX="-344" positionY="-496" width="128" height="133"/>
         <element name="Messenge" positionX="-65" positionY="-504" width="128" height="118"/>
-        <element name="Organization" positionX="90" positionY="-172" width="128" height="253"/>
+        <element name="Organization" positionX="90" positionY="-172" width="128" height="268"/>
         <element name="Skill" positionX="-407" positionY="86" width="128" height="103"/>
         <element name="Volunteer" positionX="-594" positionY="-306" width="128" height="253"/>
         <element name="VolunteerProject" positionX="-218" positionY="-103" width="128" height="118"/>

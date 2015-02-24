@@ -7,12 +7,59 @@
 //
 
 #import "CoreDataStack.h"
+#import "Volunteer.h"
 
 @implementation CoreDataStack
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+-(instancetype)init {
+  self = [super init];
+  if (self) {
+    [self seedDataBaseWithVolunteer];
+  }
+  return self;
+}
+
+-(void)seedDataBaseWithVolunteer {
+  NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Volunteer"];
+  NSError *fetchError;
+  
+  NSInteger fetchResults = [self.managedObjectContext countForFetchRequest:fetchRequest error:&fetchError];
+  NSLog(@"%ld", (long)fetchResults);
+  
+  if (fetchResults == 0) {
+    NSURL *seedURL = [[NSBundle mainBundle]URLForResource:@"testSeed" withExtension:@"json"];
+    NSData *seedData = [[NSData alloc] initWithContentsOfURL:seedURL];
+    NSError *seedError;
+    NSDictionary *seedDictionary = [NSJSONSerialization JSONObjectWithData:seedData options:0 error:&seedError];
+    if (!seedError) {
+      NSArray *jsonArray = seedDictionary[@"userSchema"];
+      for (NSDictionary *volunteerDictionary in jsonArray) {
+        Volunteer *volunteer = [NSEntityDescription insertNewObjectForEntityForName:@"Volunteer" inManagedObjectContext:self.managedObjectContext];
+        volunteer.firstName = volunteerDictionary[@"firstName"];
+        volunteer.lastName = volunteerDictionary[@"lastName"];
+        volunteer.location = volunteerDictionary[@"location"];
+//        volunteer.avatar = volunteerDictionary[@"avatar"];
+//        volunteer.bio = volunteerDictionary[@"bio"];
+        NSLog(@"%@", volunteer.firstName);
+        NSLog(@"%@", volunteer.lastName);
+//        NSLog(@"%@", volunteer.avatar);
+//        NSLog(@"%@", volunteer.bio);
+      
+      }
+    
+    NSError *saveError;
+    [self.managedObjectContext save:&saveError];
+    if (saveError) {
+      NSLog(@"%@", saveError);
+    }
+    }
+  }
+  
+}
 
 - (NSURL *)applicationDocumentsDirectory {
   // The directory the application uses to store the Core Data store file. This code uses a directory named "ClintAkins.VolunCode" in the application's documents directory.
