@@ -376,6 +376,8 @@
 				AB6FF9D91A9CFD4B0044E442 /* Skill.m in Sources */,
 				AB464D6C1A9C23D00006075B /* SkillsViewController.m in Sources */,
 				AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */,
+				79AA94371A9CFA29002C6177 /* VolunteerSignUpTableViewController.m in Sources */,
+				9C3FBC041A9CEDAE006250E3 /* VolunCode.xcdatamodel in Sources */,
 				AB28B00E1A9D1F6C00D86AF6 /* FetchService.m in Sources */,
 				AB3CC8671A9BDDB4005DFDA7 /* LoginViewController.m in Sources */,
 				AB3CC88D1A9BE097005DFDA7 /* UserDetailViewController.m in Sources */,
