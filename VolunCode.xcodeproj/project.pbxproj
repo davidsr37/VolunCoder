@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79AA94371A9CFA29002C6177 /* VolunteerSignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */; };
+		79AA943A1A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */; };
 		9C3FBC041A9CEDAE006250E3 /* VolunCode.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FBC031A9CEDAE006250E3 /* VolunCode.xcdatamodel */; };
 		9C9525761A9C432500FF9174 /* OrganizationProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9525751A9C432500FF9174 /* OrganizationProfileViewController.m */; };
 		9C9525791A9C439100FF9174 /* MMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9525781A9C439100FF9174 /* MMPickerView.m */; };
@@ -38,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79AA94351A9CFA29002C6177 /* VolunteerSignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolunteerSignUpTableViewController.h; sourceTree = "<group>"; };
+		79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolunteerSignUpTableViewController.m; sourceTree = "<group>"; };
+		79AA94381A9CFFAF002C6177 /* OrganizationSignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationSignUpTableViewController.h; sourceTree = "<group>"; };
+		79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationSignUpTableViewController.m; sourceTree = "<group>"; };
+		79AA943B1A9D231C002C6177 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		9C3FBC031A9CEDAE006250E3 /* VolunCode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VolunCode.xcdatamodel; sourceTree = "<group>"; };
 		9C9525741A9C432500FF9174 /* OrganizationProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationProfileViewController.h; sourceTree = "<group>"; };
 		9C9525751A9C432500FF9174 /* OrganizationProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationProfileViewController.m; sourceTree = "<group>"; };
@@ -95,6 +102,7 @@
 		AB3CC84F1A9BDDB4005DFDA7 = {
 			isa = PBXGroup;
 			children = (
+				79AA943B1A9D231C002C6177 /* MobileCoreServices.framework */,
 				9C95257E1A9C4E3C00FF9174 /* CoreGraphics.framework */,
 				9C95257C1A9C4E3200FF9174 /* Foundation.framework */,
 				9C95257A1A9C4E2800FF9174 /* UIKit.framework */,
@@ -161,6 +169,10 @@
 				AB3CC8661A9BDDB4005DFDA7 /* LoginViewController.m */,
 				AB3CC8881A9BE036005DFDA7 /* UserProfileViewController.h */,
 				AB3CC8891A9BE036005DFDA7 /* UserProfileViewController.m */,
+				79AA94351A9CFA29002C6177 /* VolunteerSignUpTableViewController.h */,
+				79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */,
+				79AA94381A9CFFAF002C6177 /* OrganizationSignUpTableViewController.h */,
+				79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */,
 				AB3CC88B1A9BE097005DFDA7 /* UserDetailViewController.h */,
 				AB3CC88C1A9BE097005DFDA7 /* UserDetailViewController.m */,
 				AB464D671A9C23B10006075B /* CausesViewController.h */,
@@ -286,9 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB3CC88A1A9BE036005DFDA7 /* UserProfileViewController.m in Sources */,
+				79AA943A1A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m in Sources */,
 				AB3CC8611A9BDDB4005DFDA7 /* AppDelegate.m in Sources */,
 				AB464D6C1A9C23D00006075B /* SkillsViewController.m in Sources */,
 				AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */,
+				79AA94371A9CFA29002C6177 /* VolunteerSignUpTableViewController.m in Sources */,
 				9C3FBC041A9CEDAE006250E3 /* VolunCode.xcdatamodel in Sources */,
 				AB3CC8671A9BDDB4005DFDA7 /* LoginViewController.m in Sources */,
 				AB3CC88D1A9BE097005DFDA7 /* UserDetailViewController.m in Sources */,
