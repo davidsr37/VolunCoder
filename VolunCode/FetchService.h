@@ -16,5 +16,7 @@
 
 +(id)sharedServices;
 
+-(Volunteer *) saveFetch;
+
 
 @end

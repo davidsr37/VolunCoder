@@ -38,6 +38,7 @@
     if (!seedError) {
       NSArray *jsonArray = seedDictionary[@"userSchema"];
       for (NSDictionary *volunteerDictionary in jsonArray) {
+        NSLog(@"%@", jsonArray);
         Volunteer *volunteer = [NSEntityDescription insertNewObjectForEntityForName:@"Volunteer" inManagedObjectContext:self.managedObjectContext];
         volunteer.firstName = volunteerDictionary[@"firstName"];
         volunteer.lastName = volunteerDictionary[@"lastName"];
