@@ -133,6 +133,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C3FBC051A9D403D006250E3 /* Archive */ = {
+			isa = PBXGroup;
+			children = (
+				AB3CC8881A9BE036005DFDA7 /* UserProfileViewController.h */,
+				AB3CC8891A9BE036005DFDA7 /* UserProfileViewController.m */,
+				9C9525741A9C432500FF9174 /* OrganizationProfileViewController.h */,
+				9C9525751A9C432500FF9174 /* OrganizationProfileViewController.m */,
+			);
+			name = Archive;
+			sourceTree = "<group>";
+		};
 		AB3CC84F1A9BDDB4005DFDA7 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +184,7 @@
 		AB3CC85B1A9BDDB4005DFDA7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C3FBC051A9D403D006250E3 /* Archive */,
 				AB3CC85C1A9BDDB4005DFDA7 /* Info.plist */,
 				AB3CC85D1A9BDDB4005DFDA7 /* main.m */,
 			);
@@ -201,18 +213,16 @@
 			children = (
 				AB3CC8651A9BDDB4005DFDA7 /* LoginViewController.h */,
 				AB3CC8661A9BDDB4005DFDA7 /* LoginViewController.m */,
-				AB3CC8881A9BE036005DFDA7 /* UserProfileViewController.h */,
-				AB3CC8891A9BE036005DFDA7 /* UserProfileViewController.m */,
 				79AA94351A9CFA29002C6177 /* VolunteerSignUpTableViewController.h */,
 				79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */,
 				79AA94381A9CFFAF002C6177 /* OrganizationSignUpTableViewController.h */,
 				79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */,
 				AB3CC88B1A9BE097005DFDA7 /* UserDetailViewController.h */,
+				9C6994301A9E378000A584A1 /* OrgDetailViewController.h */,
+				9C6994311A9E378000A584A1 /* OrgDetailViewController.m */,
 				AB3CC88C1A9BE097005DFDA7 /* UserDetailViewController.m */,
 				AB464D671A9C23B10006075B /* CausesViewController.h */,
 				AB464D681A9C23B10006075B /* CausesViewController.m */,
-				9C9525741A9C432500FF9174 /* OrganizationProfileViewController.h */,
-				9C9525751A9C432500FF9174 /* OrganizationProfileViewController.m */,
 				AB464D6A1A9C23D00006075B /* SkillsViewController.h */,
 				AB464D6B1A9C23D00006075B /* SkillsViewController.m */,
 				AB464D6D1A9C23E30006075B /* EventsViewController.h */,
