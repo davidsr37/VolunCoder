@@ -15,7 +15,9 @@
 //@property(nonatomic ,retain)NSArray *theArray;
 //@property(nonatomic)NSUInteger selectedRow;
 
-- (IBAction)showPickerViewButtonPressed:(id)sender;
+- (IBAction)showPickerViewButtonPressedForCause:(id)sender;
+
+- (IBAction)showPickerViewButtonPressedForLocale:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIButton *buttonForCause;
 //- (void)insertObject:atIndex;
