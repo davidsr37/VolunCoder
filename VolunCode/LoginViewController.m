@@ -29,15 +29,15 @@ NSDictionary *loginDictionary = @{@"email" : self.logEmailTextField,
                                   @"password" : self.logPasswordTextField,
                                   };
   
- [PostAndFetchService sharedService] postLoginIDs:loginDictionary completionHandler:^(NSArray *results, NSString *loginError) {
-   
-   
-   if (Login.role = @"Volunteer") {
-     destinationVC = VOLUNTEER_PROFILE;
-   } else {
-     destinationVC = ORGANIZATION_PROFILE;
-   }
- }
+//[PostAndFetchService sharedService] postLoginIDs:loginDictionary completionHandler:^(NSArray *results, NSString *loginError) {
+//   
+//   
+//   if (Login.role = @"Volunteer") {
+//     destinationVC = VOLUNTEER_PROFILE;
+//   } else {
+//     destinationVC = ORGANIZATION_PROFILE;
+//   }
+// }
 
   
 // ******* DO a PUSH instead of a segue **********
