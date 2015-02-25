@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "OrgAddMessage.h"
 
-@interface OrgMessagesViewController : UITableViewController
+@interface OrgMessagesViewController : UIViewController 
 
 @end

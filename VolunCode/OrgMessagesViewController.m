@@ -10,7 +10,7 @@
 
 @interface OrgMessagesViewController ()
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+//@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) OrgAddMessage *orgAddMessage;
 
@@ -21,15 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
+//  
+//  UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]
+//                                  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+//                                  target:self
+//                                  action:@selector(addMessage:)];
+//  
+//  self.navigationItem.rightBarButtonItem = rightButton;
+//
   
-  UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]
-                                  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                  target:self
-                                  action:@selector(addMessage:)];
-  
-  self.navigationItem.rightBarButtonItem = rightButton;
-
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -37,14 +37,14 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(IBAction)addMessage:(id)sender {
-  
-   NSLog(@"User clicked %@", _orgAddMessage);
-  [self.tableView.superview addSubview:_orgAddMessage.view];
-  
-  
-  
-}
+//-(IBAction)addMessage:(id)sender {
+//  
+//   NSLog(@"User clicked %@", _orgAddMessage);
+//  [self.tableView.superview addSubview:_orgAddMessage.view];
+//  
+//  
+//  
+//}
 
 
 

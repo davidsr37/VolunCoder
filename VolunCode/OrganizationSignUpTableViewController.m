@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *oCityTextField;
 
 @property (strong, nonatomic) IBOutlet UITextField *oLabelOfCause;
+@property (strong, nonatomic) IBOutlet UITextField *oLabelOfLocale;
 
 
 @property (weak, nonatomic) IBOutlet UITextField *oLogoURL;
@@ -32,14 +33,18 @@
 
 
 
-@property (nonatomic, strong) NSArray *stringsArray;
+@property (nonatomic, strong) NSArray *stringsArrayForCause;
 
-@property (nonatomic, strong) NSArray *objectsArray;
+@property (nonatomic, strong) NSArray *stringsArrayForLocale;
+
+@property (nonatomic, strong) NSArray *objectsArrayForCause;
+@property (nonatomic, strong) NSArray *objectsArrayForLocale;
 @property (nonatomic, strong) NSArray *numbersArray;
-@property (nonatomic, assign) id selectedObject;
+@property (nonatomic, assign) id selectedObjectForCause;
+@property (nonatomic, assign) id selectedObjectForLocale;
 
-@property (nonatomic, strong) NSString * selectedString;
-
+@property (nonatomic, strong) NSString * selectedCause;
+@property (nonatomic, strong) NSString * selectedLocale;
 
 //@property (nonatomic, retain) NSMutableArray *mutableArray; //put in .h
 //- (void)insertObject:atIndex;
@@ -56,10 +61,15 @@
     [super viewDidLoad];
   
   //_stringsArray = [[NSArray alloc]initWithArray:[NSArray arrayWithObjects:@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts", nil]];
-  _stringsArray = @[@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts"];
+  _stringsArrayForCause = @[@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts"];
   
-  _selectedObject = [_objectsArray objectAtIndex:0];
-  _selectedString = [_stringsArray objectAtIndex:0];
+  _stringsArrayForLocale = @[@"Seattle Area", @"Remote"];
+  
+  _selectedObjectForCause = [_objectsArrayForCause objectAtIndex:0];
+  _selectedCause = [_stringsArrayForCause objectAtIndex:0];
+  
+  _selectedObjectForLocale = [_objectsArrayForLocale objectAtIndex:0];
+  _selectedLocale = [_stringsArrayForLocale objectAtIndex:0];
   
 //  if (_selectedObject == nil) {
 //    _selectedObject = [_objectsArray objectAtIndex:0];
@@ -97,55 +107,60 @@
 
 */
 
+
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
   [[self view] endEditing:YES];
 }
 
-- (IBAction)showPickerViewButtonPressed:(id)sender {
-  
-  [[self view] endEditing:YES];
-  
-  /*
-  [MMPickerView showPickerViewInView:self.view
-                         withStrings:_stringsArray
-                         withOptions:@{MMbackgroundColor: [UIColor blackColor],
-                                       MMtextColor: [UIColor whiteColor],
-                                       MMtoolbarColor: [UIColor blackColor],
-                                       MMbuttonColor: [UIColor whiteColor],
-                                       MMfont: [UIFont systemFontOfSize:18],
-                                       MMvalueY: @3,
-                                       MMselectedObject:_selectedString,
-                                       MMtextAlignment: @1 }
-                          completion:^(NSString *selectedString) {
-                            
-                            _buttonForCause.titleLabel.text = selectedString;
-                            
-                            _selectedString = selectedString;
-                            _selectedObject = selectedString;
-                            //_buttonForCause.titleLabel.center = _causeCell.center;
-                           // selectedString = _selectedString;
-                          
-                            //[_stringsArray insertObject: selectedString atIndex:0];
-                           //[_stringsArray addObjectsFromArray:_stringsArray atIndex: 0];
-                          }];
-  
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+  [textField resignFirstResponder];
+  return YES;
+}
 
-*/
+- (IBAction)showPickerViewButtonPressedForLocale:(id)sender {
+  
+  //[[self view] endEditing:YES];
   
   [MMPickerView showPickerViewInView:self.view
-                         withStrings:_stringsArray
+                         withStrings:_stringsArrayForLocale
                          withOptions:@{MMbackgroundColor: [UIColor whiteColor],
                                        MMtextColor: [UIColor blackColor],
                                        MMtoolbarColor: [UIColor whiteColor],
                                        MMbuttonColor: [UIColor blueColor],
                                        MMfont: [UIFont systemFontOfSize:18],
                                        MMvalueY: @3,
-                                       MMselectedObject:_selectedString,
+                                       MMselectedObject:_selectedLocale,
+                                       MMtextAlignment:@1}
+                          completion:^(NSString *selectedString) {
+                            
+                            _oLabelOfLocale.text = selectedString;
+                            _selectedLocale = selectedString;
+                          }];
+  
+  
+  
+  
+}
+
+- (IBAction)showPickerViewButtonPressedForCause:(id)sender {
+  
+  //[[self view] endEditing:YES];
+  
+  
+  [MMPickerView showPickerViewInView:self.view
+                         withStrings:_stringsArrayForCause
+                         withOptions:@{MMbackgroundColor: [UIColor whiteColor],
+                                       MMtextColor: [UIColor blackColor],
+                                       MMtoolbarColor: [UIColor whiteColor],
+                                       MMbuttonColor: [UIColor blueColor],
+                                       MMfont: [UIFont systemFontOfSize:18],
+                                       MMvalueY: @3,
+                                       MMselectedObject:_selectedCause,
                                        MMtextAlignment:@1}
                           completion:^(NSString *selectedString) {
                             
                             _oLabelOfCause.text = selectedString;
-                            _selectedString = selectedString;
+                            _selectedCause = selectedString;
                           }];
 
 }

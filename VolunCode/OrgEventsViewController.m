@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) OrgAddEvent *orgAddEvent;
 
--(IBAction)addEvent:(id)addEvent;
+//-(IBAction)addEvent:(id)addEvent;
 
 @end
 
@@ -20,14 +20,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+/*
   UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]
                                   initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                   target:self
                                   action:@selector(addEvent:)];
   
   self.navigationItem.rightBarButtonItem = rightButton;
-  
+ */ 
 //  UIBarButtonItem *buttonAddEvent = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(Add:)];
   
 //  _buttonAddEvent = UIBarButtonItem(UIBarButtonSystemItemAdd: UIBarButtonSystemItem.Add, target: self, action: "pressedButtonAddEvent")
@@ -40,14 +40,14 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
--(IBAction) addEvent: (id) addEvent {
-  NSLog(@"User clicked %@", addEvent);
-  [self.tableView.superview addSubview:_orgAddEvent.view];
-  //addEventView will appear animated fade in
-  
-  
-  
-}
+//-(IBAction) addEvent: (id) addEvent {
+//  NSLog(@"User clicked %@", addEvent);
+////  [self.tableView.superview addSubview:_orgAddEvent.view];
+//  //addEventView will appear animated fade in
+//  
+//  
+//  
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
