@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		79AA94371A9CFA29002C6177 /* VolunteerSignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */; };
 		79AA943A1A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */; };
+		79AA943F1A9DA66A002C6177 /* PostAndFetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA943E1A9DA66A002C6177 /* PostAndFetchService.m */; };
+		79AA94421A9E8DC2002C6177 /* FetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA94411A9E8DC2002C6177 /* FetchService.m */; };
 		9C3FBC041A9CEDAE006250E3 /* VolunCode.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FBC031A9CEDAE006250E3 /* VolunCode.xcdatamodel */; };
 		9C9525761A9C432500FF9174 /* OrganizationProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9525751A9C432500FF9174 /* OrganizationProfileViewController.m */; };
 		9C9525791A9C439100FF9174 /* MMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9525781A9C439100FF9174 /* MMPickerView.m */; };
@@ -30,9 +32,7 @@
 		AB6FF9C41A9CFCF20044E442 /* VolunCode.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9C31A9CFCF20044E442 /* VolunCode.xcdatamodel */; };
 		AB6FF9C71A9CFD4A0044E442 /* VolunteerProject.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9C61A9CFD4A0044E442 /* VolunteerProject.m */; };
 		AB6FF9CA1A9CFD4B0044E442 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9C91A9CFD4B0044E442 /* Login.m */; };
-		AB6FF9CD1A9CFD4B0044E442 /* Volunteer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9CC1A9CFD4B0044E442 /* Volunteer.m */; };
 		AB6FF9D01A9CFD4B0044E442 /* Cause.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9CF1A9CFD4B0044E442 /* Cause.m */; };
-		AB6FF9D31A9CFD4B0044E442 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9D21A9CFD4B0044E442 /* Event.m */; };
 		AB6FF9D61A9CFD4B0044E442 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9D51A9CFD4B0044E442 /* Organization.m */; };
 		AB6FF9D91A9CFD4B0044E442 /* Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9D81A9CFD4B0044E442 /* Skill.m */; };
 		AB6FF9DC1A9CFD4B0044E442 /* Messenge.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9DB1A9CFD4B0044E442 /* Messenge.m */; };
@@ -55,6 +55,10 @@
 		79AA94381A9CFFAF002C6177 /* OrganizationSignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationSignUpTableViewController.h; sourceTree = "<group>"; };
 		79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationSignUpTableViewController.m; sourceTree = "<group>"; };
 		79AA943B1A9D231C002C6177 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		79AA943D1A9DA66A002C6177 /* PostAndFetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostAndFetchService.h; sourceTree = "<group>"; };
+		79AA943E1A9DA66A002C6177 /* PostAndFetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostAndFetchService.m; sourceTree = "<group>"; };
+		79AA94401A9E8DC2002C6177 /* FetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchService.h; sourceTree = "<group>"; };
+		79AA94411A9E8DC2002C6177 /* FetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchService.m; sourceTree = "<group>"; };
 		9C3FBC031A9CEDAE006250E3 /* VolunCode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VolunCode.xcdatamodel; sourceTree = "<group>"; };
 		9C9525741A9C432500FF9174 /* OrganizationProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationProfileViewController.h; sourceTree = "<group>"; };
 		9C9525751A9C432500FF9174 /* OrganizationProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationProfileViewController.m; sourceTree = "<group>"; };
@@ -198,6 +202,10 @@
 				AB3CC8891A9BE036005DFDA7 /* UserProfileViewController.m */,
 				79AA94351A9CFA29002C6177 /* VolunteerSignUpTableViewController.h */,
 				79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */,
+				79AA943D1A9DA66A002C6177 /* PostAndFetchService.h */,
+				79AA943E1A9DA66A002C6177 /* PostAndFetchService.m */,
+				79AA94401A9E8DC2002C6177 /* FetchService.h */,
+				79AA94411A9E8DC2002C6177 /* FetchService.m */,
 				79AA94381A9CFFAF002C6177 /* OrganizationSignUpTableViewController.h */,
 				79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */,
 				AB3CC88B1A9BE097005DFDA7 /* UserDetailViewController.h */,
@@ -364,6 +372,7 @@
 				AB6FF9D91A9CFD4B0044E442 /* Skill.m in Sources */,
 				AB464D6C1A9C23D00006075B /* SkillsViewController.m in Sources */,
 				AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */,
+				79AA94421A9E8DC2002C6177 /* FetchService.m in Sources */,
 				79AA94371A9CFA29002C6177 /* VolunteerSignUpTableViewController.m in Sources */,
 				9C3FBC041A9CEDAE006250E3 /* VolunCode.xcdatamodel in Sources */,
 				AB3CC8671A9BDDB4005DFDA7 /* LoginViewController.m in Sources */,
@@ -372,6 +381,7 @@
 				AB464D691A9C23B10006075B /* CausesViewController.m in Sources */,
 				9C9525791A9C439100FF9174 /* MMPickerView.m in Sources */,
 				AB464D6F1A9C23E30006075B /* EventsViewController.m in Sources */,
+				79AA943F1A9DA66A002C6177 /* PostAndFetchService.m in Sources */,
 				9C9525761A9C432500FF9174 /* OrganizationProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
