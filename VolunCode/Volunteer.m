@@ -2,7 +2,7 @@
 //  Volunteer.m
 //  VolunCode
 //
-//  Created by Clint on 2/24/15.
+//  Created by Clint on 2/25/15.
 //  Copyright (c) 2015 Clint Akins. All rights reserved.
 //
 
@@ -20,11 +20,9 @@
 @dynamic ageReq;
 @dynamic avatar;
 @dynamic bio;
-@dynamic email;
 @dynamic firstName;
 @dynamic lastName;
 @dynamic location;
-@dynamic password;
 @dynamic cause;
 @dynamic event;
 @dynamic login;

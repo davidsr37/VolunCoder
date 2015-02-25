@@ -9,11 +9,13 @@
 #import "UserDetailViewController.h"
 #import "Volunteer.h"
 #import "FetchService.h"
+#import "Login.h"
 
 @interface UserDetailViewController ()
+
 @property (weak, nonatomic) IBOutlet UILabel *volunteerNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *volunteerLocationLabel;
-
+@property (strong, nonatomic) NSArray *volunteers;
 
 @end
 
@@ -22,9 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-  Volunteer *volunteer = [NSEntityDescription insertNewObjectForEntityForName:@"Volunteer" inManagedObjectContext:[[FetchService sharedServices]coreDataStack].managedObjectContext];
-  volunteer.firstName = self.volunteerNameLabel.text;
-  volunteer.location = self.volunteerLocationLabel.text;
+    
+
+    Volunteer *volunteer = [self.volunteers lastObject];
+    self.volunteerNameLabel.text = volunteer.firstName;
+    self.volunteerLocationLabel.text = volunteer.location;
   
 }
 

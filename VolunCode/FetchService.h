@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "CoreDataStack.h"
 #import "Volunteer.h"
+#import "Organization.h"
 
 @interface FetchService : NSObject
 
@@ -17,6 +18,8 @@
 +(id)sharedServices;
 
 -(Volunteer *) saveFetch;
+
+
 
 
 @end

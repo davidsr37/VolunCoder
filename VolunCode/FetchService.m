@@ -27,6 +27,28 @@
   return self;
 }
 
+- (Volunteer *)generateVolunteer:(NSDictionary *)volunteerDictionary {
+
+  NSManagedObjectContext *context = [[[FetchService sharedServices]coreDataStack]managedObjectContext];
+  
+  Volunteer *volunteer = [NSEntityDescription insertNewObjectForEntityForName:@"Volunteer" inManagedObjectContext:context];
+  volunteer.firstName = volunteerDictionary[@"firstName"];
+  volunteer.lastName = volunteerDictionary[@"lastName"];
+  volunteer.location = volunteerDictionary[@"location"];
+  volunteer.ageReq = volunteerDictionary[@"ageReq"];
+  NSLog(@"%@", volunteer.firstName);
+  NSLog(@"%@", volunteer.lastName);
+  NSLog(@"%@", volunteer.location);
+  NSLog(@"%@", volunteer.ageReq);
+  
+  NSError *saveError;
+  [context save:&saveError];
+  if (saveError) {
+    NSLog(@"%@", saveError);
+  }
+  return volunteer;
+}
+
 
 
 @end
