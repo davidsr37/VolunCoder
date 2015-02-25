@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MMPickerView.h"
 
 @interface OrganizationSignUpTableViewController : UITableViewController
+
+- (IBAction)showPickerViewButtonPressed:(id)sender;
 
 @end
