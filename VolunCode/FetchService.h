@@ -2,20 +2,12 @@
 //  FetchService.h
 //  VolunCode
 //
-<<<<<<< HEAD
 //  Created by Annemarie Ketola on 2/25/15.
-=======
 //  Created by Clint on 2/24/15.
->>>>>>> master1
 //  Copyright (c) 2015 Clint Akins. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-<<<<<<< HEAD
-
-@interface FetchService : NSObject
-
-=======
 #import "CoreDataStack.h"
 #import "Volunteer.h"
 #import "Organization.h"
@@ -34,5 +26,4 @@
 
 
 
->>>>>>> master1
 @end

@@ -2,11 +2,8 @@
 //  FetchService.m
 //  VolunCode
 //
-<<<<<<< HEAD
 //  Created by Annemarie Ketola on 2/25/15.
-=======
 //  Created by Clint on 2/24/15.
->>>>>>> master1
 //  Copyright (c) 2015 Clint Akins. All rights reserved.
 //
 
@@ -14,8 +11,7 @@
 
 @implementation FetchService
 
-<<<<<<< HEAD
-=======
+
 +(id)sharedServices {
   static FetchService *newSharedServices = nil;
   static dispatch_once_t onceToken;
@@ -93,9 +89,4 @@
   return organization;
 }
 
-
-
-
-
->>>>>>> master1
 @end
