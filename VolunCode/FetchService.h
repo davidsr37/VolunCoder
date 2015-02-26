@@ -12,6 +12,7 @@
 #import "Volunteer.h"
 #import "Organization.h"
 #import "Login.h"
+#import "Event.h"
 
 @interface FetchService : NSObject
 
@@ -23,7 +24,10 @@
 
 - (Volunteer *)generateVolunteer:(NSDictionary *)volunteerDictionary;
 
+- (Organization *)generateOrganization:(NSDictionary *)orgDictionary;
 
+- (Login *)generateLogin:(NSDictionary *)loginDictionary;
 
+-(Event *)event:(NSDictionary *)eventDictionary;
 
 @end

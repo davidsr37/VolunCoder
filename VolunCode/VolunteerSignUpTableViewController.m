@@ -78,20 +78,20 @@
 //                                           };
 
   
-  NSDictionary *profileDictionary = @{@"email" : self.vEmailTextField,
-                                      @"password" : self.vPasswordTextField,
+  NSDictionary *profileDictionary = @{@"email" : self.vEmailTextField.text,
+                                      @"password" : self.vPasswordTextField.text,
                                       @"role" : @"volunteer",
-                                      @"firstname" : self.vFirstNameTextField,
-                                      @"lastname" : self.vLastNameTextField,
-                                      @"city" : self.vCityTextField,
-                                      @"bio" : self.vBioTextField,
+                                      @"firstname" : self.vFirstNameTextField.text,
+                                      @"lastname" : self.vLastNameTextField.text,
+                                      @"city" : self.vCityTextField.text,
+                                      @"bio" : self.vBioTextField.text,
                                       @"ageReq" : self.vAgeReqSwitch,
                                       @"avatar" : self.avatarString,
                                       };
   
   // not sure what to do with the @"avatar" : self.vAvatarImage,
   
-[[PostAndFetchService sharedService]createVolunteerProfile:profileDictionary completionHandler:^(NSArray *results, NSString *createProfileError) {
+[[PostAndFetchService sharedService]createVolunteerProfile:profileDictionary completionHandler:^(NSDictionary *results, NSString *createProfileError) {
   
   
 }];

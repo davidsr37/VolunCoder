@@ -29,7 +29,17 @@ NSDictionary *loginDictionary = @{@"email" : self.logEmailTextField.text,
                                   @"password" : self.logPasswordTextField.text,
                                   };
   
-[[PostAndFetchService sharedService] postLoginIDs:loginDictionary completionHandler:^(NSArray *results, NSString *loginError) {
+  NSLog(@"email = %@", self.logEmailTextField.text);
+  NSLog(@"password = %@", self.logPasswordTextField.text);
+  
+//NSDictionary *loginDictionary = @{@"email" : @"456@abc.com",
+//                                    @"password" : @"12345",
+//                                    };
+  
+  NSLog(@"loginDictionary = %@", loginDictionary);
+  
+  
+[[PostAndFetchService sharedService] postLoginIDs:loginDictionary completionHandler:^(NSDictionary *results, NSString *loginError) {
    
    
 //   if (Login.role = @"Volunteer") {

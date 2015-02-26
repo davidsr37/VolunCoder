@@ -12,14 +12,14 @@
 
 +(id)sharedService;
 
--(void)postLoginIDs:(NSDictionary *)loginDictionary completionHandler:(void (^)(NSArray *, NSString *))completionHandler;
+-(void)postLoginIDs:(NSDictionary *)loginDictionary completionHandler:(void (^)(NSDictionary *, NSString *))completionHandler;
 
--(void)createVolunteerProfile:(NSDictionary *)volunteerProfileDictionary completionHandler:(void (^)(NSArray *, NSString *)) completionHandler;
+-(void)createVolunteerProfile:(NSDictionary *)volunteerProfileDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler;
 
--(void)createOrganizationProfile:(NSDictionary *)organizationProfileDictionary completionHandler:(void (^)(NSArray *, NSString *)) completionHandler;
+-(void)createOrganizationProfile:(NSDictionary *)organizationProfileDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler;
 
--(void)createEvent:(NSDictionary *)createEventDictionary completionHandler:(void (^)(NSArray *, NSString *)) completionHandler;
+-(void)createEvent:(NSDictionary *)createEventDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler;
 
--(void)fetchEvents:(NSDictionary *)tokenDictionary completionHandler:(void (^)(NSArray *, NSString *)) completionHandler;
+-(void)fetchEvents:(NSDictionary *)tokenDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler;
 
 @end
