@@ -1,87 +1,50 @@
 //
-//  OrganizationProfileViewController.m
+//  OrgMessagesViewController.m
 //  VolunCode
 //
-//  Created by David Rogers on 2/23/15.
+//  Created by David Rogers on 2/25/15.
 //  Copyright (c) 2015 Clint Akins. All rights reserved.
 //
 
-#import "OrganizationProfileViewController.h"
+#import "OrgMessagesViewController.h"
 
-@interface OrganizationProfileViewController ()
+@interface OrgMessagesViewController ()
 
-@property (nonatomic, strong) NSArray *stringsArray;
-@property (nonatomic, strong) NSArray *objectsArray;
-@property (nonatomic, strong) NSArray *numbersArray;
-@property (nonatomic, assign) id selectedObject;
+//@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-@property (nonatomic, strong) NSString * selectedString;
-@property (strong, nonatomic) IBOutlet UIButton *buttonForCause;
-
+@property (strong, nonatomic) OrgAddMessage *orgAddMessage;
 
 @end
 
-@implementation OrganizationProfileViewController
-
-
+@implementation OrgMessagesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-  _stringsArray = @[@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts"];
-  
-  
+//  
+//  UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]
+//                                  initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+//                                  target:self
+//                                  action:@selector(addMessage:)];
+//  
+//  self.navigationItem.rightBarButtonItem = rightButton;
+//
   
     // Uncomment the following line to preserve selection between presentations.
-     self.clearsSelectionOnViewWillAppear = NO;
-  
-  
-  
+    // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
-  
-  if (_selectedObject == nil) {
-    _selectedObject = [_objectsArray objectAtIndex:0];
-    
-  }
-  
-  if (_selectedString == nil) {
-    _selectedString = [_stringsArray objectAtIndex:0];
-  }
-
-  
-}
-
-- (IBAction)showPickerViewButtonPressed:(id)sender {
-  
-  
-  
-  [MMPickerView showPickerViewInView:self.view
-                         withStrings:_stringsArray
-                         withOptions:@{MMbackgroundColor: [UIColor blackColor],
-                                       MMtextColor: [UIColor whiteColor],
-                                       MMtoolbarColor: [UIColor blackColor],
-                                       MMbuttonColor: [UIColor whiteColor],
-                                       MMfont: [UIFont systemFontOfSize:18],
-                                       MMvalueY: @3,
-                                       MMselectedObject:_selectedString}
-                          completion:^(NSString *selectedString) {
-                            
-                            _buttonForCause.titleLabel.text = selectedString;
-                            _selectedString = selectedString;
-                          }];
-  
-}
-
-
-
-
-
+//-(IBAction)addMessage:(id)sender {
+//  
+//   NSLog(@"User clicked %@", _orgAddMessage);
+//  [self.tableView.superview addSubview:_orgAddMessage.view];
+//  
+//  
+//  
+//}
 
 
 
@@ -90,7 +53,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 /*
 #pragma mark - Table view data source
 
@@ -105,8 +67,8 @@
     // Return the number of rows in the section.
     return 0;
 }
-
-
+*/
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     

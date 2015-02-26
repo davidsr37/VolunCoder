@@ -2,7 +2,7 @@
 //  Organization.h
 //  VolunCode
 //
-//  Created by Clint on 2/24/15.
+//  Created by Clint on 2/25/15.
 //  Copyright (c) 2015 Clint Akins. All rights reserved.
 //
 
@@ -14,13 +14,13 @@
 @interface Organization : NSManagedObject
 
 @property (nonatomic, retain) NSString * address;
+@property (nonatomic, retain) NSString * city;
 @property (nonatomic, retain) NSString * email;
 @property (nonatomic, retain) NSString * firstNameContact;
 @property (nonatomic, retain) NSString * lastNameContact;
 @property (nonatomic, retain) id logo;
 @property (nonatomic, retain) NSString * mission;
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * password;
 @property (nonatomic, retain) NSString * phone;
 @property (nonatomic, retain) NSString * website;
 @property (nonatomic, retain) Cause *cause;

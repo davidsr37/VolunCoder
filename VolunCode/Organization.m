@@ -2,7 +2,7 @@
 //  Organization.m
 //  VolunCode
 //
-//  Created by Clint on 2/24/15.
+//  Created by Clint on 2/25/15.
 //  Copyright (c) 2015 Clint Akins. All rights reserved.
 //
 
@@ -16,13 +16,13 @@
 @implementation Organization
 
 @dynamic address;
+@dynamic city;
 @dynamic email;
 @dynamic firstNameContact;
 @dynamic lastNameContact;
 @dynamic logo;
 @dynamic mission;
 @dynamic name;
-@dynamic password;
 @dynamic phone;
 @dynamic website;
 @dynamic cause;

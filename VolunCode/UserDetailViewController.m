@@ -7,8 +7,15 @@
 //
 
 #import "UserDetailViewController.h"
+#import "Volunteer.h"
+#import "FetchService.h"
+#import "Login.h"
 
 @interface UserDetailViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *volunteerNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *volunteerLocationLabel;
+//@property (strong, nonatomic) NSArray *volunteers;
 
 @end
 
@@ -17,6 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+
+    
+//    self.volunteerNameLabel.text = volunteer.firstName;
+//    self.volunteerLocationLabel.text = volunteer.location;
+  
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Volunteer.h"
+#import "CoreDataStack.h"
 
 @interface AppDelegate ()
 

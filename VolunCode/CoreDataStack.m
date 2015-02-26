@@ -7,12 +7,23 @@
 //
 
 #import "CoreDataStack.h"
+#import "Volunteer.h"
+#import "Login.h"
 
 @implementation CoreDataStack
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
+-(instancetype)init {
+  self = [super init];
+  if (self) {
+
+  }
+  return self;
+}
+
 
 - (NSURL *)applicationDocumentsDirectory {
   // The directory the application uses to store the Core Data store file. This code uses a directory named "ClintAkins.VolunCode" in the application's documents directory.
@@ -24,8 +35,7 @@
   if (_managedObjectModel != nil) {
     return _managedObjectModel;
   }
-  NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"VolunCode" withExtension:@"momd"];
-  _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+ _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
   return _managedObjectModel;
 }
 
@@ -41,6 +51,13 @@
   NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"VolunCode.sqlite"];
   NSError *error = nil;
   NSString *failureReason = @"There was an error creating or loading the application's saved data.";
+//  NSDictionary *options =
+  [NSDictionary dictionaryWithObjectsAndKeys:
+   [NSNumber numberWithBool:YES],
+   NSMigratePersistentStoresAutomaticallyOption,
+   [NSNumber numberWithBool:YES],
+   NSInferMappingModelAutomaticallyOption, nil];
+  
   if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
     // Report any error we got.
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
