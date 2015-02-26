@@ -40,6 +40,19 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  
+  //reload tableview with JSON data from FETCH EVENT
+  
+  
+}
+
+
+
+
+
+
 //-(IBAction) addEvent: (id) addEvent {
 //  NSLog(@"User clicked %@", addEvent);
 ////  [self.tableView.superview addSubview:_orgAddEvent.view];

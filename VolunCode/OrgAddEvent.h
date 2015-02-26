@@ -12,7 +12,4 @@
 @interface OrgAddEvent : UITableViewController
 
 
-
-
-
 @end
