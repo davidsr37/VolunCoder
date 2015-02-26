@@ -16,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *OrgMissionLabel;
 @property (weak, nonatomic) IBOutlet UIImage *OrgLogoImage;
 
+
+
+
+
 @end
 
 @implementation OrgDetailViewController
@@ -31,6 +35,17 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+-(void)viewWillAppear {
+  [super viewWillAppear];
+  
+  //reload tableview
+  
+  
+  
+  
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
