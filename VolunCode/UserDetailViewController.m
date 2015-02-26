@@ -15,7 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *volunteerNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *volunteerLocationLabel;
-@property (strong, nonatomic) NSArray *volunteers;
+//@property (strong, nonatomic) NSArray *volunteers;
 
 @end
 
@@ -26,9 +26,9 @@
     // Do any additional setup after loading the view.
     
 
-    Volunteer *volunteer = [self.volunteers lastObject];
-    self.volunteerNameLabel.text = volunteer.firstName;
-    self.volunteerLocationLabel.text = volunteer.location;
+    
+//    self.volunteerNameLabel.text = volunteer.firstName;
+//    self.volunteerLocationLabel.text = volunteer.location;
   
 }
 

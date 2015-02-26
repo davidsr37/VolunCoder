@@ -57,6 +57,8 @@
 		79AA94381A9CFFAF002C6177 /* OrganizationSignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationSignUpTableViewController.h; sourceTree = "<group>"; };
 		79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationSignUpTableViewController.m; sourceTree = "<group>"; };
 		79AA943B1A9D231C002C6177 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9C6994301A9E378000A584A1 /* OrgDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgDetailViewController.h; sourceTree = "<group>"; };
+		9C6994311A9E378000A584A1 /* OrgDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgDetailViewController.m; sourceTree = "<group>"; };
 		9C9525741A9C432500FF9174 /* OrganizationProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationProfileViewController.h; sourceTree = "<group>"; };
 		9C9525751A9C432500FF9174 /* OrganizationProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationProfileViewController.m; sourceTree = "<group>"; };
 		9C9525771A9C439100FF9174 /* MMPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPickerView.h; sourceTree = "<group>"; };
@@ -217,9 +219,9 @@
 				79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */,
 				79AA94381A9CFFAF002C6177 /* OrganizationSignUpTableViewController.h */,
 				79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */,
-				AB3CC88B1A9BE097005DFDA7 /* UserDetailViewController.h */,
 				9C6994301A9E378000A584A1 /* OrgDetailViewController.h */,
 				9C6994311A9E378000A584A1 /* OrgDetailViewController.m */,
+				AB3CC88B1A9BE097005DFDA7 /* UserDetailViewController.h */,
 				AB3CC88C1A9BE097005DFDA7 /* UserDetailViewController.m */,
 				AB464D671A9C23B10006075B /* CausesViewController.h */,
 				AB464D681A9C23B10006075B /* CausesViewController.m */,

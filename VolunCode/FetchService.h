@@ -10,6 +10,7 @@
 #import "CoreDataStack.h"
 #import "Volunteer.h"
 #import "Organization.h"
+#import "Login.h"
 
 @interface FetchService : NSObject
 
@@ -18,6 +19,8 @@
 +(id)sharedServices;
 
 -(Volunteer *) saveFetch;
+
+- (Volunteer *)generateVolunteer:(NSDictionary *)volunteerDictionary;
 
 
 
