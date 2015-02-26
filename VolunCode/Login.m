@@ -2,7 +2,7 @@
 //  Login.m
 //  VolunCode
 //
-//  Created by Clint on 2/24/15.
+//  Created by Clint on 2/25/15.
 //  Copyright (c) 2015 Clint Akins. All rights reserved.
 //
 
@@ -15,8 +15,8 @@
 
 @dynamic email;
 @dynamic password;
-@dynamic type;
 @dynamic role;
+@dynamic type;
 @dynamic organization;
 @dynamic volunteer;
 

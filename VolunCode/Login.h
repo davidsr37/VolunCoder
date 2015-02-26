@@ -2,7 +2,7 @@
 //  Login.h
 //  VolunCode
 //
-//  Created by Clint on 2/24/15.
+//  Created by Clint on 2/25/15.
 //  Copyright (c) 2015 Clint Akins. All rights reserved.
 //
 
@@ -15,8 +15,8 @@
 
 @property (nonatomic, retain) NSString * email;
 @property (nonatomic, retain) NSString * password;
-@property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) NSString * role;
+@property (nonatomic, retain) NSString * type;
 @property (nonatomic, retain) Organization *organization;
 @property (nonatomic, retain) Volunteer *volunteer;
 

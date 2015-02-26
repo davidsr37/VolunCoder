@@ -1,10 +1,18 @@
 {
-  "userSchema": [
+  "userSchema":
   {
-                 "firstName": "Clint",
-                 "lastName" : "Akins",
-                 "location" : "Seattle"
-                 
-                 }
-                 ]
+    "firstName": "Clint",
+    "lastName" : "Akins",
+    "location" : "Seattle",
+    "ageReq" : true
+  },
+  "login" :
+  {
+    "email" : "name@example.com",
+    "password"  : "foo",
+    "role" : "volunteer",
+    "type" : "test"
+  },
+  
+  
 }

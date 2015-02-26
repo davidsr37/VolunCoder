@@ -38,7 +38,7 @@
   //iniatates the UIImagePickerController
   UIImagePickerController *pickerC = [[UIImagePickerController alloc] init];
   // sets itself as the delegate
-  pickerC.delegate = self;
+    pickerC.delegate = self;
     pickerC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     pickerC.mediaTypes = [NSArray arrayWithObjects:(NSString *) kUTTypeImage, nil];
     pickerC.allowsEditing = NO;
