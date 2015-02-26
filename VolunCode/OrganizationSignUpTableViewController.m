@@ -61,25 +61,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-  _stringsArray = [[NSArray alloc]initWithArray:[NSArray arrayWithObjects:@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts", nil]];
-  _stringsArrayForCause = @[@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts"];
-  
-  _stringsArrayForLocale = @[@"Seattle Area", @"Remote"];
-  
-  _selectedObjectForCause = [_objectsArrayForCause objectAtIndex:0];
-  _selectedCause = [_stringsArrayForCause objectAtIndex:0];
-  
-  _selectedObjectForLocale = [_objectsArrayForLocale objectAtIndex:0];
-  _selectedLocale = [_stringsArrayForLocale objectAtIndex:0];
-  
-  if (_selectedObject == nil) {
-    _selectedObject = [_objectsArray objectAtIndex:0];
-    
-  }
-  
-  if (_selectedString == nil) {
-    _selectedString = [_stringsArray objectAtIndex:0];
-}
+//  _stringsArray = [[NSArray alloc]initWithArray:[NSArray arrayWithObjects:@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts", nil]];
+//  _stringsArrayForCause = @[@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts"];
+//  
+//  _stringsArrayForLocale = @[@"Seattle Area", @"Remote"];
+//  
+//  _selectedObjectForCause = [_objectsArrayForCause objectAtIndex:0];
+//  _selectedCause = [_stringsArrayForCause objectAtIndex:0];
+//  
+//  _selectedObjectForLocale = [_objectsArrayForLocale objectAtIndex:0];
+//  _selectedLocale = [_stringsArrayForLocale objectAtIndex:0];
+//  
+//  if (_selectedObject == nil) {
+//    _selectedObject = [_objectsArray objectAtIndex:0];
+//    
+//  }
+//  
+//  if (_selectedString == nil) {
+//    _selectedString = [_stringsArray objectAtIndex:0];
+//}
 
 
   
