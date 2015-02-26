@@ -123,11 +123,11 @@
 //          NSArray *results = [Volunteer [fetchServices sharedService] generateVolunteer:jsonResults];
           
               dispatch_async(dispatch_get_main_queue(), ^{
-            if (results) {
-              completionHandler(results, nil);
-            } else {
-              completionHandler(results, @"volunteer profile could not be completed");
-            }
+//            if (results) {
+//              completionHandler(results, nil);
+//            } else {
+//              completionHandler(results, @"volunteer profile could not be completed");
+//            }
           });
           break;
           }
