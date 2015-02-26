@@ -7,10 +7,11 @@
 //
 
 #import "LoginViewController.h"
+#import "PostAndFetchService.h"
 
 @interface LoginViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *lEmailTextField;
-@property (weak, nonatomic) IBOutlet UITextField *lPasswordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *logEmailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *logPasswordTextField;
 
 @end
 
@@ -24,27 +25,36 @@
 - (IBAction)loginButtonPressed:(id)sender {
   
 // ******************* Make loginDictionary *******************
-NSDictionary *loginDictionary = @{@"email" : self.lEmailTextField,
-                                  @"password" : self.lPasswordTextField,
+NSDictionary *loginDictionary = @{@"email" : self.logEmailTextField.text,
+                                  @"password" : self.logPasswordTextField.text,
                                   };
   
-// ******************* Change the loginDictionary into a JSON file *******************
-NSError *errorLogin;
-//  NSData *loginJsonData = [NSJSONSerialization dataWithJSONObject:loginDictionary options:kNilOptions error:&error];
-NSData *loginJsonData = [NSJSONSerialization dataWithJSONObject:loginDictionary options:NSJSONWritingPrettyPrinted error:&errorLogin];
+  NSLog(@"email = %@", self.logEmailTextField.text);
+  NSLog(@"password = %@", self.logPasswordTextField.text);
+  
+//NSDictionary *loginDictionary = @{@"email" : @"456@abc.com",
+//                                    @"password" : @"12345",
+//                                    };
+  
+  NSLog(@"loginDictionary = %@", loginDictionary);
+  
+  
+[[PostAndFetchService sharedService] postLoginIDs:loginDictionary completionHandler:^(NSDictionary *results, NSString *loginError) {
+   
+   
+//   if (Login.role = @"Volunteer") {
+//     destinationVC = VOLUNTEER_PROFILE;
+//   } else {
+//     destinationVC = ORGANIZATION_PROFILE;
+//   }
+}];
 
-if (!loginJsonData) {
-  //    NSLog(@"loginJsonDataError: ", error.localizedDescription);
-} else {
-  NSString *JSONLoginString = [[NSString alloc] initWithBytes:[loginJsonData bytes] length:[loginJsonData length] encoding:NSUTF8StringEncoding];
-  //    NSLog(@"profileJsonData: ", profileJsonData);
-}
   
-  
-  
-  
+// ******* DO a PUSH instead of a segue **********
   
 } // close loginButtonPressed
+
+
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];

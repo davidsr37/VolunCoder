@@ -9,20 +9,14 @@
 /* Begin PBXBuildFile section */
 		79AA94371A9CFA29002C6177 /* VolunteerSignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */; };
 		79AA943A1A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */; };
-		9C3FBC041A9CEDAE006250E3 /* VolunCode.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FBC031A9CEDAE006250E3 /* VolunCode.xcdatamodel */; };
-		9C6994321A9E378000A584A1 /* OrgDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6994311A9E378000A584A1 /* OrgDetailViewController.m */; };
+		79AA943F1A9DA66A002C6177 /* PostAndFetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA943E1A9DA66A002C6177 /* PostAndFetchService.m */; };
 		9C6994351A9E505F00A584A1 /* OrgEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6994341A9E505F00A584A1 /* OrgEventsViewController.m */; };
 		9C6994381A9E50AB00A584A1 /* OrgMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6994371A9E50AB00A584A1 /* OrgMessagesViewController.m */; };
-		9C69943B1A9E5ED600A584A1 /* OrgAddEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69943A1A9E5ED600A584A1 /* OrgAddEvent.m */; };
-		9C69943E1A9E5F9D00A584A1 /* OrgAddMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69943D1A9E5F9D00A584A1 /* OrgAddMessage.m */; };
 		9C9525761A9C432500FF9174 /* OrganizationProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9525751A9C432500FF9174 /* OrganizationProfileViewController.m */; };
 		9C9525791A9C439100FF9174 /* MMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9525781A9C439100FF9174 /* MMPickerView.m */; };
 		9C95257B1A9C4E2800FF9174 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257A1A9C4E2800FF9174 /* UIKit.framework */; };
 		9C95257D1A9C4E3200FF9174 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257C1A9C4E3200FF9174 /* Foundation.framework */; };
 		9C95257F1A9C4E3C00FF9174 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257E1A9C4E3C00FF9174 /* CoreGraphics.framework */; };
-		AB28B0051A9D165F00D86AF6 /* seed.json in Resources */ = {isa = PBXBuildFile; fileRef = AB28B0041A9D165F00D86AF6 /* seed.json */; };
-		AB28B0081A9D1C4900D86AF6 /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = AB28B0071A9D1C4900D86AF6 /* Organization.m */; };
-		AB28B00B1A9D1C4900D86AF6 /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = AB28B00A1A9D1C4900D86AF6 /* Login.m */; };
 		AB28B00E1A9D1F6C00D86AF6 /* FetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = AB28B00D1A9D1F6C00D86AF6 /* FetchService.m */; };
 		AB28B0101A9D266D00D86AF6 /* testSeed.json in Resources */ = {isa = PBXBuildFile; fileRef = AB28B00F1A9D266D00D86AF6 /* testSeed.json */; };
 		AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CC85D1A9BDDB4005DFDA7 /* main.m */; };
@@ -37,11 +31,16 @@
 		AB464D691A9C23B10006075B /* CausesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB464D681A9C23B10006075B /* CausesViewController.m */; };
 		AB464D6C1A9C23D00006075B /* SkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB464D6B1A9C23D00006075B /* SkillsViewController.m */; };
 		AB464D6F1A9C23E30006075B /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB464D6E1A9C23E30006075B /* EventsViewController.m */; };
+		AB4B55461A9E70E400B2893A /* seed.json in Resources */ = {isa = PBXBuildFile; fileRef = AB4B55451A9E70E400B2893A /* seed.json */; };
+		AB4B55611A9E823400B2893A /* Volunteer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4B55601A9E823400B2893A /* Volunteer.m */; };
+		AB4B55641A9E823500B2893A /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4B55631A9E823500B2893A /* Event.m */; };
+		AB4B55671A9E823500B2893A /* Cause.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4B55661A9E823500B2893A /* Cause.m */; };
+		AB4B556A1A9E823500B2893A /* Messenge.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4B55691A9E823500B2893A /* Messenge.m */; };
+		AB4B556D1A9E823500B2893A /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4B556C1A9E823500B2893A /* Login.m */; };
+		AB4B55701A9E823500B2893A /* VolunteerProject.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4B556F1A9E823500B2893A /* VolunteerProject.m */; };
+		AB4B55731A9E823500B2893A /* Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4B55721A9E823500B2893A /* Skill.m */; };
+		AB4B55761A9E823500B2893A /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4B55751A9E823500B2893A /* Organization.m */; };
 		AB6FF9C41A9CFCF20044E442 /* VolunCode.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9C31A9CFCF20044E442 /* VolunCode.xcdatamodel */; };
-		AB6FF9C71A9CFD4A0044E442 /* VolunteerProject.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9C61A9CFD4A0044E442 /* VolunteerProject.m */; };
-		AB6FF9D01A9CFD4B0044E442 /* Cause.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9CF1A9CFD4B0044E442 /* Cause.m */; };
-		AB6FF9D91A9CFD4B0044E442 /* Skill.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9D81A9CFD4B0044E442 /* Skill.m */; };
-		AB6FF9DC1A9CFD4B0044E442 /* Messenge.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9DB1A9CFD4B0044E442 /* Messenge.m */; };
 		AB6FF9E51A9D039C0044E442 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +60,10 @@
 		79AA94381A9CFFAF002C6177 /* OrganizationSignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationSignUpTableViewController.h; sourceTree = "<group>"; };
 		79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationSignUpTableViewController.m; sourceTree = "<group>"; };
 		79AA943B1A9D231C002C6177 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		9C3FBC031A9CEDAE006250E3 /* VolunCode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VolunCode.xcdatamodel; sourceTree = "<group>"; };
+		79AA943D1A9DA66A002C6177 /* PostAndFetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostAndFetchService.h; sourceTree = "<group>"; };
+		79AA943E1A9DA66A002C6177 /* PostAndFetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostAndFetchService.m; sourceTree = "<group>"; };
+		79AA94401A9E8DC2002C6177 /* FetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchService.h; sourceTree = "<group>"; };
+		79AA94411A9E8DC2002C6177 /* FetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchService.m; sourceTree = "<group>"; };
 		9C6994301A9E378000A584A1 /* OrgDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgDetailViewController.h; sourceTree = "<group>"; };
 		9C6994311A9E378000A584A1 /* OrgDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgDetailViewController.m; sourceTree = "<group>"; };
 		9C6994331A9E505F00A584A1 /* OrgEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgEventsViewController.h; sourceTree = "<group>"; };
@@ -79,11 +81,6 @@
 		9C95257A1A9C4E2800FF9174 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9C95257C1A9C4E3200FF9174 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C95257E1A9C4E3C00FF9174 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AB28B0041A9D165F00D86AF6 /* seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = seed.json; sourceTree = "<group>"; };
-		AB28B0061A9D1C4900D86AF6 /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organization.h; sourceTree = "<group>"; };
-		AB28B0071A9D1C4900D86AF6 /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organization.m; sourceTree = "<group>"; };
-		AB28B0091A9D1C4900D86AF6 /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
-		AB28B00A1A9D1C4900D86AF6 /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
 		AB28B00C1A9D1F6C00D86AF6 /* FetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchService.h; sourceTree = "<group>"; };
 		AB28B00D1A9D1F6C00D86AF6 /* FetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchService.m; sourceTree = "<group>"; };
 		AB28B00F1A9D266D00D86AF6 /* testSeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testSeed.json; sourceTree = "<group>"; };
@@ -110,19 +107,24 @@
 		AB464D6B1A9C23D00006075B /* SkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillsViewController.m; sourceTree = "<group>"; };
 		AB464D6D1A9C23E30006075B /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		AB464D6E1A9C23E30006075B /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		AB4B55451A9E70E400B2893A /* seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = seed.json; sourceTree = "<group>"; };
+		AB4B555F1A9E823400B2893A /* Volunteer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Volunteer.h; sourceTree = "<group>"; };
+		AB4B55601A9E823400B2893A /* Volunteer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Volunteer.m; sourceTree = "<group>"; };
+		AB4B55621A9E823500B2893A /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		AB4B55631A9E823500B2893A /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		AB4B55651A9E823500B2893A /* Cause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cause.h; sourceTree = "<group>"; };
+		AB4B55661A9E823500B2893A /* Cause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cause.m; sourceTree = "<group>"; };
+		AB4B55681A9E823500B2893A /* Messenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messenge.h; sourceTree = "<group>"; };
+		AB4B55691A9E823500B2893A /* Messenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Messenge.m; sourceTree = "<group>"; };
+		AB4B556B1A9E823500B2893A /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
+		AB4B556C1A9E823500B2893A /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
+		AB4B556E1A9E823500B2893A /* VolunteerProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolunteerProject.h; sourceTree = "<group>"; };
+		AB4B556F1A9E823500B2893A /* VolunteerProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolunteerProject.m; sourceTree = "<group>"; };
+		AB4B55711A9E823500B2893A /* Skill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skill.h; sourceTree = "<group>"; };
+		AB4B55721A9E823500B2893A /* Skill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skill.m; sourceTree = "<group>"; };
+		AB4B55741A9E823500B2893A /* Organization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Organization.h; sourceTree = "<group>"; };
+		AB4B55751A9E823500B2893A /* Organization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Organization.m; sourceTree = "<group>"; };
 		AB6FF9C31A9CFCF20044E442 /* VolunCode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VolunCode.xcdatamodel; sourceTree = SOURCE_ROOT; };
-		AB6FF9C51A9CFD4A0044E442 /* VolunteerProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolunteerProject.h; sourceTree = "<group>"; };
-		AB6FF9C61A9CFD4A0044E442 /* VolunteerProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolunteerProject.m; sourceTree = "<group>"; };
-		AB6FF9CB1A9CFD4B0044E442 /* Volunteer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Volunteer.h; sourceTree = "<group>"; };
-		AB6FF9CC1A9CFD4B0044E442 /* Volunteer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Volunteer.m; sourceTree = "<group>"; };
-		AB6FF9CE1A9CFD4B0044E442 /* Cause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cause.h; sourceTree = "<group>"; };
-		AB6FF9CF1A9CFD4B0044E442 /* Cause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cause.m; sourceTree = "<group>"; };
-		AB6FF9D11A9CFD4B0044E442 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
-		AB6FF9D21A9CFD4B0044E442 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
-		AB6FF9D71A9CFD4B0044E442 /* Skill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skill.h; sourceTree = "<group>"; };
-		AB6FF9D81A9CFD4B0044E442 /* Skill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Skill.m; sourceTree = "<group>"; };
-		AB6FF9DA1A9CFD4B0044E442 /* Messenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Messenge.h; sourceTree = "<group>"; };
-		AB6FF9DB1A9CFD4B0044E442 /* Messenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Messenge.m; sourceTree = "<group>"; };
 		AB6FF9E31A9D039C0044E442 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,7 +188,7 @@
 			children = (
 				AB3CC85F1A9BDDB4005DFDA7 /* AppDelegate.h */,
 				AB3CC8601A9BDDB4005DFDA7 /* AppDelegate.m */,
-				AB28B0041A9D165F00D86AF6 /* seed.json */,
+				AB4B55451A9E70E400B2893A /* seed.json */,
 				AB28B00F1A9D266D00D86AF6 /* testSeed.json */,
 				AB6FF9C21A9CFC7D0044E442 /* Model */,
 				AB3CC8841A9BDDF8005DFDA7 /* Controller */,
@@ -230,6 +232,10 @@
 				AB3CC8661A9BDDB4005DFDA7 /* LoginViewController.m */,
 				79AA94351A9CFA29002C6177 /* VolunteerSignUpTableViewController.h */,
 				79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */,
+				79AA943D1A9DA66A002C6177 /* PostAndFetchService.h */,
+				79AA943E1A9DA66A002C6177 /* PostAndFetchService.m */,
+				79AA94401A9E8DC2002C6177 /* FetchService.h */,
+				79AA94411A9E8DC2002C6177 /* FetchService.m */,
 				79AA94381A9CFFAF002C6177 /* OrganizationSignUpTableViewController.h */,
 				79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */,
 				9C6994301A9E378000A584A1 /* OrgDetailViewController.h */,
@@ -270,26 +276,26 @@
 			isa = PBXGroup;
 			children = (
 				AB6FF9C31A9CFCF20044E442 /* VolunCode.xcdatamodel */,
+				AB4B55741A9E823500B2893A /* Organization.h */,
+				AB4B55751A9E823500B2893A /* Organization.m */,
+				AB4B55711A9E823500B2893A /* Skill.h */,
+				AB4B55721A9E823500B2893A /* Skill.m */,
+				AB4B556E1A9E823500B2893A /* VolunteerProject.h */,
+				AB4B556F1A9E823500B2893A /* VolunteerProject.m */,
+				AB4B556B1A9E823500B2893A /* Login.h */,
+				AB4B556C1A9E823500B2893A /* Login.m */,
+				AB4B55681A9E823500B2893A /* Messenge.h */,
+				AB4B55691A9E823500B2893A /* Messenge.m */,
+				AB4B55651A9E823500B2893A /* Cause.h */,
+				AB4B55661A9E823500B2893A /* Cause.m */,
+				AB4B55621A9E823500B2893A /* Event.h */,
+				AB4B55631A9E823500B2893A /* Event.m */,
+				AB4B555F1A9E823400B2893A /* Volunteer.h */,
+				AB4B55601A9E823400B2893A /* Volunteer.m */,
 				AB6FF9E31A9D039C0044E442 /* CoreDataStack.h */,
 				AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */,
 				AB28B00C1A9D1F6C00D86AF6 /* FetchService.h */,
 				AB28B00D1A9D1F6C00D86AF6 /* FetchService.m */,
-				AB28B0091A9D1C4900D86AF6 /* Login.h */,
-				AB28B00A1A9D1C4900D86AF6 /* Login.m */,
-				AB28B0061A9D1C4900D86AF6 /* Organization.h */,
-				AB28B0071A9D1C4900D86AF6 /* Organization.m */,
-				AB6FF9DA1A9CFD4B0044E442 /* Messenge.h */,
-				AB6FF9DB1A9CFD4B0044E442 /* Messenge.m */,
-				AB6FF9D71A9CFD4B0044E442 /* Skill.h */,
-				AB6FF9D81A9CFD4B0044E442 /* Skill.m */,
-				AB6FF9D11A9CFD4B0044E442 /* Event.h */,
-				AB6FF9D21A9CFD4B0044E442 /* Event.m */,
-				AB6FF9CE1A9CFD4B0044E442 /* Cause.h */,
-				AB6FF9CF1A9CFD4B0044E442 /* Cause.m */,
-				AB6FF9CB1A9CFD4B0044E442 /* Volunteer.h */,
-				AB6FF9CC1A9CFD4B0044E442 /* Volunteer.m */,
-				AB6FF9C51A9CFD4A0044E442 /* VolunteerProject.h */,
-				AB6FF9C61A9CFD4A0044E442 /* VolunteerProject.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -374,9 +380,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB4B55461A9E70E400B2893A /* seed.json in Resources */,
 				AB3CC86F1A9BDDB4005DFDA7 /* LaunchScreen.xib in Resources */,
 				AB3CC86C1A9BDDB4005DFDA7 /* Images.xcassets in Resources */,
-				AB28B0051A9D165F00D86AF6 /* seed.json in Resources */,
 				AB28B0101A9D266D00D86AF6 /* testSeed.json in Resources */,
 				AB3CC8871A9BDF52005DFDA7 /* Main.storyboard in Resources */,
 			);
@@ -397,31 +403,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C6994351A9E505F00A584A1 /* OrgEventsViewController.m in Sources */,
-				AB6FF9C71A9CFD4A0044E442 /* VolunteerProject.m in Sources */,
 				AB6FF9C41A9CFCF20044E442 /* VolunCode.xcdatamodel in Sources */,
-				AB28B0081A9D1C4900D86AF6 /* Organization.m in Sources */,
 				AB3CC88A1A9BE036005DFDA7 /* UserProfileViewController.m in Sources */,
 				79AA943A1A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m in Sources */,
-				9C6994321A9E378000A584A1 /* OrgDetailViewController.m in Sources */,
+				AB4B55731A9E823500B2893A /* Skill.m in Sources */,
+				AB4B55671A9E823500B2893A /* Cause.m in Sources */,
 				AB3CC8611A9BDDB4005DFDA7 /* AppDelegate.m in Sources */,
-				AB6FF9D01A9CFD4B0044E442 /* Cause.m in Sources */,
-				AB6FF9DC1A9CFD4B0044E442 /* Messenge.m in Sources */,
-				AB6FF9D91A9CFD4B0044E442 /* Skill.m in Sources */,
 				AB464D6C1A9C23D00006075B /* SkillsViewController.m in Sources */,
+				AB4B55701A9E823500B2893A /* VolunteerProject.m in Sources */,
 				AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */,
+				AB4B55641A9E823500B2893A /* Event.m in Sources */,
 				79AA94371A9CFA29002C6177 /* VolunteerSignUpTableViewController.m in Sources */,
-				9C3FBC041A9CEDAE006250E3 /* VolunCode.xcdatamodel in Sources */,
-				9C69943E1A9E5F9D00A584A1 /* OrgAddMessage.m in Sources */,
-				9C69943B1A9E5ED600A584A1 /* OrgAddEvent.m in Sources */,
+				AB4B556A1A9E823500B2893A /* Messenge.m in Sources */,
 				AB28B00E1A9D1F6C00D86AF6 /* FetchService.m in Sources */,
 				AB3CC8671A9BDDB4005DFDA7 /* LoginViewController.m in Sources */,
 				9C6994381A9E50AB00A584A1 /* OrgMessagesViewController.m in Sources */,
 				AB3CC88D1A9BE097005DFDA7 /* UserDetailViewController.m in Sources */,
+				AB4B55611A9E823400B2893A /* Volunteer.m in Sources */,
+				AB4B55761A9E823500B2893A /* Organization.m in Sources */,
 				AB6FF9E51A9D039C0044E442 /* CoreDataStack.m in Sources */,
-				AB28B00B1A9D1C4900D86AF6 /* Login.m in Sources */,
+				AB4B556D1A9E823500B2893A /* Login.m in Sources */,
 				AB464D691A9C23B10006075B /* CausesViewController.m in Sources */,
 				9C9525791A9C439100FF9174 /* MMPickerView.m in Sources */,
 				AB464D6F1A9C23E30006075B /* EventsViewController.m in Sources */,
+				79AA943F1A9DA66A002C6177 /* PostAndFetchService.m in Sources */,
 				9C9525761A9C432500FF9174 /* OrganizationProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
