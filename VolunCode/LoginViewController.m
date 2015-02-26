@@ -25,19 +25,19 @@
 - (IBAction)loginButtonPressed:(id)sender {
   
 // ******************* Make loginDictionary *******************
-NSDictionary *loginDictionary = @{@"email" : self.logEmailTextField,
-                                  @"password" : self.logPasswordTextField,
+NSDictionary *loginDictionary = @{@"email" : self.logEmailTextField.text,
+                                  @"password" : self.logPasswordTextField.text,
                                   };
   
-//[PostAndFetchService sharedService] postLoginIDs:loginDictionary completionHandler:^(NSArray *results, NSString *loginError) {
-//   
-//   
+[[PostAndFetchService sharedService] postLoginIDs:loginDictionary completionHandler:^(NSArray *results, NSString *loginError) {
+   
+   
 //   if (Login.role = @"Volunteer") {
 //     destinationVC = VOLUNTEER_PROFILE;
 //   } else {
 //     destinationVC = ORGANIZATION_PROFILE;
 //   }
-// }
+}];
 
   
 // ******* DO a PUSH instead of a segue **********

@@ -7,6 +7,7 @@
 //
 
 #import "VolunteerSignUpTableViewController.h"
+#import "PostAndFetchService.h"
 
 @interface VolunteerSignUpTableViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *vEmailTextField;
@@ -97,16 +98,10 @@
   
   // not sure what to do with the @"avatar" : self.vAvatarImage,
   
-  NSError *error;
-  //  NSData *profileJsonData = [NSJSONSerialization dataWithJSONObject:profileDictionary options:kNilOptions error:&error];
-  NSData *profileJsonData = [NSJSONSerialization dataWithJSONObject:profileDictionary options:NSJSONWritingPrettyPrinted error:&error];
+[[PostAndFetchService sharedService]createVolunteerProfile:profileDictionary completionHandler:^(NSArray *results, NSString *createProfileError) {
   
-  if (!profileJsonData) {
-    //    NSLog(@"profileJsonDataError: ", error.localizedDescription);
-  } else {
-    NSString *JSONProfileString = [[NSString alloc] initWithBytes:[profileJsonData bytes] length:[profileJsonData length] encoding:NSUTF8StringEncoding];
-    //    NSLog(@"profileJsonData: ", profileJsonData);
-  }
+  
+}];
   
 
   
