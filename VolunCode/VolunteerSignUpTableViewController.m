@@ -72,23 +72,16 @@
 - (IBAction)submitVolunteerProfileButtonPressed:(id)sender {
   
   //Make dictionary to hold volunteer's Login inputs
-  NSDictionary *profileLoginDictionary = @{@"email" : self.vEmailTextField,
-                                           @"password" : self.vPasswordTextField,
-                                           @"role" : @"volunteer",
-                                           };
+//  NSDictionary *profileLoginDictionary = @{@"basic": { @"email" : self.vEmailTextField,
+//                                           @"password" : self.vPasswordTextField,
+//                                           @"role" : @"volunteer",
+//                                           };
+
   
-  NSError *errorLogin;
-  //  NSData *profileLoginJsonData = [NSJSONSerialization dataWithJSONObject:profileLoginDictionary options:kNilOptions error:&error];
-  NSData *profileLoginJsonData = [NSJSONSerialization dataWithJSONObject:profileLoginDictionary options:NSJSONWritingPrettyPrinted error:&errorLogin];
-  
-  if (!profileLoginJsonData) {
-    //    NSLog(@"profileJsonDataError: ", error.localizedDescription);
-  } else {
-    NSString *JSONProfileLoginString = [[NSString alloc] initWithBytes:[profileLoginJsonData bytes] length:[profileLoginJsonData length] encoding:NSUTF8StringEncoding];
-    //    NSLog(@"profileJsonData: ", profileJsonData);
-  }
-  
-  NSDictionary *profileDictionary = @{@"firstname" : self.vFirstNameTextField,
+  NSDictionary *profileDictionary = @{@"email" : self.vEmailTextField,
+                                      @"password" : self.vPasswordTextField,
+                                      @"role" : @"volunteer",
+                                      @"firstname" : self.vFirstNameTextField,
                                       @"lastname" : self.vLastNameTextField,
                                       @"city" : self.vCityTextField,
                                       @"bio" : self.vBioTextField,

@@ -517,6 +517,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" title="Submit"/>
                                                     <connections>
+                                                        <action selector="submitVolunteerProfileButtonPressed:" destination="nXx-Sb-wf3" eventType="touchUpInside" id="qpt-H8-q5P"/>
                                                         <segue destination="8LC-v5-6IS" kind="show" id="omm-27-jHk"/>
                                                     </connections>
                                                 </button>
