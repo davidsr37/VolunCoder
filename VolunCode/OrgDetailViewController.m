@@ -10,7 +10,11 @@
 
 @interface OrgDetailViewController ()
 
-
+@property (weak, nonatomic) IBOutlet UILabel *OrgNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *OrgLocationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *OrgOwnerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *OrgMissionLabel;
+@property (weak, nonatomic) IBOutlet UIImage *OrgLogoImage;
 
 
 
@@ -22,6 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+  
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

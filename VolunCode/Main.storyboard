@@ -663,6 +663,11 @@
                             <outlet property="delegate" destination="yLC-H7-FCu" id="sxF-Ne-in2"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="OrgLocationLabel" destination="Cjq-PZ-qE8" id="GwP-kq-3iR"/>
+                        <outlet property="OrgNameLabel" destination="ExN-1d-nXw" id="lUQ-pV-G1t"/>
+                        <outlet property="OrgOwnerLabel" destination="qew-bG-80S" id="277-mU-VjP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYh-LL-4fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1472,6 +1477,8 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="volunteerAvatarImage" destination="c4j-24-Ynt" id="yAd-mK-xWa"/>
+                        <outlet property="volunteerBioLabel" destination="Bgl-PR-Dn3" id="cvK-IC-xMh"/>
                         <outlet property="volunteerLocationLabel" destination="DgR-ew-Tv2" id="13P-FN-X0c"/>
                         <outlet property="volunteerNameLabel" destination="5X1-s0-q6c" id="E7H-My-B7T"/>
                     </connections>

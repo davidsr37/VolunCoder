@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "OrgAddEvent.h"
+#import "PostAndFetchService"
 
 @interface OrgAddEvent ()
 
@@ -65,11 +66,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
-
-
 
 
 /*

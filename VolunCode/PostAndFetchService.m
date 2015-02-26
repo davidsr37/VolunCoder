@@ -24,13 +24,7 @@
   return mySharedService;
 }
 
--(void)postLoginIDs:(NSDictionary *)loginDictionary completionHandler:(void (^)(NSDictionary *, NSString *))completionHandler {
-  
-  // ******************* Change the loginDictionary into a JSON file *******************
-  NSError *errorLogin;
-  //  NSData *loginJsonData = [NSJSONSerialization dataWithJSONObject:loginDictionary options:kNilOptions error:&error];
-  NSData *loginJsonData = [NSJSONSerialization dataWithJSONObject:loginDictionary options:NSJSONWritingPrettyPrinted error:&errorLogin];
-  NSLog(@"loginJsonData = %@", loginJsonData);
+-(void)postLoginIDs:(NSString *)loginString completionHandler:(void (^)(NSDictionary *, NSString *))completionHandler {
   
   // This is our URL to our server
   NSString *urlString = @"http://outcharityiosapp.herokuapp.com/api/v1/sign_in";
@@ -41,17 +35,22 @@
   NSMutableURLRequest *findLoginRoleRequest = [[NSMutableURLRequest alloc] initWithURL:url];
   NSLog(@"request = %@", findLoginRoleRequest);
   // make the post and body definitions
-  [findLoginRoleRequest setHTTPMethod:@"POST"];
-  [findLoginRoleRequest setHTTPBody:loginJsonData];
+  [findLoginRoleRequest setHTTPMethod:@"GET"];
+//  [findLoginRoleRequest setHTTPBody:loginJsonData];
+//     set the post's type of data to send and its length
+//  NSString *lengthString = [NSString stringWithFormat:@"%lu",(unsigned long)loginJsonData.length];
+//    [findLoginRoleRequest setValue:lengthString forHTTPHeaderField:@"Content-Length"];
+//  [findLoginRoleRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
   
-  NSString *lengthString = [NSString stringWithFormat:@"%lu",(unsigned long)loginJsonData.length];
-  
-  [findLoginRoleRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-  [findLoginRoleRequest setValue:lengthString forHTTPHeaderField:@"Content-Length"];
-  
+  // convert the post's username and password into base64
+  NSData *nsDataUserPassword = [loginString dataUsingEncoding:NSUTF8StringEncoding];
+  NSString *base64UserPassword = [nsDataUserPassword base64EncodedStringWithOptions:0];
+  [findLoginRoleRequest setValue:[NSString stringWithFormat:@"Basic %@",base64UserPassword] forHTTPHeaderField:@"Authorization"];
+  NSLog(@"base64UserPassword %@", base64UserPassword);
+
   // start the NSURLSession
   NSURLSession *session = [NSURLSession sharedSession];
-  // start the task and get data and response
+  // start the task to get data and response
   NSURLSessionTask *dataTask = [session dataTaskWithRequest:findLoginRoleRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
     
     if (error) {
@@ -59,21 +58,23 @@
     } else { // what we get if we got no error
       NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
       NSInteger statusCode = httpResponse.statusCode;
-      NSLog(@"%ld", (long)statusCode);
+      NSLog(@"status code = %ld", (long)statusCode);
       switch (statusCode) {
         case 200 ... 299: {
-          NSLog(@"%ld", (long)statusCode);
+          NSLog(@"statuscode = %ld", (long)statusCode);
           
           // if we got the correst code, then start doing the parse data
           NSDictionary *jsonResults = [[NSDictionary alloc] init];
           jsonResults = [NSJSONSerialization JSONObjectWithData:jsonResults options:nil error:nil];
           [[FetchService sharedServices]generateLogin:jsonResults];
+          
 //          NSArray *results = [Login loginFromJson:data];
 //          if (login.type == @"volunteer" {
 //            [[FetchService sharedService]generateVolunteer:jsonResults];
 //          } else {
 //            [[FetchService sharedService]generateOrganization:jsonResults];
 //          }
+          
           dispatch_async(dispatch_get_main_queue(), ^{
 //            if (results) {
 //              completionHandler(results, nil);
@@ -93,10 +94,11 @@
   } // close postLoginIDs call
       
 -(void)createVolunteerProfile:(NSDictionary *)volunteerProfileDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler {
-  // ******************* Change the loginDictionary into a JSON file *******************
+  // ******************* Change the profileDictionary into a JSON file *******************
   NSError *errorVolunteerProfile;
-  //  NSData *volunteerProfileJsonData = [NSJSONSerialization dataWithJSONObject:loginDictionary options:kNilOptions error:&error];
-  NSData *volunteerProfileJsonData = [NSJSONSerialization dataWithJSONObject:volunteerProfileDictionary options:NSJSONWritingPrettyPrinted error:&errorVolunteerProfile];
+    NSData *volunteerProfileJsonData = [NSJSONSerialization dataWithJSONObject:volunteerProfileDictionary options:kNilOptions error:&errorVolunteerProfile];
+  NSLog(@"volunteerProfileDictionary %@", volunteerProfileDictionary);
+//  NSData *volunteerProfileJsonData = [NSJSONSerialization dataWithJSONObject:volunteerProfileDictionary options:NSJSONWritingPrettyPrinted error:&errorVolunteerProfile];
   
   // This is our URL to our server
   NSString *urlString = @"http://outcharityiosapp.herokuapp.com/api/v1/create_user_volunteer/";
@@ -109,6 +111,10 @@
   // make the post and body definitions
   [createVolunteerProfileRequest setHTTPMethod:@"POST"];
   [createVolunteerProfileRequest setHTTPBody:volunteerProfileJsonData];
+//       set the post's type of data to send and its length
+    NSString *lengthString = [NSString stringWithFormat:@"%lu",(unsigned long)volunteerProfileJsonData.length];
+    [createVolunteerProfileRequest setValue:lengthString forHTTPHeaderField:@"Content-Length"];
+    [createVolunteerProfileRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
   
   // start the NSURLSession
   NSURLSession *session = [NSURLSession sharedSession];
@@ -145,10 +151,11 @@
 } // close createVolunteerProfile
               
 -(void)createOrganizationProfile:(NSDictionary *)organizationProfileDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler {
+  NSLog(@"CreateOrgProfileFetch started");
   // ******************* Change the loginDictionary into a JSON file *******************
   NSError *errorOrgProfile;
-  //  NSData *orgProfileJsonData = [NSJSONSerialization dataWithJSONObject:organizationProfileDictionary options:kNilOptions error:&error];
-  NSData *orgProfileJsonData = [NSJSONSerialization dataWithJSONObject:organizationProfileDictionary options:NSJSONWritingPrettyPrinted error:&errorOrgProfile];
+    NSData *orgProfileJsonData = [NSJSONSerialization dataWithJSONObject:organizationProfileDictionary options:kNilOptions error:&errorOrgProfile];
+//  NSData *orgProfileJsonData = [NSJSONSerialization dataWithJSONObject:organizationProfileDictionary options:NSJSONWritingPrettyPrinted error:&errorOrgProfile];
   
   // This is our URL to our server
   NSString *urlString = @"http://outcharityiosapp.herokuapp.com/api/v1/create_user_organizer";
@@ -161,6 +168,10 @@
   // make the post and body definitions
   [createOrgProfileRequest setHTTPMethod:@"POST"];
   [createOrgProfileRequest setHTTPBody:orgProfileJsonData];
+  //       set the post's type of data to send and its length
+  NSString *lengthString = [NSString stringWithFormat:@"%lu",(unsigned long)orgProfileJsonData.length];
+  [createOrgProfileRequest setValue:lengthString forHTTPHeaderField:@"Content-Length"];
+  [createOrgProfileRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
   
   // start the NSURLSession
   NSURLSession *session = [NSURLSession sharedSession];
@@ -171,9 +182,10 @@
     } else { // what we get if we got no error
       NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
       NSInteger statusCode = httpResponse.statusCode;
+      NSLog(@"1st status code %ld", (long)statusCode);
       switch (statusCode) {
         case 200 ... 299: {
-          NSLog(@"%ld", (long)statusCode);
+          NSLog(@"2nd status code = %ld", (long)statusCode);
 //          // if we got the correst code, then start doing the parse data
           NSDictionary *jsonResults = [[NSDictionary alloc] init];
           jsonResults = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
@@ -213,6 +225,9 @@
   // make the post and body definitions
   [createEventRequest setHTTPMethod:@"POST"];
   [createEventRequest setHTTPBody:createEventJsonData];
+  NSString *lengthString = [NSString stringWithFormat:@"%lu",(unsigned long)createEventJsonData.length];
+  [createEventRequest setValue:lengthString forHTTPHeaderField:@"Content-Length"];
+  [createEventRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
   
   // start the NSURLSession
   NSURLSession *session = [NSURLSession sharedSession];
