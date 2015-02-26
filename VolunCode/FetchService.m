@@ -44,9 +44,7 @@
 }
 
 -(Volunteer *)generateVolunteer:(NSDictionary *)volunteerDictionary {
-
-  NSManagedObjectContext *context = [[[FetchService sharedServices]coreDataStack]managedObjectContext];
-  
+  NSManagedObjectContext *context = [[[FetchService sharedServices]coreDataStack]managedObjectContext];  
   Volunteer *volunteer = [NSEntityDescription insertNewObjectForEntityForName:@"Volunteer" inManagedObjectContext:context];
   volunteer.firstName = volunteerDictionary[@"firstName"];
   volunteer.lastName = volunteerDictionary[@"lastName"];
