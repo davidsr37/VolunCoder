@@ -6,9 +6,24 @@
 //  Copyright (c) 2015 Clint Akins. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "OrgAddEvent.h"
 
 @interface OrgAddEvent ()
+
+@property (strong, nonatomic) IBOutlet UITextField *evContactEmail;
+@property (strong, nonatomic) IBOutlet UITextField *evEventTitle;
+@property (strong, nonatomic) IBOutlet UITextField *evAddress;
+@property (strong, nonatomic) IBOutlet UITextView *evDescription;
+@property (strong, nonatomic) IBOutlet UITextField *evJobTitle;
+@property (strong, nonatomic) IBOutlet UISwitch *evSkillWebSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *evSkillMobileSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *evSkillDBSwitch;
+@property (strong, nonatomic) IBOutlet UIDatePicker *evDatePicker;
+@property (strong, nonatomic) IBOutlet UIButton *evSubmitButton;
+
+
+
 
 @end
 
@@ -16,13 +31,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+  /*
+   
+   preload organizer email but allow them to change it
+   
+   
+   
+   
+   */
+  
+  
+  
+  
+  
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
