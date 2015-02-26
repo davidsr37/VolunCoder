@@ -9,12 +9,9 @@
 /* Begin PBXBuildFile section */
 		79AA94371A9CFA29002C6177 /* VolunteerSignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */; };
 		79AA943A1A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */; };
-		9C3FBC041A9CEDAE006250E3 /* VolunCode.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 9C3FBC031A9CEDAE006250E3 /* VolunCode.xcdatamodel */; };
-		9C6994321A9E378000A584A1 /* OrgDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6994311A9E378000A584A1 /* OrgDetailViewController.m */; };
+		79AA943F1A9DA66A002C6177 /* PostAndFetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA943E1A9DA66A002C6177 /* PostAndFetchService.m */; };
 		9C6994351A9E505F00A584A1 /* OrgEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6994341A9E505F00A584A1 /* OrgEventsViewController.m */; };
 		9C6994381A9E50AB00A584A1 /* OrgMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6994371A9E50AB00A584A1 /* OrgMessagesViewController.m */; };
-		9C69943B1A9E5ED600A584A1 /* OrgAddEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69943A1A9E5ED600A584A1 /* OrgAddEvent.m */; };
-		9C69943E1A9E5F9D00A584A1 /* OrgAddMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C69943D1A9E5F9D00A584A1 /* OrgAddMessage.m */; };
 		9C9525761A9C432500FF9174 /* OrganizationProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9525751A9C432500FF9174 /* OrganizationProfileViewController.m */; };
 		9C9525791A9C439100FF9174 /* MMPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9525781A9C439100FF9174 /* MMPickerView.m */; };
 		9C95257B1A9C4E2800FF9174 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257A1A9C4E2800FF9174 /* UIKit.framework */; };
@@ -63,6 +60,10 @@
 		79AA94381A9CFFAF002C6177 /* OrganizationSignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganizationSignUpTableViewController.h; sourceTree = "<group>"; };
 		79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganizationSignUpTableViewController.m; sourceTree = "<group>"; };
 		79AA943B1A9D231C002C6177 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		79AA943D1A9DA66A002C6177 /* PostAndFetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostAndFetchService.h; sourceTree = "<group>"; };
+		79AA943E1A9DA66A002C6177 /* PostAndFetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostAndFetchService.m; sourceTree = "<group>"; };
+		79AA94401A9E8DC2002C6177 /* FetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchService.h; sourceTree = "<group>"; };
+		79AA94411A9E8DC2002C6177 /* FetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchService.m; sourceTree = "<group>"; };
 		9C6994301A9E378000A584A1 /* OrgDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgDetailViewController.h; sourceTree = "<group>"; };
 		9C6994311A9E378000A584A1 /* OrgDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgDetailViewController.m; sourceTree = "<group>"; };
 		9C6994331A9E505F00A584A1 /* OrgEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgEventsViewController.h; sourceTree = "<group>"; };
@@ -231,6 +232,10 @@
 				AB3CC8661A9BDDB4005DFDA7 /* LoginViewController.m */,
 				79AA94351A9CFA29002C6177 /* VolunteerSignUpTableViewController.h */,
 				79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */,
+				79AA943D1A9DA66A002C6177 /* PostAndFetchService.h */,
+				79AA943E1A9DA66A002C6177 /* PostAndFetchService.m */,
+				79AA94401A9E8DC2002C6177 /* FetchService.h */,
+				79AA94411A9E8DC2002C6177 /* FetchService.m */,
 				79AA94381A9CFFAF002C6177 /* OrganizationSignUpTableViewController.h */,
 				79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */,
 				9C6994301A9E378000A584A1 /* OrgDetailViewController.h */,
@@ -398,7 +403,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C6994351A9E505F00A584A1 /* OrgEventsViewController.m in Sources */,
-				AB6FF9C71A9CFD4A0044E442 /* VolunteerProject.m in Sources */,
 				AB6FF9C41A9CFCF20044E442 /* VolunCode.xcdatamodel in Sources */,
 				AB3CC88A1A9BE036005DFDA7 /* UserProfileViewController.m in Sources */,
 				79AA943A1A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m in Sources */,
@@ -422,6 +426,7 @@
 				AB464D691A9C23B10006075B /* CausesViewController.m in Sources */,
 				9C9525791A9C439100FF9174 /* MMPickerView.m in Sources */,
 				AB464D6F1A9C23E30006075B /* EventsViewController.m in Sources */,
+				79AA943F1A9DA66A002C6177 /* PostAndFetchService.m in Sources */,
 				9C9525761A9C432500FF9174 /* OrganizationProfileViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

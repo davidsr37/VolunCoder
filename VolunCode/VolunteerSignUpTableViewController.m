@@ -7,8 +7,9 @@
 //
 
 #import "VolunteerSignUpTableViewController.h"
+#import "PostAndFetchService.h"
 
-@interface VolunteerSignUpTableViewController () <UIImagePickerControllerDelegate, UINavigationBarDelegate>
+@interface VolunteerSignUpTableViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *vEmailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *vPasswordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *vFirstNameTextField;
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *vAvatarImage;
 @property (weak, nonatomic) IBOutlet UITextView *vBioTextField;
 @property (weak, nonatomic) IBOutlet UISwitch *vAgeReqSwitch;
+@property (strong, nonatomic) NSString *avatarString;
 
 @end
 
@@ -54,6 +56,10 @@
   if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
     UIImage *avatarImage = [info objectForKey:UIImagePickerControllerOriginalImage];
     self.vAvatarImage.image = avatarImage;
+    
+    NSData *avatarData = UIImagePNGRepresentation(avatarImage);
+    self.avatarString = [[NSString alloc] initWithData:avatarData encoding:NSUTF8StringEncoding];
+    //[UIImagePNGRepresentation(avatarImage) base64EncodedDataWithOptions:nil];
   }
   NSLog(@"%@", info);
 }
@@ -66,53 +72,31 @@
 - (IBAction)submitVolunteerProfileButtonPressed:(id)sender {
   
   //Make dictionary to hold volunteer's Login inputs
-  NSDictionary *profileLoginDictionary = @{@"email" : self.vEmailTextField,
-                                           @"password" : self.vPasswordTextField,
-                                           @"role" : @"volunteer",
-                                           };
+//  NSDictionary *profileLoginDictionary = @{@"basic": { @"email" : self.vEmailTextField,
+//                                           @"password" : self.vPasswordTextField,
+//                                           @"role" : @"volunteer",
+//                                           };
+
   
-  NSError *errorLogin;
-  //  NSData *profileLoginJsonData = [NSJSONSerialization dataWithJSONObject:profileLoginDictionary options:kNilOptions error:&error];
-  NSData *profileLoginJsonData = [NSJSONSerialization dataWithJSONObject:profileLoginDictionary options:NSJSONWritingPrettyPrinted error:&errorLogin];
-  
-  if (!profileLoginJsonData) {
-    //    NSLog(@"profileJsonDataError: ", error.localizedDescription);
-  } else {
-    NSString *JSONProfileLoginString = [[NSString alloc] initWithBytes:[profileLoginJsonData bytes] length:[profileLoginJsonData length] encoding:NSUTF8StringEncoding];
-    //    NSLog(@"profileJsonData: ", profileJsonData);
-  }
-  
-  NSDictionary *profileDictionary = @{@"firstname" : self.vFirstNameTextField,
+  NSDictionary *profileDictionary = @{@"email" : self.vEmailTextField,
+                                      @"password" : self.vPasswordTextField,
+                                      @"role" : @"volunteer",
+                                      @"firstname" : self.vFirstNameTextField,
                                       @"lastname" : self.vLastNameTextField,
                                       @"city" : self.vCityTextField,
                                       @"bio" : self.vBioTextField,
                                       @"ageReq" : self.vAgeReqSwitch,
+                                      @"avatar" : self.avatarString,
                                       };
   
   // not sure what to do with the @"avatar" : self.vAvatarImage,
   
-  NSError *error;
-  //  NSData *profileJsonData = [NSJSONSerialization dataWithJSONObject:profileDictionary options:kNilOptions error:&error];
-  NSData *profileJsonData = [NSJSONSerialization dataWithJSONObject:profileDictionary options:NSJSONWritingPrettyPrinted error:&error];
+[[PostAndFetchService sharedService]createVolunteerProfile:profileDictionary completionHandler:^(NSArray *results, NSString *createProfileError) {
   
-  if (!profileJsonData) {
-    //    NSLog(@"profileJsonDataError: ", error.localizedDescription);
-  } else {
-    NSString *JSONProfileString = [[NSString alloc] initWithBytes:[profileJsonData bytes] length:[profileJsonData length] encoding:NSUTF8StringEncoding];
-    //    NSLog(@"profileJsonData: ", profileJsonData);
-  }
   
-  NSURL *url = [NSURL URLWithString:@"http://jsfiddle.net/chengzh2008/y7tcLL13/12/#"];
+}];
   
-  NSMutableURLRequest *createVolunteerProfileRequest = [[NSMutableURLRequest alloc] initWithURL:url];
-  
-  [createVolunteerProfileRequest setHTTPMethod:@"POST"];
-  [createVolunteerProfileRequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-  [createVolunteerProfileRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-  [createVolunteerProfileRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[profileJsonData length]] forHTTPHeaderField:@"Content-Length"];
-  [createVolunteerProfileRequest setHTTPBody:profileJsonData];
-  
-  NSURLConnection *connection = [NSURLConnection connectionWithRequest:createVolunteerProfileRequest delegate:self];
+
   
   
 } // close submitVolunteerProfileButtonPressed
@@ -190,5 +174,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end

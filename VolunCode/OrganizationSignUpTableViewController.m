@@ -170,7 +170,7 @@
   //Make dictionary to hold volunteer's Login inputs
   NSDictionary *profileLoginDictionary = @{@"email" : self.oEmailTextField,
                                            @"password" : self.oPasswordTextField,
-                                           @"roll" : @"organization",
+                                           @"role" : @"organization",
                                            };
   
   NSError *errorLogin;
