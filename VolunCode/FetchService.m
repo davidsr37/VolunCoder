@@ -55,10 +55,12 @@
   volunteer.lastName = volunteerDictionary[@"lastName"];
   volunteer.location = volunteerDictionary[@"location"];
   volunteer.ageReq = volunteerDictionary[@"ageReq"];
+  volunteer.bio = volunteerDictionary[@"bio"];
   NSLog(@"%@", volunteer.firstName);
   NSLog(@"%@", volunteer.lastName);
   NSLog(@"%@", volunteer.location);
   NSLog(@"%@", volunteer.ageReq);
+  NSLog(@"%@", volunteer.bio);
   
   NSError *saveError;
   [context save:&saveError];
