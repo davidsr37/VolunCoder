@@ -24,9 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-
-    
+  
 //    self.volunteerNameLabel.text = volunteer.firstName;
 //    self.volunteerLocationLabel.text = volunteer.location;
   

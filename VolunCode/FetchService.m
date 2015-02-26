@@ -87,4 +87,23 @@
   return organization;
 }
 
+-(Event *)generateEvent:(NSDictionary *)eventDictionary {
+  NSManagedObjectContext *context = [[[FetchService sharedServices]coreDataStack]managedObjectContext];
+  Event *event = [NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:context];
+  event.date = eventDictionary[@"event"];
+  event.eventDescription = eventDictionary[@"eventDescription"];
+  event.location = eventDictionary[@"location"];
+  event.time = eventDictionary[@"time"];
+  event.title = eventDictionary[@"title"];
+  event.volunteersNeeded = eventDictionary[@"volunteerNeeded"];
+  event.organization = eventDictionary[@"organization"];
+  
+  NSError *saveError;
+  [context save:&saveError];
+  if (saveError) {
+    NSLog(@"%@", saveError);
+  }
+  return event;
+}
+
 @end

@@ -51,7 +51,7 @@
   NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"VolunCode.sqlite"];
   NSError *error = nil;
   NSString *failureReason = @"There was an error creating or loading the application's saved data.";
-//  NSDictionary *options =
+
   [NSDictionary dictionaryWithObjectsAndKeys:
    [NSNumber numberWithBool:YES],
    NSMigratePersistentStoresAutomaticallyOption,
