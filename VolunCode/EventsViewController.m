@@ -19,6 +19,21 @@
     // Do any additional setup after loading the view.
 }
 
+
+- (void)viewWillAppear:(BOOL)animated {
+  
+  /*
+   
+   TODO:
+   
+   FETCH ALL EVENTS
+   
+   RELOAD TABLEVIEW
+   
+   */
+  
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

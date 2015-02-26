@@ -23,11 +23,17 @@
 @property (strong, nonatomic) IBOutlet UIButton *evSubmitButton;
 
 
-
-
 @end
 
+
 @implementation OrgAddEvent
+
+- (IBAction)evSubmitPressed:(id)sender {
+  
+  //JSON POST event sending details of event that was created to the API database
+  
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -59,6 +65,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+
+
+
 /*
 #pragma mark - Table view data source
 
