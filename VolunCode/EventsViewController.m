@@ -11,7 +11,10 @@
 
 
 @interface EventsViewController ()
+
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic) Event *events;
 
 @end
 
@@ -46,6 +49,8 @@
 }
 
 
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //warning Incomplete method implementation.
   // Return the number of rows in the section.
@@ -55,7 +60,10 @@
 
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EVENT_CELL" forIndexPath:indexPath];
+ 
+   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EVENT_CELL" forIndexPath:indexPath];
+   
+   Event *event = _events;
  
  // Configure the cell... SEE EVENTCELL.M
  
