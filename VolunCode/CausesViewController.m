@@ -10,6 +10,23 @@
 
 @interface CausesViewController ()
 
+@property (strong, nonatomic) IBOutlet UISwitch *cAnimalsSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *cEnvironmentSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *cSportsSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *cEducationSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *cPoverty;
+@property (strong, nonatomic) IBOutlet UISwitch *cReligionSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *cChildrenSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *cDomesticViolenceSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *cHealthSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *cElderlySwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *cCultureSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *cArtsSwitch;
+
+
+
+
+
 @end
 
 @implementation CausesViewController

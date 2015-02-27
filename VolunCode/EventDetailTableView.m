@@ -1,82 +1,39 @@
 //
-//  OrgAddEvent.m
+//  EventDetailTableView.m
 //  VolunCode
 //
-//  Created by David Rogers on 2/25/15.
+//  Created by David Rogers on 2/26/15.
 //  Copyright (c) 2015 Clint Akins. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "OrgAddEvent.h"
-#import "PostAndFetchService"
+#import "EventDetailTableView.h"
 
-@interface OrgAddEvent ()
+@interface EventDetailTableView ()
+@property (strong, nonatomic) IBOutlet UILabel *eOrgNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eEventNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eJobNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eSkillsNeededLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eAddressLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eEmailLabel;
+@property (strong, nonatomic) IBOutlet UITextView *eDescriptionLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eDateLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eCauseLabel;
+@property (strong, nonatomic) IBOutlet UITextView *eMessages;
 
-@property (strong, nonatomic) IBOutlet UITextField *evContactEmail;
-@property (strong, nonatomic) IBOutlet UITextField *evEventTitle;
-@property (strong, nonatomic) IBOutlet UITextField *evAddress;
-@property (strong, nonatomic) IBOutlet UITextView *evDescription;
-@property (strong, nonatomic) IBOutlet UITextField *evJobTitle;
-@property (strong, nonatomic) IBOutlet UISwitch *evSkillWebSwitch;
-@property (strong, nonatomic) IBOutlet UISwitch *evSkillMobileSwitch;
-@property (strong, nonatomic) IBOutlet UISwitch *evSkillDBSwitch;
-@property (strong, nonatomic) IBOutlet UIDatePicker *evDatePicker;
-@property (strong, nonatomic) IBOutlet UIButton *evSubmitButton;
+
+
+
+
+
 
 
 @end
 
-
-@implementation OrgAddEvent
-
-- (IBAction)evSubmitPressed:(id)sender {
-  
-  NSString *token = @"4Lphc97wg1jGMi0BBKDZY0F9xn5wI+fU1O+cAiokCTUn68j/Pv+XDi9s/ZW+t47njJV3vTVdBJJAVeQ=";
-  
-  
-  NSDictionary *eventDictionary = @{
-                                    @"organizerID" : @"def@def.com",
-                                    @"title" : @"Title of my awesome event",
-                                    @"date" : @"",
-                                    @"time" : @"",
-                                    @"location" : @"Our Charity Space, Seattle, Wa 98121",
-                                    @"description" : @"Our cool event!",
-                                    @"volunteerJobs" : @{
-                                        @"title" : @"Make website",
-                                        @"skills" : @"Website"
-                                        },
-                                    @"messages" : @{
-                                        @"username" : @"Anne",
-                                        @"body" : @"La la la la la "
-                                        }
-                                    };
-  
-[[PostAndFetchService sharedService]createEvent:eventDictionary withToken:token completionHandler:^(NSDictionary *results, NSString *createEventError) {
-  
-  }];
-  
-  
-  
-  //JSON POST event sending details of event that was created to the API database
-  
-}
-
+@implementation EventDetailTableView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  /*
-   
-   preload organizer email but allow them to change it
-   
-   
-   
-   
-   */
-  
-  
-  
-  
-  
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -84,16 +41,10 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-
-
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 /*
 #pragma mark - Table view data source
 

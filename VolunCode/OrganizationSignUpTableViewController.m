@@ -7,6 +7,7 @@
 //
 
 #import "OrganizationSignUpTableViewController.h"
+#import "PostAndFetchService.h"
 
 @interface OrganizationSignUpTableViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *oEmailTextField;
@@ -46,8 +47,8 @@
 @property (nonatomic, strong) NSString * selectedCause;
 @property (nonatomic, strong) NSString * selectedLocale;
 
-//@property (nonatomic, retain) NSMutableArray *mutableArray; //put in .h
-//- (void)insertObject:atIndex;
+@property (nonatomic, retain) NSMutableArray *mutableArray; //put in .h
+
 
 @end
 
@@ -60,17 +61,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-  //_stringsArray = [[NSArray alloc]initWithArray:[NSArray arrayWithObjects:@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts", nil]];
-  _stringsArrayForCause = @[@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts"];
-  
-  _stringsArrayForLocale = @[@"Seattle Area", @"Remote"];
-  
-  _selectedObjectForCause = [_objectsArrayForCause objectAtIndex:0];
-  _selectedCause = [_stringsArrayForCause objectAtIndex:0];
-  
-  _selectedObjectForLocale = [_objectsArrayForLocale objectAtIndex:0];
-  _selectedLocale = [_stringsArrayForLocale objectAtIndex:0];
-  
+//  _stringsArray = [[NSArray alloc]initWithArray:[NSArray arrayWithObjects:@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts", nil]];
+//  _stringsArrayForCause = @[@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts"];
+//  
+//  _stringsArrayForLocale = @[@"Seattle Area", @"Remote"];
+//  
+//  _selectedObjectForCause = [_objectsArrayForCause objectAtIndex:0];
+//  _selectedCause = [_stringsArrayForCause objectAtIndex:0];
+//  
+//  _selectedObjectForLocale = [_objectsArrayForLocale objectAtIndex:0];
+//  _selectedLocale = [_stringsArrayForLocale objectAtIndex:0];
+//  
 //  if (_selectedObject == nil) {
 //    _selectedObject = [_objectsArray objectAtIndex:0];
 //    
@@ -168,44 +169,57 @@
 - (IBAction)submitOrganizationProfileButtonPressed:(id)sender {
   
   //Make dictionary to hold volunteer's Login inputs
-  NSDictionary *profileLoginDictionary = @{@"email" : self.oEmailTextField,
-                                           @"password" : self.oPasswordTextField,
-                                           @"role" : @"organization",
-                                           };
-  
-  NSError *errorLogin;
-  //  NSData *profileLoginJsonData = [NSJSONSerialization dataWithJSONObject:profileLoginDictionary options:kNilOptions error:&error];
-  NSData *profileLoginJsonData = [NSJSONSerialization dataWithJSONObject:profileLoginDictionary options:NSJSONWritingPrettyPrinted error:&errorLogin];
-  
-  if (!profileLoginJsonData) {
-    //    NSLog(@"profileJsonDataError: ", error.localizedDescription);
-  } else {
-    NSString *JSONProfileLoginString = [[NSString alloc] initWithBytes:[profileLoginJsonData bytes] length:[profileLoginJsonData length] encoding:NSUTF8StringEncoding];
-    //    NSLog(@"profileJsonData: ", profileJsonData);
-  }
-  
-  NSDictionary *profileDictionary = @{@"firstame" : self.oFirstNameTextField,
-                                      @"lastname" : self.oLastNameTextField,
-                                      @"city" : self.oCityTextField,
-                                      @"organizationname" : self.oOrganizationNameTextField,
-                                      @"mission" : self.oMissionTextField,
-                                      @"address" : self.oAddressTextField,
-                                      @"phone" : self.oPhoneTextField,
-                                      @"website" : self.oWebsiteTextField,
+//  NSDictionary *profileDictionary = @{
+//                                      @"credential" : @{
+//                                          @"Basic" : @{
+//                                              @"email" : self.oEmailTextField.text,
+//                                              @"password" : self.oPasswordTextField.text,
+//                                              },
+//                                          @"role" : @"organization",
+//                                          },
+//                                          @"profileinfo" : @{
+//                                          @"email" : self.oEmailTextField.text,
+//                                          @"orgName" : self.oOrganizationNameTextField.text,
+//                                          @"firstname" : self.oFirstNameTextField.text,
+//                                          @"lastname" : self.oLastNameTextField.text,
+//                                          @"type" : @"animals",
+//                                          @"mission" : self.oMissionTextField.text,
+//                                          @"address" : self.oAddressTextField.text,
+//                                          @"city" : @"Seattle",
+//                                          @"phone" : self.oPhoneTextField.text,
+//                                          @"website" : self.oWebsiteTextField.text,
+//                                          @"logo" : @"logo string",
+//                                          }
+//                                      };
+//  
+  NSDictionary *profileDictionary = @{
+                                      @"credential" : @{
+                                          @"basic" : @{
+                                              @"email" : @"orgtest.com",
+                                              @"password" : @"orgpass",
+                                              },
+                                          @"role" : @"organizer",
+                                          },
+                                      @"profileInfo" : @{
+                                          @"email" : @"orgtest.com",
+                                          @"orgName" : @"Anne's Charity",
+                                          @"firstname" : @"Anne",
+                                          @"lastname" : @"Lasttest",
+                                          @"type" : @"animals",
+                                          @"mission" : @"This is our mission!",
+                                          @"address" : @"555 Seattle Rd, Seattle, WA 98121",
+                                          @"city" : @"Seattle",
+                                          @"phone" : @"555-555-5555",
+                                          @"website" : @"www.testorg.org",
+                                          @"logo" : @"logo string",
+                                          }
                                       };
   
-  // Not sure what to do with the Logo @"logo" : self.oLogoImage,
+  [[PostAndFetchService sharedService]createOrganizationProfile:profileDictionary completionHandler:^(NSDictionary *results, NSString *createOrgProfileError) {
+    NSLog(@"createOrganizationProfile request started!");
+  }];
   
-  NSError *error;
-  //  NSData *profileJsonData = [NSJSONSerialization dataWithJSONObject:profileDictionary options:kNilOptions error:&error];
-  NSData *profileJsonData = [NSJSONSerialization dataWithJSONObject:profileDictionary options:NSJSONWritingPrettyPrinted error:&error];
-  
-  if (!profileJsonData) {
-    //    NSLog(@"profileJsonDataError: ", error.localizedDescription);
-  } else {
-    NSString *JSONProfileString = [[NSString alloc] initWithBytes:[profileJsonData bytes] length:[profileJsonData length] encoding:NSUTF8StringEncoding];
-    //    NSLog(@"profileJsonData: ", profileJsonData);
-  }
+
 } // close the submitOrganizationProfileButtonPressed
 
 - (void)didReceiveMemoryWarning {

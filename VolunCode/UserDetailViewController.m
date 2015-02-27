@@ -14,6 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *volunteerNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *volunteerLocationLabel;
+@property (weak, nonatomic) IBOutlet UITextView *volunteerBioLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *volunteerAvatarImage;
 //@property (strong, nonatomic) NSArray *volunteers;
 
 @end
@@ -25,7 +27,7 @@
     // Do any additional setup after loading the view.
   
   
-// Below code used to test parsing of Volunteer, use FetchService generateVolunteer method instead
+// Below code used to test parsing of Volunteer, use FetchService fetchForVolunteer method instead
 
   NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Volunteer"];
   NSError *fetchError;

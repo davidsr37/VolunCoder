@@ -22,11 +22,10 @@
 
 -(Volunteer *) saveFetch;
 
--(Volunteer *)generateVolunteer:(NSDictionary *)volunteerDictionary;
--(Organization *)generateOrganization:(NSDictionary *)orgDictionary;
+-(Volunteer *)parseForVolunteer:(NSDictionary *)volunteerDictionary;
+-(Organization *)parseForOrganization:(NSDictionary *)orgDictionary;
+-(Event *)parseForEvent:(NSDictionary *)eventDictionary;
 -(Login *)generateLogin:(NSDictionary *)loginDictionary;
--(Event *)event:(NSDictionary *)eventDictionary ;
-
 
 
 

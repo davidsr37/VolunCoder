@@ -10,6 +10,8 @@
 		79AA94371A9CFA29002C6177 /* VolunteerSignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */; };
 		79AA943A1A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */; };
 		79AA943F1A9DA66A002C6177 /* PostAndFetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AA943E1A9DA66A002C6177 /* PostAndFetchService.m */; };
+		9C305BAA1A9FE2E400CE28C6 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C305BA81A9FE2E400CE28C6 /* EventCell.m */; };
+		9C305BAE1A9FEE5300CE28C6 /* EventDetailTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C305BAD1A9FEE5300CE28C6 /* EventDetailTableView.m */; };
 		9C6994351A9E505F00A584A1 /* OrgEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6994341A9E505F00A584A1 /* OrgEventsViewController.m */; };
 		9C6994381A9E50AB00A584A1 /* OrgMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6994371A9E50AB00A584A1 /* OrgMessagesViewController.m */; };
 		9C9525761A9C432500FF9174 /* OrganizationProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9525751A9C432500FF9174 /* OrganizationProfileViewController.m */; };
@@ -17,7 +19,6 @@
 		9C95257B1A9C4E2800FF9174 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257A1A9C4E2800FF9174 /* UIKit.framework */; };
 		9C95257D1A9C4E3200FF9174 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257C1A9C4E3200FF9174 /* Foundation.framework */; };
 		9C95257F1A9C4E3C00FF9174 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257E1A9C4E3C00FF9174 /* CoreGraphics.framework */; };
-		AB28B00E1A9D1F6C00D86AF6 /* FetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = AB28B00D1A9D1F6C00D86AF6 /* FetchService.m */; };
 		AB293C361A9FF03600B42909 /* Volunteer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB293C351A9FF03600B42909 /* Volunteer.m */; };
 		AB293C381A9FFC2A00B42909 /* orgtest.json in Resources */ = {isa = PBXBuildFile; fileRef = AB293C371A9FFC2A00B42909 /* orgtest.json */; };
 		AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CC85D1A9BDDB4005DFDA7 /* main.m */; };
@@ -64,6 +65,11 @@
 		79AA943E1A9DA66A002C6177 /* PostAndFetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostAndFetchService.m; sourceTree = "<group>"; };
 		79AA94401A9E8DC2002C6177 /* FetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchService.h; sourceTree = "<group>"; };
 		79AA94411A9E8DC2002C6177 /* FetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchService.m; sourceTree = "<group>"; };
+		9C305BA71A9FE2E400CE28C6 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventCell.h; path = ../EventCell.h; sourceTree = "<group>"; };
+		9C305BA81A9FE2E400CE28C6 /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventCell.m; path = ../EventCell.m; sourceTree = "<group>"; };
+		9C305BA91A9FE2E400CE28C6 /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventCell.xib; path = ../EventCell.xib; sourceTree = "<group>"; };
+		9C305BAC1A9FEE5300CE28C6 /* EventDetailTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailTableView.h; sourceTree = "<group>"; };
+		9C305BAD1A9FEE5300CE28C6 /* EventDetailTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailTableView.m; sourceTree = "<group>"; };
 		9C6994301A9E378000A584A1 /* OrgDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgDetailViewController.h; sourceTree = "<group>"; };
 		9C6994311A9E378000A584A1 /* OrgDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgDetailViewController.m; sourceTree = "<group>"; };
 		9C6994331A9E505F00A584A1 /* OrgEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrgEventsViewController.h; sourceTree = "<group>"; };
@@ -81,8 +87,6 @@
 		9C95257A1A9C4E2800FF9174 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9C95257C1A9C4E3200FF9174 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C95257E1A9C4E3C00FF9174 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AB28B00C1A9D1F6C00D86AF6 /* FetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchService.h; sourceTree = "<group>"; };
-		AB28B00D1A9D1F6C00D86AF6 /* FetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchService.m; sourceTree = "<group>"; };
 		AB293C341A9FF03600B42909 /* Volunteer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Volunteer.h; sourceTree = "<group>"; };
 		AB293C351A9FF03600B42909 /* Volunteer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Volunteer.m; sourceTree = "<group>"; };
 		AB293C371A9FFC2A00B42909 /* orgtest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = orgtest.json; sourceTree = "<group>"; };
@@ -228,34 +232,36 @@
 		AB3CC8841A9BDDF8005DFDA7 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AB3CC8651A9BDDB4005DFDA7 /* LoginViewController.h */,
-				AB3CC8661A9BDDB4005DFDA7 /* LoginViewController.m */,
-				79AA94351A9CFA29002C6177 /* VolunteerSignUpTableViewController.h */,
-				79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */,
 				79AA943D1A9DA66A002C6177 /* PostAndFetchService.h */,
 				79AA943E1A9DA66A002C6177 /* PostAndFetchService.m */,
 				79AA94401A9E8DC2002C6177 /* FetchService.h */,
 				79AA94411A9E8DC2002C6177 /* FetchService.m */,
-				79AA94381A9CFFAF002C6177 /* OrganizationSignUpTableViewController.h */,
-				79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */,
-				9C6994301A9E378000A584A1 /* OrgDetailViewController.h */,
-				9C6994311A9E378000A584A1 /* OrgDetailViewController.m */,
+				AB3CC8651A9BDDB4005DFDA7 /* LoginViewController.h */,
+				AB3CC8661A9BDDB4005DFDA7 /* LoginViewController.m */,
+				79AA94351A9CFA29002C6177 /* VolunteerSignUpTableViewController.h */,
+				79AA94361A9CFA29002C6177 /* VolunteerSignUpTableViewController.m */,
 				AB3CC88B1A9BE097005DFDA7 /* UserDetailViewController.h */,
 				AB3CC88C1A9BE097005DFDA7 /* UserDetailViewController.m */,
-				9C6994331A9E505F00A584A1 /* OrgEventsViewController.h */,
-				9C6994341A9E505F00A584A1 /* OrgEventsViewController.m */,
-				9C6994361A9E50AB00A584A1 /* OrgMessagesViewController.h */,
-				9C6994371A9E50AB00A584A1 /* OrgMessagesViewController.m */,
 				AB464D671A9C23B10006075B /* CausesViewController.h */,
 				AB464D681A9C23B10006075B /* CausesViewController.m */,
 				AB464D6A1A9C23D00006075B /* SkillsViewController.h */,
 				AB464D6B1A9C23D00006075B /* SkillsViewController.m */,
 				AB464D6D1A9C23E30006075B /* EventsViewController.h */,
 				AB464D6E1A9C23E30006075B /* EventsViewController.m */,
+				79AA94381A9CFFAF002C6177 /* OrganizationSignUpTableViewController.h */,
+				79AA94391A9CFFAF002C6177 /* OrganizationSignUpTableViewController.m */,
+				9C6994301A9E378000A584A1 /* OrgDetailViewController.h */,
+				9C6994311A9E378000A584A1 /* OrgDetailViewController.m */,
 				9C6994391A9E5ED600A584A1 /* OrgAddEvent.h */,
 				9C69943A1A9E5ED600A584A1 /* OrgAddEvent.m */,
 				9C69943C1A9E5F9D00A584A1 /* OrgAddMessage.h */,
 				9C69943D1A9E5F9D00A584A1 /* OrgAddMessage.m */,
+				9C6994331A9E505F00A584A1 /* OrgEventsViewController.h */,
+				9C6994341A9E505F00A584A1 /* OrgEventsViewController.m */,
+				9C6994361A9E50AB00A584A1 /* OrgMessagesViewController.h */,
+				9C6994371A9E50AB00A584A1 /* OrgMessagesViewController.m */,
+				9C305BAC1A9FEE5300CE28C6 /* EventDetailTableView.h */,
+				9C305BAD1A9FEE5300CE28C6 /* EventDetailTableView.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -263,6 +269,9 @@
 		AB3CC8851A9BDE0C005DFDA7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9C305BA71A9FE2E400CE28C6 /* EventCell.h */,
+				9C305BA81A9FE2E400CE28C6 /* EventCell.m */,
+				9C305BA91A9FE2E400CE28C6 /* EventCell.xib */,
 				AB3CC8861A9BDF52005DFDA7 /* Main.storyboard */,
 				AB3CC86B1A9BDDB4005DFDA7 /* Images.xcassets */,
 				AB3CC86D1A9BDDB4005DFDA7 /* LaunchScreen.xib */,
@@ -294,8 +303,6 @@
 				AB4B55631A9E823500B2893A /* Event.m */,
 				AB6FF9E31A9D039C0044E442 /* CoreDataStack.h */,
 				AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */,
-				AB28B00C1A9D1F6C00D86AF6 /* FetchService.h */,
-				AB28B00D1A9D1F6C00D86AF6 /* FetchService.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -409,6 +416,7 @@
 				AB4B55731A9E823500B2893A /* Skill.m in Sources */,
 				AB4B55671A9E823500B2893A /* Cause.m in Sources */,
 				AB3CC8611A9BDDB4005DFDA7 /* AppDelegate.m in Sources */,
+				9C305BAA1A9FE2E400CE28C6 /* EventCell.m in Sources */,
 				AB464D6C1A9C23D00006075B /* SkillsViewController.m in Sources */,
 				AB4B55701A9E823500B2893A /* VolunteerProject.m in Sources */,
 				AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */,
@@ -416,7 +424,6 @@
 				79AA94371A9CFA29002C6177 /* VolunteerSignUpTableViewController.m in Sources */,
 				AB293C361A9FF03600B42909 /* Volunteer.m in Sources */,
 				AB4B556A1A9E823500B2893A /* Messenge.m in Sources */,
-				AB28B00E1A9D1F6C00D86AF6 /* FetchService.m in Sources */,
 				AB3CC8671A9BDDB4005DFDA7 /* LoginViewController.m in Sources */,
 				9C6994381A9E50AB00A584A1 /* OrgMessagesViewController.m in Sources */,
 				AB3CC88D1A9BE097005DFDA7 /* UserDetailViewController.m in Sources */,
@@ -426,6 +433,7 @@
 				AB464D691A9C23B10006075B /* CausesViewController.m in Sources */,
 				9C9525791A9C439100FF9174 /* MMPickerView.m in Sources */,
 				AB464D6F1A9C23E30006075B /* EventsViewController.m in Sources */,
+				9C305BAE1A9FEE5300CE28C6 /* EventDetailTableView.m in Sources */,
 				79AA943F1A9DA66A002C6177 /* PostAndFetchService.m in Sources */,
 				9C9525761A9C432500FF9174 /* OrganizationProfileViewController.m in Sources */,
 			);

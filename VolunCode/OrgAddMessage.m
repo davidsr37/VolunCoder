@@ -10,6 +10,12 @@
 
 @interface OrgAddMessage ()
 
+@property (strong, nonatomic) IBOutlet UITextField *mTitleOfMessage;
+
+@property (strong, nonatomic) IBOutlet UITextView *mTextOfMessage;
+@property (strong, nonatomic) IBOutlet UIButton *mSubmitButton;
+
+
 @end
 
 @implementation OrgAddMessage
@@ -23,6 +29,23 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+-(void)viewWillAppear {
+  [super viewWillAppear];
+  
+  
+  
+  
+  
+}
+
+- (IBAction)evSubmitPressed:(id)sender {
+  
+  //JSON POST event sending details of Message that was created to the API database, (time is added - iOS or JS side?)
+  
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
