@@ -8,6 +8,7 @@
 
 #import "EventsViewController.h"
 #import "EventCell.h"
+#import "PostAndFetchService.h"
 
 
 @interface EventsViewController ()
@@ -29,6 +30,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   
+  
+  NSString *token = @"4Lphc97wg13BNy0EA6XZY0F9xn5wI+fU1O+cAiokCTUn68j/Pv+XDi9s/ZW+to7ljZVxtjVTC5xAVeQ=";
+  
+[[PostAndFetchService sharedService]fetchEvents:token completionHandler:^(NSDictionary *results, NSString *fetchEventsError) {
+    
+  }];
   
 
   /*
