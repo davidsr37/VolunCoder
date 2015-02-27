@@ -91,6 +91,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [textField resignFirstResponder];
+  return NO;
+}
+
 /*
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
@@ -113,10 +118,7 @@
   [[self view] endEditing:YES];
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-  [textField resignFirstResponder];
-  return YES;
-}
+
 
 - (IBAction)showPickerViewButtonPressedForLocale:(id)sender {
   
