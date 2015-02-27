@@ -13,8 +13,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *OrgNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *OrgLocationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *OrgOwnerLabel;
-@property (weak, nonatomic) IBOutlet UILabel *OrgMissionLabel;
-@property (weak, nonatomic) IBOutlet UIImage *OrgLogoImage;
+@property (weak, nonatomic) IBOutlet UITextView *orgMission;
+
+@property (weak, nonatomic) IBOutlet UIImageView *OrgLogoImage;
 
 
 

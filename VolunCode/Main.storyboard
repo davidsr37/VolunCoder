@@ -665,8 +665,10 @@
                     </tableView>
                     <connections>
                         <outlet property="OrgLocationLabel" destination="Cjq-PZ-qE8" id="GwP-kq-3iR"/>
+                        <outlet property="OrgLogoImage" destination="dvW-hH-UJc" id="c6m-0W-zuD"/>
                         <outlet property="OrgNameLabel" destination="ExN-1d-nXw" id="lUQ-pV-G1t"/>
                         <outlet property="OrgOwnerLabel" destination="qew-bG-80S" id="277-mU-VjP"/>
+                        <outlet property="orgMission" destination="58s-j9-nN7" id="40C-lq-rJ1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYh-LL-4fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
