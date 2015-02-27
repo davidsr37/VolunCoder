@@ -67,7 +67,7 @@
 }];
 
   
-// ******* DO a PUSH instead of a segue **********
+// ******* DO a PUSH instead of a segue ********** (can do push and segue together?)
   
 } // close loginButtonPressed
 

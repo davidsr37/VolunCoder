@@ -10,11 +10,6 @@
 
 @interface SkillsViewController ()
 
-@property (strong, nonatomic) IBOutlet UISwitch *skWebSwitch;
-@property (strong, nonatomic) IBOutlet UISwitch *skMobileSwitch;
-@property (strong, nonatomic) IBOutlet UISwitch *skDataBaseSwitch;
-
-
 @end
 
 @implementation SkillsViewController
