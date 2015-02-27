@@ -9,7 +9,9 @@
 #import "EventsViewController.h"
 #import "EventCell.h"
 
+
 @interface EventsViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 

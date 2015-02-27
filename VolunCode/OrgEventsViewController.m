@@ -12,6 +12,9 @@
 
 @interface OrgEventsViewController ()
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+
 @property (strong, nonatomic) OrgAddEvent *orgAddEvent;
 
 //-(IBAction)addEvent:(id)addEvent;
