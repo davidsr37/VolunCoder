@@ -18,7 +18,7 @@
 
 -(void)createOrganizationProfile:(NSDictionary *)organizationProfileDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler;
 
--(void)createEvent:(NSDictionary *)createEventDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler;
+-(void)createEvent:(NSDictionary *)createEventDictionary withToken:(NSString *)token completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler;
 
 -(void)fetchEvents:(NSDictionary *)tokenDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler;
 

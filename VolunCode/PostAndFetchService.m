@@ -208,7 +208,7 @@
  [dataTask resume];
 } // close createOrganizationProfile
 
--(void)createEvent:(NSDictionary *)createEventDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler {
+-(void)createEvent:(NSDictionary *)createEventDictionary withToken:(NSString *)token completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler {
   // ******************* Change the loginDictionary into a JSON file *******************
   NSError *errorCreateEvent;
   //  NSData *createEventJsonData = [NSJSONSerialization dataWithJSONObject:createEventDictionary options:kNilOptions error:&error];
@@ -228,6 +228,7 @@
   NSString *lengthString = [NSString stringWithFormat:@"%lu",(unsigned long)createEventJsonData.length];
   [createEventRequest setValue:lengthString forHTTPHeaderField:@"Content-Length"];
   [createEventRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+  [createEventRequest setValue:token forHTTPHeaderField:@"token"];
   
   // start the NSURLSession
   NSURLSession *session = [NSURLSession sharedSession];
