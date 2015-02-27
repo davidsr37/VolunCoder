@@ -6,17 +6,51 @@
 //  Copyright (c) 2015 Clint Akins. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "OrgAddEvent.h"
+#import "PostAndFetchService"
 
 @interface OrgAddEvent ()
 
+@property (strong, nonatomic) IBOutlet UITextField *evContactEmail;
+@property (strong, nonatomic) IBOutlet UITextField *evEventTitle;
+@property (strong, nonatomic) IBOutlet UITextField *evAddress;
+@property (strong, nonatomic) IBOutlet UITextView *evDescription;
+@property (strong, nonatomic) IBOutlet UITextField *evJobTitle;
+@property (strong, nonatomic) IBOutlet UISwitch *evSkillWebSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *evSkillMobileSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *evSkillDBSwitch;
+@property (strong, nonatomic) IBOutlet UIDatePicker *evDatePicker;
+@property (strong, nonatomic) IBOutlet UIButton *evSubmitButton;
+
+
 @end
+
 
 @implementation OrgAddEvent
 
+- (IBAction)evSubmitPressed:(id)sender {
+  
+  //JSON POST event sending details of event that was created to the API database
+  
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+  /*
+   
+   preload organizer email but allow them to change it
+   
+   
+   
+   
+   */
+  
+  
+  
+  
+  
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -24,10 +58,16 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 /*
 #pragma mark - Table view data source
 
