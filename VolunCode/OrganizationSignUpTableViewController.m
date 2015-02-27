@@ -61,16 +61,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-//  _stringsArray = [[NSArray alloc]initWithArray:[NSArray arrayWithObjects:@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts", nil]];
-//  _stringsArrayForCause = @[@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts"];
+ // _stringsArray = [[NSArray alloc]initWithArray:[NSArray arrayWithObjects:@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts", nil]];
+  _stringsArrayForCause = @[@"Please Select Cause", @"Animals", @"Environment", @"Sports", @"Education", @"Poverty", @"Religion", @"Children", @"Domestic Violence", @"Health", @"Elderly", @"Culture", @"Arts"];
 //  
-//  _stringsArrayForLocale = @[@"Seattle Area", @"Remote"];
+  _stringsArrayForLocale = @[@"Seattle Area", @"Remote"];
 //  
-//  _selectedObjectForCause = [_objectsArrayForCause objectAtIndex:0];
-//  _selectedCause = [_stringsArrayForCause objectAtIndex:0];
+  _selectedObjectForCause = [_objectsArrayForCause objectAtIndex:0];
+  _selectedCause = [_stringsArrayForCause objectAtIndex:0];
 //  
-//  _selectedObjectForLocale = [_objectsArrayForLocale objectAtIndex:0];
-//  _selectedLocale = [_stringsArrayForLocale objectAtIndex:0];
+  _selectedObjectForLocale = [_objectsArrayForLocale objectAtIndex:0];
+  _selectedLocale = [_stringsArrayForLocale objectAtIndex:0];
 //  
 //  if (_selectedObject == nil) {
 //    _selectedObject = [_objectsArray objectAtIndex:0];
@@ -84,11 +84,16 @@
 
   
   // Uncomment the following line to preserve selection between presentations.
-  //self.clearsSelectionOnViewWillAppear = NO;
+  self.clearsSelectionOnViewWillAppear = NO;
   
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [textField resignFirstResponder];
+  return NO;
 }
 
 /*
@@ -113,14 +118,11 @@
   [[self view] endEditing:YES];
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-  [textField resignFirstResponder];
-  return YES;
-}
+
 
 - (IBAction)showPickerViewButtonPressedForLocale:(id)sender {
   
-  //[[self view] endEditing:YES];
+  [[self view] endEditing:YES];
   
   [MMPickerView showPickerViewInView:self.view
                          withStrings:_stringsArrayForLocale
@@ -145,7 +147,7 @@
 
 - (IBAction)showPickerViewButtonPressedForCause:(id)sender {
   
-  //[[self view] endEditing:YES];
+  [[self view] endEditing:YES];
   
   
   [MMPickerView showPickerViewInView:self.view

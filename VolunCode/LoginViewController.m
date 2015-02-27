@@ -22,6 +22,14 @@
   // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [textField resignFirstResponder];
+  return NO;
+}
+
+
+
+
 - (IBAction)loginButtonPressed:(id)sender {
   
 // ******************* Make loginDictionary *******************
@@ -59,7 +67,7 @@
 }];
 
   
-// ******* DO a PUSH instead of a segue **********
+// ******* DO a PUSH instead of a segue ********** (can do push and segue together?)
   
 } // close loginButtonPressed
 

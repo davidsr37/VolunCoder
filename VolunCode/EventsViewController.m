@@ -7,8 +7,11 @@
 //
 
 #import "EventsViewController.h"
+#import "EventCell.h"
+
 
 @interface EventsViewController ()
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -19,20 +22,49 @@
     // Do any additional setup after loading the view.
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [textField resignFirstResponder];
+  return NO;
+}
 
 - (void)viewWillAppear:(BOOL)animated {
   
+  
+
   /*
    
    TODO:
    
    FETCH ALL EVENTS
    
+   PARSE DATA INTO XIB FOR "EVENTS_CELL" PROTOTYPE CELL (EventsCell)
+   
    RELOAD TABLEVIEW
    
    */
   
 }
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//warning Incomplete method implementation.
+  // Return the number of rows in the section.
+  return 0;
+  //return self.EVENTS.count;
+}
+
+
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EVENT_CELL" forIndexPath:indexPath];
+ 
+ // Configure the cell... SEE EVENTCELL.M
+ 
+ return cell;
+ }
+ 
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

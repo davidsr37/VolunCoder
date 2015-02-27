@@ -1,24 +1,35 @@
 //
-//  OrgAddMessage.m
+//  EventDetailTableView.m
 //  VolunCode
 //
-//  Created by David Rogers on 2/25/15.
+//  Created by David Rogers on 2/26/15.
 //  Copyright (c) 2015 Clint Akins. All rights reserved.
 //
 
-#import "OrgAddMessage.h"
+#import "EventDetailTableView.h"
 
-@interface OrgAddMessage ()
+@interface EventDetailTableView ()
+@property (strong, nonatomic) IBOutlet UILabel *eOrgNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eEventNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eJobNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eSkillsNeededLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eAddressLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eEmailLabel;
+@property (strong, nonatomic) IBOutlet UITextView *eDescriptionLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eDateLabel;
+@property (strong, nonatomic) IBOutlet UILabel *eCauseLabel;
+@property (strong, nonatomic) IBOutlet UITextView *eMessages;
 
-@property (strong, nonatomic) IBOutlet UITextField *mTitleOfMessage;
 
-@property (strong, nonatomic) IBOutlet UITextView *mTextOfMessage;
-@property (strong, nonatomic) IBOutlet UIButton *mSubmitButton;
+
+
+
+
 
 
 @end
 
-@implementation OrgAddMessage
+@implementation EventDetailTableView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,23 +45,6 @@
   [textField resignFirstResponder];
   return NO;
 }
-
--(void)viewWillAppear {
-  [super viewWillAppear];
-  
-  
-  
-  
-  
-}
-
-- (IBAction)evSubmitPressed:(id)sender {
-  
-  //JSON POST event sending details of Message that was created to the API database, (time is added - iOS or JS side?)
-  
-}
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

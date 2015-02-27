@@ -26,23 +26,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-// covert JSON string to image - Option 1
-//  NSData *dataImage = [[NSData alloc] initWithBase64EncodedString:jsonArray[key] options:0];
-//  NSData *fromJsonDataImage = [[NSData alloc] initWithBase64EncodedString:volunteer.avatar options:0];
-//  UIImage *img = UIImage imageWithData:fromJsonDataImage];
+  // ********* Below code used to test parsing of Volunteer, use FetchService fetchForVolunteer method instead *********
   
-// covert JSON string to image - Option 2
-//  NSData *imageData = [[NSData alloc]initWithBase64EncodedString:fromJsonDataImage options:NSDataBase64DecodingIgnoreUnknownCharacters];
-//  UIImage *image = [UIImage imageWithData: imageData];
+  NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Volunteer"];
+  NSError *fetchError;
   
-    // Do any additional setup after loading the view.
+  NSInteger fetchResults = [[[[FetchService sharedServices]coreDataStack]managedObjectContext] countForFetchRequest:fetchRequest error:&fetchError];
+  NSLog(@"%ld", (long)fetchResults);
   
-//  NSString *fullname = (@"%@ %@", volunteer.firstName, volunteer.lastName);
-//  self.volunteerNameLabel.text = fullname;
-//  self.volunteerLocationLabel.text = volunteer.location;
-//  self.volunteerBioLabel.text = volunteer.bio;
-//  self.volunteerAvatarImage = volunteer.avatar;
-//  self.volunteerAvatarImage = img;
+  if (fetchResults == 0) {
+  // URL currently set to test2.json in main bundle - need to change url to point to server
+    NSURL *url = [[NSBundle mainBundle]URLForResource:@"test2" withExtension:@"json"];
+    NSData *data = [[NSData alloc]initWithContentsOfURL:url];
+    NSError *error;
+    NSDictionary *fetchDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if (!error) {
+      NSString *email = fetchDictionary[@"email"];
+      BOOL ageReq = fetchDictionary[@"ageReq"];
+      NSString *city = fetchDictionary[@"city"];
+      NSString *bio = fetchDictionary[@"bio"];
+      NSDictionary *nameDictionary = fetchDictionary[@"name"];
+      NSString *firstName = nameDictionary[@"firstname"];
+      NSString *lastName = nameDictionary[@"lastname"];
+      
+      NSLog(@"%@", firstName);
+  // ********* Above code used to test parsing of Volunteer, use FetchService fetchForVolunteer method instead  *********
+      
+      
+      _volunteerLocationLabel.text = city;
+      _volunteerNameLabel.text = firstName;
+      
+    }
+  }
+
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [textField resignFirstResponder];
+  return NO;
 }
 
 - (void)didReceiveMemoryWarning {

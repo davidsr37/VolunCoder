@@ -12,6 +12,9 @@
 
 @interface OrgEventsViewController ()
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+
 @property (strong, nonatomic) OrgAddEvent *orgAddEvent;
 
 //-(IBAction)addEvent:(id)addEvent;
@@ -47,6 +50,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [textField resignFirstResponder];
+  return NO;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
