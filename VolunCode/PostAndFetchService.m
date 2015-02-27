@@ -63,24 +63,24 @@
         case 200 ... 299: {
           NSLog(@"statuscode = %ld", (long)statusCode);
           
-          // if we got the correst code, then start doing the parse data
-          NSDictionary *jsonResults = [[NSDictionary alloc] init];
-          jsonResults = [NSJSONSerialization JSONObjectWithData:jsonResults options:nil error:nil];
-          [[FetchService sharedServices]generateLogin:jsonResults];
-          
-//          NSArray *results = [Login loginFromJson:data];
-//          if (login.type == @"volunteer" {
-//            [[FetchService sharedService]generateVolunteer:jsonResults];
-//          } else {
-//            [[FetchService sharedService]generateOrganization:jsonResults];
-//          }
-          
+          // if we got the correst code, take the raw data sent to us and puts it into an NSDictionary for us
+          NSDictionary *jsonLoginResultsDictionary = [[NSDictionary alloc] init];
+          jsonLoginResultsDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:0];
+          // start doing the parse to determine which type of user
+          NSString *login = jsonLoginResultsDictionary[@"email"];
+          if ([login  isEqual: @"volunteer"]) {
+            // generate a volunter in Core Data
+            [[FetchService sharedServices]parseForVolunteer:jsonLoginResultsDictionary];
+          } else {
+            // generate an organization in Core Data
+            [[FetchService sharedServices]parseForOrganization:jsonLoginResultsDictionary];
+          }
           dispatch_async(dispatch_get_main_queue(), ^{
-//            if (results) {
-//              completionHandler(results, nil);
-//            } else {
-//              completionHandler(results, @"Login could not be completed");
-//            }
+            if (jsonLoginResultsDictionary) {
+              completionHandler(jsonLoginResultsDictionary, nil);
+            } else {
+              completionHandler(jsonLoginResultsDictionary, @"Login could not be completed");
+            }
           });
           break;
       }
@@ -128,15 +128,16 @@
       switch (statusCode) {
         case 200 ... 299: {
           NSLog(@"%ld", (long)statusCode);
-          // if we got the correct code, then start serializing it
-          NSDictionary *jsonResults = [[NSDictionary alloc] init];
-          jsonResults = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
-          [[FetchService sharedServices]parseForVolunteer:jsonResults];
+          // if we got the correct code, then start serializing the raw data sent to us
+          NSDictionary *jsonVolunteerResults = [[NSDictionary alloc] init];
+          jsonVolunteerResults = [NSJSONSerialization JSONObjectWithData:data options:0 error:0];
+          // generate a volunteer in Core Data
+          [[FetchService sharedServices]parseForVolunteer:jsonVolunteerResults];
               dispatch_async(dispatch_get_main_queue(), ^{
-            if (jsonResults) {
-              completionHandler(jsonResults, nil);
+            if (jsonVolunteerResults) {
+              completionHandler(jsonVolunteerResults, nil);
             } else {
-              completionHandler(jsonResults, @"volunteer profile could not be completed");
+              completionHandler(jsonVolunteerResults, @"volunteer profile could not be completed");
             }
           });
           break;
@@ -155,7 +156,6 @@
   // ******************* Change the loginDictionary into a JSON file *******************
   NSError *errorOrgProfile;
     NSData *orgProfileJsonData = [NSJSONSerialization dataWithJSONObject:organizationProfileDictionary options:kNilOptions error:&errorOrgProfile];
-//  NSData *orgProfileJsonData = [NSJSONSerialization dataWithJSONObject:organizationProfileDictionary options:NSJSONWritingPrettyPrinted error:&errorOrgProfile];
   
   // This is our URL to our server
   NSString *urlString = @"http://outcharityiosapp.herokuapp.com/api/v1/create_user_organizer";
@@ -186,9 +186,10 @@
       switch (statusCode) {
         case 200 ... 299: {
           NSLog(@"2nd status code = %ld", (long)statusCode);
-//          // if we got the correst code, then start doing the parse data
+          // if we got the correst code, then serializing the raw data sent to us into a NSDictionary for us
           NSDictionary *jsonResults = [[NSDictionary alloc] init];
-          jsonResults = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
+          jsonResults = [NSJSONSerialization JSONObjectWithData:data options:0 error:0];
+          // create an organization in Core Data
           [[FetchService sharedServices]parseForOrganization:jsonResults];
               dispatch_async(dispatch_get_main_queue(), ^{
             if (jsonResults) {
@@ -225,6 +226,7 @@
   // make the post and body definitions
   [createEventRequest setHTTPMethod:@"POST"];
   [createEventRequest setHTTPBody:createEventJsonData];
+  // set the post's type of data to send and its length
   NSString *lengthString = [NSString stringWithFormat:@"%lu",(unsigned long)createEventJsonData.length];
   [createEventRequest setValue:lengthString forHTTPHeaderField:@"Content-Length"];
   [createEventRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -243,9 +245,10 @@
       switch (statusCode) {
         case 200 ... 299: {
           NSLog(@"%ld", (long)statusCode);
-          // if we got the correst code, then start doing the parse data
+          // if we got the correst code, then serializing the raw data sent to us into a NSDictionary for us
           NSDictionary *jsonResults = [[NSDictionary alloc] init];
-          jsonResults = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
+          jsonResults = [NSJSONSerialization JSONObjectWithData:data options:0 error:0];
+          // generate an event in Core Data
           [[FetchService sharedServices]parseForEvent:jsonResults];
               dispatch_async(dispatch_get_main_queue(), ^{
             if (jsonResults) {
@@ -293,19 +296,32 @@
         case 200 ... 299: {
           NSLog(@"%ld", (long)statusCode);
           // if we got the correst code, then start doing the parse data
-          NSDictionary *jsonResults = [[NSDictionary alloc] init];
-//          NSArray *jsonArray = [[NSArray alloc] init];
-//          jsonArray = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
-//          if jsonResults = NSDictionary (NSDictionaryWithObject) {
-//            [[FetchService sharedServices]event:jsonResults];
-//            append jsonArray(event);
+          NSDictionary *jsonEventsDictionary = [[NSDictionary alloc] init];
+          jsonEventsDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:0];
+//          
+//          NSMutableArray *jsonEventsArray = [[NSMutableArray alloc] init];
+//          if jsonEventsArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:0] {
+//            for object in jsonEventArray {
+//              if jsonResultsDictionary = object {
+//                [[FetchService sharedService]generateEvent:jsonEventsDictionary];  // returns an Event
+//                [jsonEventsArray addObject:Event]; // add the event
+//              }
+//            }
 //          }
+//          if let jsonArray = NSJSONSerialization.JSONObjectWithData(data, options: nil, error:nil) as? [AnyObject] {
+//            var tweets = [Tweet]()
+//            for object in jsonArray {
+//              if let jsonDictionary = object as? [String : AnyObject] {
+//                let tweet = Tweet(jsonDictionary)
+//                tweets.append(tweet)
+//              }
+//            }
               dispatch_async(dispatch_get_main_queue(), ^{
-            if (jsonResults) {
-              completionHandler(jsonResults, nil);
-            } else {
-              completionHandler(jsonResults, @"Fetch events could not be completed");
-            }
+//            if (jsonResults) {
+//              completionHandler(jsonResults, nil);
+//            } else {
+//              completionHandler(jsonResults, @"Fetch events could not be completed");
+//            }
           });
           break;
           }

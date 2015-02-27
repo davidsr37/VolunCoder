@@ -99,6 +99,7 @@
 //                                                           }
 //                                         };
 //
+
   
   NSDictionary *profileDictionary = @{
                                       @"credential" : @{
@@ -106,7 +107,7 @@
                                               @"email" : @"test3.com",
                                               @"password" : @"pass3",
                                               },
-                                          @"role" : @"volunteer3",
+                                          @"role" : @"volunteer",
                                           },
                                       @"profileInfo" : @{
                                           @"email" : @"test3.com",
