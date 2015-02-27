@@ -22,6 +22,14 @@
   // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [textField resignFirstResponder];
+  return NO;
+}
+
+
+
+
 - (IBAction)loginButtonPressed:(id)sender {
   
 // ******************* Make loginDictionary *******************
