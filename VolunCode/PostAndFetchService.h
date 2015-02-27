@@ -12,7 +12,7 @@
 
 +(id)sharedService;
 
--(void)postLoginIDs:(NSDictionary *)loginDictionary completionHandler:(void (^)(NSDictionary *, NSString *))completionHandler;
+-(void)postLoginIDs:(NSString *)loginString completionHandler:(void (^)(NSDictionary *, NSString *))completionHandler;
 
 -(void)createVolunteerProfile:(NSDictionary *)volunteerProfileDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler;
 

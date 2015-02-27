@@ -72,32 +72,52 @@
 - (IBAction)submitVolunteerProfileButtonPressed:(id)sender {
   
   //Make dictionary to hold volunteer's Login inputs
-//  NSDictionary *profileLoginDictionary = @{@"basic": { @"email" : self.vEmailTextField,
-//                                           @"password" : self.vPasswordTextField,
-//                                           @"role" : @"volunteer",
-//                                           };
-
-  
-  NSDictionary *profileDictionary = @{@"email" : self.vEmailTextField.text,
-                                      @"password" : self.vPasswordTextField.text,
-                                      @"role" : @"volunteer",
-                                      @"firstname" : self.vFirstNameTextField.text,
-                                      @"lastname" : self.vLastNameTextField.text,
-                                      @"city" : self.vCityTextField.text,
-                                      @"bio" : self.vBioTextField.text,
-                                      @"ageReq" : self.vAgeReqSwitch,
-                                      @"avatar" : self.avatarString,
+//  NSDictionary *profileDictionary = @{
+//                                      @"credential" : @{
+//                                          @"Basic" : @{
+//                                                         @"email" : self.vEmailTextField.text,
+//                                                         @"password" : self.vPasswordTextField.text,
+//                                                         },
+//                                            @"role" : @"volunteer",
+//                                           },
+//                                        @"profileinfo" : @{
+//                                          @"email" : self.vEmailTextField.text,
+//                                          @"name" : @{
+//                                                        @"firstname" : self.vFirstNameTextField.text,
+//                                                        @"lastname" : self.vLastNameTextField.text,
+//                                                    },
+//                                          @"ageReq" : self.vAgeReqSwitch,
+//                                          @"city" : self.vCityTextField.text,
+//                                          @"bio" : self.vBioTextField.text,
+//                                          @"avatar" : self.avatarString,
+//                                                           }
+//                                         };
+  NSDictionary *profileDictionary = @{
+                                      @"credential" : @{
+                                          @"basic" : @{
+                                              @"email" : @"test2.com",
+                                              @"password" : @"pass",
+                                              },
+                                          @"role" : @"volunteer",
+                                          },
+                                      @"profileInfo" : @{
+                                          @"email" : @"test.com",
+                                          @"name" : @{
+                                              @"firstname" : @"anne",
+                                              @"lastname" : @"last",
+                                              },
+                                          @"ageReq" : @true,
+                                          @"city" : @"Seattle",
+                                          @"bio" : @"Stuff about me!",
+                                          @"avatar" : @"imagestring",
+                                          }
                                       };
   
   // not sure what to do with the @"avatar" : self.vAvatarImage,
   
 [[PostAndFetchService sharedService]createVolunteerProfile:profileDictionary completionHandler:^(NSDictionary *results, NSString *createProfileError) {
-  
-  
 }];
-  
 
-  
   
 } // close submitVolunteerProfileButtonPressed
 

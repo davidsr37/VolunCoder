@@ -15,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *volunteerNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *volunteerLocationLabel;
+@property (weak, nonatomic) IBOutlet UITextView *volunteerBioLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *volunteerAvatarImage;
 //@property (strong, nonatomic) NSArray *volunteers;
 
 @end
@@ -23,13 +25,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
 
-    
-//    self.volunteerNameLabel.text = volunteer.firstName;
-//    self.volunteerLocationLabel.text = volunteer.location;
+// covert JSON string to image - Option 1
+//  NSData *dataImage = [[NSData alloc] initWithBase64EncodedString:jsonArray[key] options:0];
+//  NSData *fromJsonDataImage = [[NSData alloc] initWithBase64EncodedString:volunteer.avatar options:0];
+//  UIImage *img = UIImage imageWithData:fromJsonDataImage];
   
+// covert JSON string to image - Option 2
+//  NSData *imageData = [[NSData alloc]initWithBase64EncodedString:fromJsonDataImage options:NSDataBase64DecodingIgnoreUnknownCharacters];
+//  UIImage *image = [UIImage imageWithData: imageData];
+  
+    // Do any additional setup after loading the view.
+  
+//  NSString *fullname = (@"%@ %@", volunteer.firstName, volunteer.lastName);
+//  self.volunteerNameLabel.text = fullname;
+//  self.volunteerLocationLabel.text = volunteer.location;
+//  self.volunteerBioLabel.text = volunteer.bio;
+//  self.volunteerAvatarImage = volunteer.avatar;
+//  self.volunteerAvatarImage = img;
 }
 
 - (void)didReceiveMemoryWarning {
