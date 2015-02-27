@@ -48,7 +48,7 @@
 @property (nonatomic, strong) NSString * selectedLocale;
 
 @property (nonatomic, retain) NSMutableArray *mutableArray; //put in .h
-- (void)insertObject:atIndex;
+
 
 @end
 

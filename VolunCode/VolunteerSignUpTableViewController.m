@@ -92,24 +92,26 @@
 //                                          @"avatar" : self.avatarString,
 //                                                           }
 //                                         };
+//
+  
   NSDictionary *profileDictionary = @{
                                       @"credential" : @{
                                           @"basic" : @{
-                                              @"email" : @"test2.com",
-                                              @"password" : @"pass",
+                                              @"email" : @"test3.com",
+                                              @"password" : @"pass3",
                                               },
-                                          @"role" : @"volunteer",
+                                          @"role" : @"volunteer3",
                                           },
                                       @"profileInfo" : @{
-                                          @"email" : @"test.com",
+                                          @"email" : @"test3.com",
                                           @"name" : @{
-                                              @"firstname" : @"anne",
-                                              @"lastname" : @"last",
+                                              @"firstname" : @"anne3",
+                                              @"lastname" : @"last3",
                                               },
                                           @"ageReq" : @true,
                                           @"city" : @"Seattle",
                                           @"bio" : @"Stuff about me!",
-                                          @"avatar" : @"imagestring",
+                                          @"avatar" : @"imagestring3",
                                           }
                                       };
   
@@ -117,6 +119,7 @@
   
 [[PostAndFetchService sharedService]createVolunteerProfile:profileDictionary completionHandler:^(NSDictionary *results, NSString *createProfileError) {
 }];
+  
 
   
 } // close submitVolunteerProfileButtonPressed

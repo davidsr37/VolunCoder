@@ -208,7 +208,7 @@
  [dataTask resume];
 } // close createOrganizationProfile
 
--(void)createEvent:(NSDictionary *)createEventDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler {
+-(void)createEvent:(NSDictionary *)createEventDictionary withToken:(NSString *)token completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler {
   // ******************* Change the loginDictionary into a JSON file *******************
   NSError *errorCreateEvent;
   //  NSData *createEventJsonData = [NSJSONSerialization dataWithJSONObject:createEventDictionary options:kNilOptions error:&error];
@@ -228,6 +228,7 @@
   NSString *lengthString = [NSString stringWithFormat:@"%lu",(unsigned long)createEventJsonData.length];
   [createEventRequest setValue:lengthString forHTTPHeaderField:@"Content-Length"];
   [createEventRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+  [createEventRequest setValue:token forHTTPHeaderField:@"token"];
   
   // start the NSURLSession
   NSURLSession *session = [NSURLSession sharedSession];
@@ -265,11 +266,7 @@
     
 } // close createEvent
 
--(void)fetchEvents:(NSDictionary *)tokenDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler {
-  // ******************* Change the token Dictionary into a JSON file *******************
-  NSError *errorfetchEvents;
-  //  NSData *fetchEventsJsonData = [NSJSONSerialization dataWithJSONObject:tokenDictionary options:kNilOptions error:&error];
-  NSData *fetchEventsJsonData = [NSJSONSerialization dataWithJSONObject:tokenDictionary options:NSJSONWritingPrettyPrinted error:&errorfetchEvents];
+-(void)fetchEvents:(NSString *)token completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler {
   
   // This is our URL to our server
   NSString *urlString = @"http://outcharityiosapp.herokuapp.com/api/v1/events";
@@ -279,9 +276,9 @@
   // Initialize the request
   NSMutableURLRequest *fetchEventsRequest = [[NSMutableURLRequest alloc] initWithURL:url];
   NSLog(@"request = %@", fetchEventsRequest);
-  // make the post and body definitions
+  // make the post and definitions
   [fetchEventsRequest setHTTPMethod:@"GET"];
-  [fetchEventsRequest setHTTPBody:fetchEventsJsonData];
+  [fetchEventsRequest setValue:token forHTTPHeaderField:@"token"];
   
   // start the NSURLSession
   NSURLSession *session = [NSURLSession sharedSession];
