@@ -92,7 +92,7 @@
 //                                          @"avatar" : self.avatarString,
 //                                                           }
 //                                         };
-
+//
   
   NSDictionary *profileDictionary = @{
                                       @"credential" : @{
@@ -119,6 +119,7 @@
   
 [[PostAndFetchService sharedService]createVolunteerProfile:profileDictionary completionHandler:^(NSDictionary *results, NSString *createProfileError) {
 }];
+  
 
   
 } // close submitVolunteerProfileButtonPressed

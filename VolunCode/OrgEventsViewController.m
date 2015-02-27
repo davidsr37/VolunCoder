@@ -7,6 +7,8 @@
 //
 
 #import "OrgEventsViewController.h"
+#include "PostAndFetchService.h"
+
 
 @interface OrgEventsViewController ()
 
@@ -20,6 +22,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+  NSString *token = @"4Lphc97wg13BNy0EA6XZY0F9xn5wI+fU1O+cAiokCTUn68j/Pv+XDi9s/ZW+to7ljZVxtjVTC5xAVeQ=";
+  
+[[PostAndFetchService sharedService]fetchEvents:token completionHandler:^(NSDictionary *results, NSString *fetchEventsError) {
+    
+  }];
+  
 /*
   UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]
                                   initWithBarButtonSystemItem:UIBarButtonSystemItemAdd

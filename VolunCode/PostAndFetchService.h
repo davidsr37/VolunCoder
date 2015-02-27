@@ -20,6 +20,6 @@
 
 -(void)createEvent:(NSDictionary *)createEventDictionary withToken:(NSString *)token completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler;
 
--(void)fetchEvents:(NSDictionary *)tokenDictionary completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler;
+-(void)fetchEvents:(NSString *)token completionHandler:(void (^)(NSDictionary *, NSString *)) completionHandler;
 
 @end
