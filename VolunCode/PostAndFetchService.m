@@ -131,7 +131,7 @@
           // if we got the correct code, then start serializing it
           NSDictionary *jsonResults = [[NSDictionary alloc] init];
           jsonResults = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
-          [[FetchService sharedServices]generateVolunteer:jsonResults];
+          [[FetchService sharedServices]parseForVolunteer:jsonResults];
               dispatch_async(dispatch_get_main_queue(), ^{
             if (jsonResults) {
               completionHandler(jsonResults, nil);
@@ -189,7 +189,7 @@
 //          // if we got the correst code, then start doing the parse data
           NSDictionary *jsonResults = [[NSDictionary alloc] init];
           jsonResults = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
-          [[FetchService sharedServices]generateOrganization:jsonResults];
+          [[FetchService sharedServices]parseForOrganization:jsonResults];
               dispatch_async(dispatch_get_main_queue(), ^{
             if (jsonResults) {
               completionHandler(jsonResults, nil);
@@ -246,7 +246,7 @@
           // if we got the correst code, then start doing the parse data
           NSDictionary *jsonResults = [[NSDictionary alloc] init];
           jsonResults = [NSJSONSerialization JSONObjectWithData:data options:nil error:nil];
-          [[FetchService sharedServices]event:jsonResults];
+          [[FetchService sharedServices]parseForEvent:jsonResults];
               dispatch_async(dispatch_get_main_queue(), ^{
             if (jsonResults) {
               completionHandler(jsonResults, nil);
