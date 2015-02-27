@@ -31,6 +31,7 @@
 		AB3CC8871A9BDF52005DFDA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3CC8861A9BDF52005DFDA7 /* Main.storyboard */; };
 		AB3CC88A1A9BE036005DFDA7 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CC8891A9BE036005DFDA7 /* UserProfileViewController.m */; };
 		AB3CC88D1A9BE097005DFDA7 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CC88C1A9BE097005DFDA7 /* UserDetailViewController.m */; };
+		AB3E9CC11AA0CBE60041D109 /* test2.json in Resources */ = {isa = PBXBuildFile; fileRef = AB3E9CC01AA0CBE60041D109 /* test2.json */; };
 		AB464D691A9C23B10006075B /* CausesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB464D681A9C23B10006075B /* CausesViewController.m */; };
 		AB464D6C1A9C23D00006075B /* SkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB464D6B1A9C23D00006075B /* SkillsViewController.m */; };
 		AB464D6F1A9C23E30006075B /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB464D6E1A9C23E30006075B /* EventsViewController.m */; };
@@ -109,6 +110,7 @@
 		AB3CC8891A9BE036005DFDA7 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
 		AB3CC88B1A9BE097005DFDA7 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
 		AB3CC88C1A9BE097005DFDA7 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
+		AB3E9CC01AA0CBE60041D109 /* test2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test2.json; sourceTree = "<group>"; };
 		AB464D671A9C23B10006075B /* CausesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CausesViewController.h; sourceTree = "<group>"; };
 		AB464D681A9C23B10006075B /* CausesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CausesViewController.m; sourceTree = "<group>"; };
 		AB464D6A1A9C23D00006075B /* SkillsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkillsViewController.h; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				AB3CC8601A9BDDB4005DFDA7 /* AppDelegate.m */,
 				AB4B55451A9E70E400B2893A /* seed.json */,
 				AB28B00F1A9D266D00D86AF6 /* testSeed.json */,
+				AB3E9CC01AA0CBE60041D109 /* test2.json */,
 				AB6FF9C21A9CFC7D0044E442 /* Model */,
 				AB3CC8841A9BDDF8005DFDA7 /* Controller */,
 				AB3CC8851A9BDE0C005DFDA7 /* View */,
@@ -395,6 +398,7 @@
 			files = (
 				AB4B55461A9E70E400B2893A /* seed.json in Resources */,
 				AB3CC86F1A9BDDB4005DFDA7 /* LaunchScreen.xib in Resources */,
+				AB3E9CC11AA0CBE60041D109 /* test2.json in Resources */,
 				AB3CC86C1A9BDDB4005DFDA7 /* Images.xcassets in Resources */,
 				AB28B0101A9D266D00D86AF6 /* testSeed.json in Resources */,
 				9C305BAB1A9FE2E400CE28C6 /* EventCell.xib in Resources */,
