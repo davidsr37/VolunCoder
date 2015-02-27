@@ -10,4 +10,16 @@
 
 @interface EventCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UILabel *eCause;
+@property (strong, nonatomic) IBOutlet UILabel *eEvent;
+@property (strong, nonatomic) IBOutlet UILabel *eOrganization;
+@property (strong, nonatomic) IBOutlet UILabel *eSkills;
+@property (strong, nonatomic) IBOutlet UILabel *eDate;
+
+
+
+
+
+
+
 @end

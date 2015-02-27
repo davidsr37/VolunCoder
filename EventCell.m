@@ -7,6 +7,11 @@
 //
 
 #import "EventCell.h"
+/*
+ OUTLETS @INTERFACE IN .H FILE
+ 
+ */
+
 
 @implementation EventCell
 
