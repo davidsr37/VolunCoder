@@ -108,7 +108,9 @@
   if (saveError) {
     NSLog(@"%@", saveError);
   }
+  NSLog(@"%@", event);
   return event;
+  
 }
 
 @end

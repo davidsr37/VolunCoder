@@ -1908,13 +1908,19 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-hE-Tf6">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-hE-Tf6">
                                                     <rect key="frame" x="528" y="6" width="51" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="6mp-pP-38O"/>
+                                                        <constraint firstAttribute="width" constant="49" id="tiU-vQ-aVA"/>
+                                                    </constraints>
                                                 </switch>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="mqf-DE-U5D" firstAttribute="top" secondItem="anC-fT-8Kb" secondAttribute="topMargin" constant="3" id="12N-L9-F9Y"/>
+                                                <constraint firstItem="DaT-hE-Tf6" firstAttribute="top" secondItem="anC-fT-8Kb" secondAttribute="topMargin" constant="-2" id="7Pw-0I-maB"/>
                                                 <constraint firstItem="mqf-DE-U5D" firstAttribute="leading" secondItem="anC-fT-8Kb" secondAttribute="leadingMargin" constant="25" id="KfH-Hr-K4m"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DaT-hE-Tf6" secondAttribute="trailing" constant="15" id="q12-d2-Rn1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1929,13 +1935,19 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ro7-0Y-yC8">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ro7-0Y-yC8">
                                                     <rect key="frame" x="528" y="6" width="51" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="l8S-I8-Y5C"/>
+                                                        <constraint firstAttribute="width" constant="49" id="qkT-bP-XGd"/>
+                                                    </constraints>
                                                 </switch>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="QdH-SM-1sV" firstAttribute="top" secondItem="3lv-KB-Jr1" secondAttribute="topMargin" constant="3" id="2T6-xU-hpe"/>
                                                 <constraint firstItem="QdH-SM-1sV" firstAttribute="leading" secondItem="3lv-KB-Jr1" secondAttribute="leadingMargin" constant="25" id="4mg-Vy-kBq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ro7-0Y-yC8" secondAttribute="trailing" constant="15" id="A1M-L6-oca"/>
+                                                <constraint firstItem="ro7-0Y-yC8" firstAttribute="top" secondItem="3lv-KB-Jr1" secondAttribute="topMargin" constant="-2" id="duh-NL-kMp"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1950,12 +1962,18 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ekF-wd-UOp">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ekF-wd-UOp">
                                                     <rect key="frame" x="528" y="6" width="51" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="LLj-2m-Th8"/>
+                                                        <constraint firstAttribute="width" constant="49" id="QGx-So-P2G"/>
+                                                    </constraints>
                                                 </switch>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ekF-wd-UOp" secondAttribute="trailing" constant="15" id="I5k-Wy-BbX"/>
                                                 <constraint firstItem="rqT-qq-Ecv" firstAttribute="top" secondItem="dJx-LX-Z3T" secondAttribute="topMargin" constant="3" id="Qhl-L0-6CH"/>
+                                                <constraint firstItem="ekF-wd-UOp" firstAttribute="top" secondItem="dJx-LX-Z3T" secondAttribute="topMargin" constant="-2" id="aAS-LS-K54"/>
                                                 <constraint firstItem="rqT-qq-Ecv" firstAttribute="leading" secondItem="dJx-LX-Z3T" secondAttribute="leadingMargin" constant="25" id="pay-Iq-mts"/>
                                             </constraints>
                                         </tableViewCellContentView>
