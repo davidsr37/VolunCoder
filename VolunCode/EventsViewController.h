@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Event.h"
 
-@interface EventsViewController : UIViewController
+@interface EventsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

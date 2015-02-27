@@ -183,6 +183,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="YOc-Rg-7vv" id="c6i-M8-ZWx"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -222,6 +225,9 @@
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="YOc-Rg-7vv" id="pKD-pe-qaq"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -2009,6 +2015,9 @@
                             <constraint firstItem="Ev0-Hj-wDI" firstAttribute="leading" secondItem="2X0-lZ-0bI" secondAttribute="leadingMargin" constant="-16" id="qSa-By-NCn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Ev0-Hj-wDI" id="aFt-D7-7Jo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ava-LZ-QOh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2313,6 +2322,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="N2C-eH-Vyc" id="eh7-TL-woe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9a5-m8-KVQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

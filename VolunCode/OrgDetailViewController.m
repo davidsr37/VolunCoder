@@ -42,15 +42,12 @@
   return NO;
 }
 
--(void)viewWillAppear {
-  [super viewWillAppear];
-  
-  //reload tableview
-  
-  
-  
-  
-}
+//-(void)viewWillAppear {
+//  [super viewWillAppear];
+//  
+//  //reload tableview
+//  
+//}
 
 
 - (void)didReceiveMemoryWarning {
