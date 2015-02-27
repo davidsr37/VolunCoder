@@ -94,31 +94,37 @@
 //                                         };
 //
   
-  NSDictionary *profileDictionary = @{
-                                      @"credential" : @{
-                                          @"basic" : @{
-                                              @"email" : @"test3.com",
-                                              @"password" : @"pass3",
-                                              },
-                                          @"role" : @"volunteer",
-                                          },
-                                      @"profileInfo" : @{
-                                          @"email" : @"test3.com",
-                                          @"name" : @{
-                                              @"firstname" : @"anne3",
-                                              @"lastname" : @"last3",
-                                              },
-                                          @"ageReq" : @true,
-                                          @"city" : @"Seattle",
-                                          @"bio" : @"Stuff about me!",
-                                          @"avatar" : @"imagestring3",
-                                          }
-                                      };
+  NSString *token = @"4Lphc97wg13BNy0EA6XZY0F9xn5wI+fU1O+cAiokCTUn68j/Pv+XDi9s/ZW+to7ljZVxtjVTC5xAVeQ=";
   
-  // not sure what to do with the @"avatar" : self.vAvatarImage,
+  [[PostAndFetchService sharedService]fetchEvents:token completionHandler:^(NSDictionary *results, NSString *fetchEventsError) {
+    
+  }];
   
-[[PostAndFetchService sharedService]createVolunteerProfile:profileDictionary completionHandler:^(NSDictionary *results, NSString *createProfileError) {
-}];
+//  NSDictionary *profileDictionary = @{
+//                                      @"credential" : @{
+//                                          @"basic" : @{
+//                                              @"email" : @"test3.com",
+//                                              @"password" : @"pass3",
+//                                              },
+//                                          @"role" : @"volunteer",
+//                                          },
+//                                      @"profileInfo" : @{
+//                                          @"email" : @"test3.com",
+//                                          @"name" : @{
+//                                              @"firstname" : @"anne3",
+//                                              @"lastname" : @"last3",
+//                                              },
+//                                          @"ageReq" : @true,
+//                                          @"city" : @"Seattle",
+//                                          @"bio" : @"Stuff about me!",
+//                                          @"avatar" : @"imagestring3",
+//                                          }
+//                                      };
+//  
+//  // not sure what to do with the @"avatar" : self.vAvatarImage,
+//  
+//[[PostAndFetchService sharedService]createVolunteerProfile:profileDictionary completionHandler:^(NSDictionary *results, NSString *createProfileError) {
+//}];
   
 
   
