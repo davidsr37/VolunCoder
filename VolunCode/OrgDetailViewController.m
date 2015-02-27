@@ -27,14 +27,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  // ********* Below code used to test parsing of Organization, use FetchService parseForOrganization method instead *********
+  NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Organization"];
+  NSError *fetchError;
   
+  NSInteger fetchResults = [[[[FetchService sharedServices]coreDataStack]managedObjectContext] countForFetchRequest:fetchRequest error:&fetchError];
+  NSLog(@"%ld", (long)fetchResults);
   
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  if (fetchResults == 0) {
+    NSURL *url = [[NSBundle mainBundle]URLForResource:@"seed" withExtension:@"json"];
+    NSData *data = [[NSData alloc]initWithContentsOfURL:url];
+    NSError *error;
+    NSDictionary *fetchDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if (!error) {
+      NSString *email = fetchDictionary[@"email"];
+      NSString *orgName = fetchDictionary[@"orgName"];
+      NSString *firstName = fetchDictionary[@"firstName"];
+      NSString *lastName = fetchDictionary[@"lastName"];
+      NSString *mission = fetchDictionary[@"mission"];
+      NSString *address = fetchDictionary[@"address"];
+      NSString *city = fetchDictionary[@"city"];
+      NSString *phone = fetchDictionary[@"phone"];
+      NSString *type = nameDictionary[@"type"];
+      NSString *website = nameDictionary[@"website"];
+      
+      NSLog(@"%@", firstName);
+  // ********* Above code used to test parsing of Volunteer, use FetchService parseForOrganization method instead *********      
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

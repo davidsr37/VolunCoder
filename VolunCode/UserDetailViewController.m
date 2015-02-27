@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-  // ********* Below code used to test parsing of Volunteer, use FetchService fetchForVolunteer method instead *********
+  // ********* Below code used to test parsing of Volunteer, use FetchService parseForVolunteer method instead *********
   
   NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Volunteer"];
   NSError *fetchError;
@@ -35,7 +35,6 @@
   NSLog(@"%ld", (long)fetchResults);
   
   if (fetchResults == 0) {
-  // URL currently set to test2.json in main bundle - need to change url to point to server
     NSURL *url = [[NSBundle mainBundle]URLForResource:@"test2" withExtension:@"json"];
     NSData *data = [[NSData alloc]initWithContentsOfURL:url];
     NSError *error;
@@ -50,7 +49,7 @@
       NSString *lastName = nameDictionary[@"lastname"];
       
       NSLog(@"%@", firstName);
-  // ********* Above code used to test parsing of Volunteer, use FetchService fetchForVolunteer method instead  *********
+  // ********* Above code used to test parsing of Volunteer, use FetchService parseForVolunteer method instead  *********
       
       
       _volunteerLocationLabel.text = city;
