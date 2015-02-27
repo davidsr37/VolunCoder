@@ -55,11 +55,11 @@
   NSLog(@"%ld", (long)fetchResults);
   
   if (fetchResults == 0) {
-    NSURL *url = [[NSBundle mainBundle]URLForResource:@"test2" withExtension:@"json"];
-    NSData *data = [[NSData alloc]initWithContentsOfURL:url];
-    NSError *error;
+//    NSURL *url = [[NSBundle mainBundle]URLForResource:@"test2" withExtension:@"json"];
+//    NSData *data = [[NSData alloc]initWithContentsOfURL:url];
+//    NSError *error;
     //    NSDictionary *fetchDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-    if (!error) {
+    //if (!error) {
       NSString *email = volunteerDictionary[@"email"];
       BOOL ageReq = volunteerDictionary[@"ageReq"];
       NSString *city = volunteerDictionary[@"city"];
@@ -73,11 +73,11 @@
       if (saveError) {
         NSLog(@"%@", saveError);
       }
-      return volunteer;
-    }
+    return volunteer;
   }
   return nil;
 }
+
 
 -(Organization *)parseForOrganization:(NSDictionary *)orgDictionary {
   NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Organization"];
@@ -88,11 +88,11 @@
   NSLog(@"%ld", (long)fetchResults);
   
   if (fetchResults == 0) {
-    NSURL *url = [[NSBundle mainBundle]URLForResource:@"test2" withExtension:@"json"];
-    NSData *data = [[NSData alloc]initWithContentsOfURL:url];
-    NSError *error;
+//    NSURL *url = [[NSBundle mainBundle]URLForResource:@"test2" withExtension:@"json"];
+//    NSData *data = [[NSData alloc]initWithContentsOfURL:url];
+//    NSError *error;
     //    NSDictionary *fetchDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-    if (!error) {
+    //if (!error) {
       NSString *address = orgDictionary[@"address"];
       NSString *name = orgDictionary[@"name"];
       NSString *city = orgDictionary[@"city"];
@@ -109,7 +109,7 @@
         NSLog(@"%@", saveError);
       }
       return organization;
-    }
+    //}
   }
   return nil;
 }
@@ -122,10 +122,10 @@
   Event *event = [NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:context];
   NSLog(@"%ld", (long)fetchResults);
   if (fetchResults == 0) {
-    NSURL *url = [[NSBundle mainBundle]URLForResource:@"test2" withExtension:@"json"];
-    NSData *data = [[NSData alloc]initWithContentsOfURL:url];
-    NSError *error;
-    if (!error) {
+//    NSURL *url = [[NSBundle mainBundle]URLForResource:@"test2" withExtension:@"json"];
+//    NSData *data = [[NSData alloc]initWithContentsOfURL:url];
+//    NSError *error;
+    //if (!error) {
       NSDate *date = eventDictionary[@"date"];
       NSDate *time = eventDictionary[@"time"];
       NSString *title = eventDictionary[@"title"];
@@ -138,9 +138,11 @@
         NSLog(@"%@", saveError);
       }
       return event;
-    }
+    //}
   }
   return nil;
 }
 
+
 @end
+
