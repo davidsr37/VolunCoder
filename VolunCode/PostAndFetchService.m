@@ -70,10 +70,10 @@
           NSString *login = jsonLoginResultsDictionary[@"email"];
           if ([login  isEqual: @"volunteer"]) {
             // generate a volunter in Core Data
-            [[FetchService sharedServices]generateVolunteer:jsonLoginResultsDictionary];
+            [[FetchService sharedServices]parseForVolunteer:jsonLoginResultsDictionary];
           } else {
             // generate an organization in Core Data
-            [[FetchService sharedServices]generateOrganization:jsonLoginResultsDictionary];
+            [[FetchService sharedServices]parseForOrganization:jsonLoginResultsDictionary];
           }
           dispatch_async(dispatch_get_main_queue(), ^{
             if (jsonLoginResultsDictionary) {
@@ -132,7 +132,7 @@
           NSDictionary *jsonVolunteerResults = [[NSDictionary alloc] init];
           jsonVolunteerResults = [NSJSONSerialization JSONObjectWithData:data options:0 error:0];
           // generate a volunteer in Core Data
-          [[FetchService sharedServices]generateVolunteer:jsonVolunteerResults];
+          [[FetchService sharedServices]parseForVolunteer:jsonVolunteerResults];
               dispatch_async(dispatch_get_main_queue(), ^{
             if (jsonVolunteerResults) {
               completionHandler(jsonVolunteerResults, nil);
@@ -190,7 +190,7 @@
           NSDictionary *jsonResults = [[NSDictionary alloc] init];
           jsonResults = [NSJSONSerialization JSONObjectWithData:data options:0 error:0];
           // create an organization in Core Data
-          [[FetchService sharedServices]generateOrganization:jsonResults];
+          [[FetchService sharedServices]parseForOrganization:jsonResults];
               dispatch_async(dispatch_get_main_queue(), ^{
             if (jsonResults) {
               completionHandler(jsonResults, nil);
@@ -249,7 +249,7 @@
           NSDictionary *jsonResults = [[NSDictionary alloc] init];
           jsonResults = [NSJSONSerialization JSONObjectWithData:data options:0 error:0];
           // generate an event in Core Data
-          [[FetchService sharedServices]event:jsonResults];
+          [[FetchService sharedServices]parseForEvent:jsonResults];
               dispatch_async(dispatch_get_main_queue(), ^{
             if (jsonResults) {
               completionHandler(jsonResults, nil);
