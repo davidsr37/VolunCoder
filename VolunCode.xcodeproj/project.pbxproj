@@ -18,7 +18,8 @@
 		9C95257D1A9C4E3200FF9174 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257C1A9C4E3200FF9174 /* Foundation.framework */; };
 		9C95257F1A9C4E3C00FF9174 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257E1A9C4E3C00FF9174 /* CoreGraphics.framework */; };
 		AB28B00E1A9D1F6C00D86AF6 /* FetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = AB28B00D1A9D1F6C00D86AF6 /* FetchService.m */; };
-		AB28B0101A9D266D00D86AF6 /* testSeed.json in Resources */ = {isa = PBXBuildFile; fileRef = AB28B00F1A9D266D00D86AF6 /* testSeed.json */; };
+		AB293C361A9FF03600B42909 /* Volunteer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB293C351A9FF03600B42909 /* Volunteer.m */; };
+		AB293C381A9FFC2A00B42909 /* orgtest.json in Resources */ = {isa = PBXBuildFile; fileRef = AB293C371A9FFC2A00B42909 /* orgtest.json */; };
 		AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CC85D1A9BDDB4005DFDA7 /* main.m */; };
 		AB3CC8611A9BDDB4005DFDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CC8601A9BDDB4005DFDA7 /* AppDelegate.m */; };
 		AB3CC8671A9BDDB4005DFDA7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CC8661A9BDDB4005DFDA7 /* LoginViewController.m */; };
@@ -31,8 +32,6 @@
 		AB464D691A9C23B10006075B /* CausesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB464D681A9C23B10006075B /* CausesViewController.m */; };
 		AB464D6C1A9C23D00006075B /* SkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB464D6B1A9C23D00006075B /* SkillsViewController.m */; };
 		AB464D6F1A9C23E30006075B /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB464D6E1A9C23E30006075B /* EventsViewController.m */; };
-		AB4B55461A9E70E400B2893A /* seed.json in Resources */ = {isa = PBXBuildFile; fileRef = AB4B55451A9E70E400B2893A /* seed.json */; };
-		AB4B55611A9E823400B2893A /* Volunteer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4B55601A9E823400B2893A /* Volunteer.m */; };
 		AB4B55641A9E823500B2893A /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4B55631A9E823500B2893A /* Event.m */; };
 		AB4B55671A9E823500B2893A /* Cause.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4B55661A9E823500B2893A /* Cause.m */; };
 		AB4B556A1A9E823500B2893A /* Messenge.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4B55691A9E823500B2893A /* Messenge.m */; };
@@ -42,6 +41,7 @@
 		AB4B55761A9E823500B2893A /* Organization.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4B55751A9E823500B2893A /* Organization.m */; };
 		AB6FF9C41A9CFCF20044E442 /* VolunCode.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9C31A9CFCF20044E442 /* VolunCode.xcdatamodel */; };
 		AB6FF9E51A9D039C0044E442 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */; };
+		AB84B4C61A9FE777009CB670 /* test2.json in Resources */ = {isa = PBXBuildFile; fileRef = AB84B4C51A9FE777009CB670 /* test2.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +83,9 @@
 		9C95257E1A9C4E3C00FF9174 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AB28B00C1A9D1F6C00D86AF6 /* FetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchService.h; sourceTree = "<group>"; };
 		AB28B00D1A9D1F6C00D86AF6 /* FetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchService.m; sourceTree = "<group>"; };
-		AB28B00F1A9D266D00D86AF6 /* testSeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testSeed.json; sourceTree = "<group>"; };
+		AB293C341A9FF03600B42909 /* Volunteer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Volunteer.h; sourceTree = "<group>"; };
+		AB293C351A9FF03600B42909 /* Volunteer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Volunteer.m; sourceTree = "<group>"; };
+		AB293C371A9FFC2A00B42909 /* orgtest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = orgtest.json; sourceTree = "<group>"; };
 		AB3CC8581A9BDDB4005DFDA7 /* VolunCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolunCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3CC85C1A9BDDB4005DFDA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB3CC85D1A9BDDB4005DFDA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -107,9 +109,6 @@
 		AB464D6B1A9C23D00006075B /* SkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkillsViewController.m; sourceTree = "<group>"; };
 		AB464D6D1A9C23E30006075B /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		AB464D6E1A9C23E30006075B /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
-		AB4B55451A9E70E400B2893A /* seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = seed.json; sourceTree = "<group>"; };
-		AB4B555F1A9E823400B2893A /* Volunteer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Volunteer.h; sourceTree = "<group>"; };
-		AB4B55601A9E823400B2893A /* Volunteer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Volunteer.m; sourceTree = "<group>"; };
 		AB4B55621A9E823500B2893A /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		AB4B55631A9E823500B2893A /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		AB4B55651A9E823500B2893A /* Cause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cause.h; sourceTree = "<group>"; };
@@ -127,6 +126,7 @@
 		AB6FF9C31A9CFCF20044E442 /* VolunCode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VolunCode.xcdatamodel; sourceTree = SOURCE_ROOT; };
 		AB6FF9E31A9D039C0044E442 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		AB84B4C51A9FE777009CB670 /* test2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test2.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,8 +188,8 @@
 			children = (
 				AB3CC85F1A9BDDB4005DFDA7 /* AppDelegate.h */,
 				AB3CC8601A9BDDB4005DFDA7 /* AppDelegate.m */,
-				AB4B55451A9E70E400B2893A /* seed.json */,
-				AB28B00F1A9D266D00D86AF6 /* testSeed.json */,
+				AB293C371A9FFC2A00B42909 /* orgtest.json */,
+				AB84B4C51A9FE777009CB670 /* test2.json */,
 				AB6FF9C21A9CFC7D0044E442 /* Model */,
 				AB3CC8841A9BDDF8005DFDA7 /* Controller */,
 				AB3CC8851A9BDE0C005DFDA7 /* View */,
@@ -276,6 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				AB6FF9C31A9CFCF20044E442 /* VolunCode.xcdatamodel */,
+				AB293C341A9FF03600B42909 /* Volunteer.h */,
+				AB293C351A9FF03600B42909 /* Volunteer.m */,
 				AB4B55741A9E823500B2893A /* Organization.h */,
 				AB4B55751A9E823500B2893A /* Organization.m */,
 				AB4B55711A9E823500B2893A /* Skill.h */,
@@ -290,8 +292,6 @@
 				AB4B55661A9E823500B2893A /* Cause.m */,
 				AB4B55621A9E823500B2893A /* Event.h */,
 				AB4B55631A9E823500B2893A /* Event.m */,
-				AB4B555F1A9E823400B2893A /* Volunteer.h */,
-				AB4B55601A9E823400B2893A /* Volunteer.m */,
 				AB6FF9E31A9D039C0044E442 /* CoreDataStack.h */,
 				AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */,
 				AB28B00C1A9D1F6C00D86AF6 /* FetchService.h */,
@@ -380,11 +380,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB4B55461A9E70E400B2893A /* seed.json in Resources */,
+				AB84B4C61A9FE777009CB670 /* test2.json in Resources */,
 				AB3CC86F1A9BDDB4005DFDA7 /* LaunchScreen.xib in Resources */,
 				AB3CC86C1A9BDDB4005DFDA7 /* Images.xcassets in Resources */,
-				AB28B0101A9D266D00D86AF6 /* testSeed.json in Resources */,
 				AB3CC8871A9BDF52005DFDA7 /* Main.storyboard in Resources */,
+				AB293C381A9FFC2A00B42909 /* orgtest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,12 +414,12 @@
 				AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */,
 				AB4B55641A9E823500B2893A /* Event.m in Sources */,
 				79AA94371A9CFA29002C6177 /* VolunteerSignUpTableViewController.m in Sources */,
+				AB293C361A9FF03600B42909 /* Volunteer.m in Sources */,
 				AB4B556A1A9E823500B2893A /* Messenge.m in Sources */,
 				AB28B00E1A9D1F6C00D86AF6 /* FetchService.m in Sources */,
 				AB3CC8671A9BDDB4005DFDA7 /* LoginViewController.m in Sources */,
 				9C6994381A9E50AB00A584A1 /* OrgMessagesViewController.m in Sources */,
 				AB3CC88D1A9BE097005DFDA7 /* UserDetailViewController.m in Sources */,
-				AB4B55611A9E823400B2893A /* Volunteer.m in Sources */,
 				AB4B55761A9E823500B2893A /* Organization.m in Sources */,
 				AB6FF9E51A9D039C0044E442 /* CoreDataStack.m in Sources */,
 				AB4B556D1A9E823500B2893A /* Login.m in Sources */,

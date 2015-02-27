@@ -56,12 +56,14 @@
         <relationship name="volunteerProject" toMany="YES" deletionRule="Nullify" destinationEntity="VolunteerProject" inverseName="skill" inverseEntity="VolunteerProject" syncable="YES"/>
     </entity>
     <entity name="Volunteer" representedClassName="Volunteer" syncable="YES">
-        <attribute name="ageReq" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="ageReq" attributeType="Boolean" syncable="YES"/>
         <attribute name="avatar" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="bio" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" attributeType="String" syncable="YES"/>
+        <attribute name="email" attributeType="String" syncable="YES"/>
         <attribute name="firstName" attributeType="String" syncable="YES"/>
         <attribute name="lastName" attributeType="String" syncable="YES"/>
-        <attribute name="location" attributeType="String" syncable="YES"/>
+        <attribute name="role" attributeType="String" syncable="YES"/>
         <relationship name="cause" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cause" inverseName="volunteer" inverseEntity="Cause" syncable="YES"/>
         <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="volunteer" inverseEntity="Event" syncable="YES"/>
         <relationship name="login" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Login" inverseName="volunteer" inverseEntity="Login" syncable="YES"/>
@@ -83,7 +85,7 @@
         <element name="Messenge" positionX="-65" positionY="-504" width="128" height="118"/>
         <element name="Organization" positionX="90" positionY="-172" width="128" height="253"/>
         <element name="Skill" positionX="-407" positionY="86" width="128" height="103"/>
-        <element name="Volunteer" positionX="-594" positionY="-306" width="128" height="223"/>
+        <element name="Volunteer" positionX="-594" positionY="-306" width="128" height="255"/>
         <element name="VolunteerProject" positionX="-218" positionY="-103" width="128" height="118"/>
     </elements>
 </model>

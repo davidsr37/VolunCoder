@@ -29,45 +29,74 @@
   return self;
 }
 
--(Login *)generateLogin:(NSDictionary *)loginDictionary {
-  NSManagedObjectContext *context = [[[FetchService sharedServices]coreDataStack]managedObjectContext];
-  Login *login = [NSEntityDescription insertNewObjectForEntityForName:@"Login" inManagedObjectContext:context];
-  login.email = loginDictionary[@"email"];
-  login.password = loginDictionary[@"password"];
-  login.role = loginDictionary[@"role"];
-  login.type = loginDictionary[@"type"];
-  
-  NSError *saveError;
-  [context save:&saveError];
-  if (saveError) {
-    NSLog(@"%@", saveError);
-  }
-  return login;  
-}
+//-(Login *)generateLogin:(NSDictionary *)loginDictionary {
+//  NSManagedObjectContext *context = [[[FetchService sharedServices]coreDataStack]managedObjectContext];
+//  Login *login = [NSEntityDescription insertNewObjectForEntityForName:@"Login" inManagedObjectContext:context];
+//  login.email = loginDictionary[@"email"];
+//  login.password = loginDictionary[@"password"];
+//  login.role = loginDictionary[@"role"];
+//  login.type = loginDictionary[@"type"];
+//  
+//  NSError *saveError;
+//  [context save:&saveError];
+//  if (saveError) {
+//    NSLog(@"%@", saveError);
+//  }
+//  return login;  
+//}
 
 -(Volunteer *)generateVolunteer:(NSDictionary *)volunteerDictionary {
-  NSManagedObjectContext *context = [[[FetchService sharedServices]coreDataStack]managedObjectContext];  
+  NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Volunteer"];
+  NSError *fetchError;
+  NSInteger fetchResults = [[[[FetchService sharedServices]coreDataStack]managedObjectContext] countForFetchRequest:fetchRequest error:&fetchError];
+  NSManagedObjectContext *context = [[[FetchService sharedServices]coreDataStack]managedObjectContext];
   Volunteer *volunteer = [NSEntityDescription insertNewObjectForEntityForName:@"Volunteer" inManagedObjectContext:context];
-  volunteer.firstName = volunteerDictionary[@"firstName"];
-  volunteer.lastName = volunteerDictionary[@"lastName"];
-  volunteer.location = volunteerDictionary[@"location"];
-  volunteer.ageReq = volunteerDictionary[@"ageReq"];
-  NSLog(@"%@", volunteer.firstName);
-  NSLog(@"%@", volunteer.lastName);
-  NSLog(@"%@", volunteer.location);
-  NSLog(@"%@", volunteer.ageReq);
+  NSLog(@"%ld", (long)fetchResults);
   
-  NSError *saveError;
-  [context save:&saveError];
-  if (saveError) {
-    NSLog(@"%@", saveError);
+  if (fetchResults == 0) {
+    NSURL *url = [[NSBundle mainBundle]URLForResource:@"test2" withExtension:@"json"];
+    NSData *data = [[NSData alloc]initWithContentsOfURL:url];
+    NSError *error;
+    NSDictionary *fetchDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if (!error) {
+      NSString *email = fetchDictionary[@"email"];
+      BOOL ageReq = fetchDictionary[@"ageReq"];
+      NSString *city = fetchDictionary[@"city"];
+      NSString *bio = fetchDictionary[@"bio"];
+      NSDictionary *nameDictionary = fetchDictionary[@"name"];
+      NSString *firstName = nameDictionary[@"firstname"];
+      NSString *lastName = nameDictionary[@"lastname"];
+      NSError *saveError;
+      [context save:&saveError];
+      if (saveError) {
+        NSLog(@"%@", saveError);
+      }
+      return volunteer;
+    }
   }
-  return volunteer;
+  return nil;
 }
 
 -(Organization *)generateOrganization:(NSDictionary *)orgDictionary {
+  NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Organization"];
+  NSError *fetchError;
+  NSInteger fetchResults = [[[[FetchService sharedServices]coreDataStack]managedObjectContext] countForFetchRequest:fetchRequest error:&fetchError];
   NSManagedObjectContext *context = [[[FetchService sharedServices]coreDataStack]managedObjectContext];
   Organization *organization = [NSEntityDescription insertNewObjectForEntityForName:@"Organization" inManagedObjectContext:context];
+  NSLog(@"%ld", (long)fetchResults);
+  
+  if (fetchResults == 0) {
+    NSURL *url = [[NSBundle mainBundle]URLForResource:@"test2" withExtension:@"json"];
+    NSData *data = [[NSData alloc]initWithContentsOfURL:url];
+    NSError *error;
+    NSDictionary *fetchDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if (!error) {
+      NSString *address = fetchDictionary
+      
+    }
+  }
+  
+
   organization.name = orgDictionary[@"name"];
   organization.address = orgDictionary[@"address"];
   organization.city = orgDictionary[@"city"];

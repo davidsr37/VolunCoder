@@ -622,7 +622,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="9dw-Ga-guO" kind="show" id="Tfj-6J-uiJ"/>
+                                            <segue destination="9dw-Ga-guO" kind="show" id="DMq-cd-DxI"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="4tr-vj-DNo">

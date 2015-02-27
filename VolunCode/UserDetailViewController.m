@@ -9,7 +9,6 @@
 #import "UserDetailViewController.h"
 #import "Volunteer.h"
 #import "FetchService.h"
-#import "Login.h"
 
 @interface UserDetailViewController ()
 
@@ -25,8 +24,38 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   
-//    self.volunteerNameLabel.text = volunteer.firstName;
-//    self.volunteerLocationLabel.text = volunteer.location;
+  
+// Below code used to test parsing of Volunteer, use FetchService generateVolunteer method instead
+
+  NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Volunteer"];
+  NSError *fetchError;
+  
+  NSInteger fetchResults = [[[[FetchService sharedServices]coreDataStack]managedObjectContext] countForFetchRequest:fetchRequest error:&fetchError];
+  NSLog(@"%ld", (long)fetchResults);
+  
+  if (fetchResults == 0) {
+    NSURL *url = [[NSBundle mainBundle]URLForResource:@"test2" withExtension:@"json"];
+    NSData *data = [[NSData alloc]initWithContentsOfURL:url];
+    NSError *error;
+    NSDictionary *fetchDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if (!error) {
+      NSString *email = fetchDictionary[@"email"];
+      BOOL ageReq = fetchDictionary[@"ageReq"];
+      NSString *city = fetchDictionary[@"city"];
+      NSString *bio = fetchDictionary[@"bio"];
+      NSDictionary *nameDictionary = fetchDictionary[@"name"];
+      NSString *firstName = nameDictionary[@"firstname"];
+      NSString *lastName = nameDictionary[@"lastname"];
+      
+      NSLog(@"%@", firstName);
+
+      
+      _volunteerLocationLabel.text = city;
+      _volunteerNameLabel.text = firstName;
+
+    }
+  }
+  
   
 }
 

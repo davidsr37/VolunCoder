@@ -7,6 +7,11 @@
 //
 
 #import "OrgDetailViewController.h"
+#import "Organization.h"
+#import "FetchService.h"
+#import "Event.h"
+
+
 
 @interface OrgDetailViewController ()
 
@@ -17,13 +22,39 @@
 @implementation OrgDetailViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  [super viewDidLoad];
+  
+  NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]initWithEntityName:@"Organization"];
+  NSError *fetchError;
+  
+  NSInteger fetchResults = [[[[FetchService sharedServices]coreDataStack]managedObjectContext] countForFetchRequest:fetchRequest error:&fetchError];
+  NSLog(@"%ld", (long)fetchResults);
+  
+  if (fetchResults == 0) {
+    NSURL *url = [[NSBundle mainBundle]URLForResource:@"orgtest" withExtension:@"json"];
+    NSData *data = [[NSData alloc]initWithContentsOfURL:url];
+    NSError *error;
+    NSDictionary *fetchDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    if (!error) {
+      NSString *email = fetchDictionary[@"email"];
+      NSString *orgName = fetchDictionary[@"orgName"];
+      NSString *firstName = fetchDictionary[@"firstname"];
+      NSString *lastName = fetchDictionary[@"lastname"];
+      NSString *type = fetchDictionary[@"type"];
+      NSString *mission = fetchDictionary[@"mission"];
+      NSString *address = fetchDictionary[@"address"];
+      NSString *city = fetchDictionary[@"city"];
+      NSString *phone = fetchDictionary[@"phone"];
+      NSString *website = fetchDictionary[@"website"];
+      
+      NSArray *eventsArray = fetchDictionary[@"events"];
+      for (NSDictionary *eventsDictionary in eventsArray) {
+        Event *event = [NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:self.managedObjectContext];
+      }
+      
+      NSLog(@"%@", firstName);
+  
+
 }
 
 - (void)didReceiveMemoryWarning {

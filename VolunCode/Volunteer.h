@@ -2,7 +2,7 @@
 //  Volunteer.h
 //  VolunCode
 //
-//  Created by Clint on 2/25/15.
+//  Created by Clint on 2/26/15.
 //  Copyright (c) 2015 Clint Akins. All rights reserved.
 //
 
@@ -16,9 +16,11 @@
 @property (nonatomic, retain) NSNumber * ageReq;
 @property (nonatomic, retain) id avatar;
 @property (nonatomic, retain) NSString * bio;
+@property (nonatomic, retain) NSString * city;
+@property (nonatomic, retain) NSString * email;
 @property (nonatomic, retain) NSString * firstName;
 @property (nonatomic, retain) NSString * lastName;
-@property (nonatomic, retain) NSString * location;
+@property (nonatomic, retain) NSString * role;
 @property (nonatomic, retain) NSSet *cause;
 @property (nonatomic, retain) NSSet *event;
 @property (nonatomic, retain) Login *login;
