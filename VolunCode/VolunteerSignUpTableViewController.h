@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 
-@interface VolunteerSignUpTableViewController : UITableViewController
+@interface VolunteerSignUpTableViewController : UITableViewController <UITextViewDelegate>
 
 @end

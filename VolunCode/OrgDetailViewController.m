@@ -36,6 +36,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+  [textField resignFirstResponder];
+  return NO;
+}
+
 -(void)viewWillAppear {
   [super viewWillAppear];
   
