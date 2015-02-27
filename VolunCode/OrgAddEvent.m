@@ -31,6 +31,32 @@
 
 - (IBAction)evSubmitPressed:(id)sender {
   
+  NSString *token = @"4Lphc97wg1jGMi0BBKDZY0F9xn5wI+fU1O+cAiokCTUn68j/Pv+XDi9s/ZW+t47njJV3vTVdBJJAVeQ=";
+  
+  
+  NSDictionary *eventDictionary = @{
+                                    @"organizerID" : @"def@def.com",
+                                    @"title" : @"Title of my awesome event",
+                                    @"date" : @"",
+                                    @"time" : @"",
+                                    @"location" : @"Our Charity Space, Seattle, Wa 98121",
+                                    @"description" : @"Our cool event!",
+                                    @"volunteerJobs" : @{
+                                        @"title" : @"Make website",
+                                        @"skills" : @"Website"
+                                        },
+                                    @"messages" : @{
+                                        @"username" : @"Anne",
+                                        @"body" : @"La la la la la "
+                                        }
+                                    };
+  
+[[PostAndFetchService sharedService]createEvent:eventDictionary withToken:token completionHandler:^(NSDictionary *results, NSString *createEventError) {
+  
+  }];
+  
+  
+  
   //JSON POST event sending details of event that was created to the API database
   
 }
