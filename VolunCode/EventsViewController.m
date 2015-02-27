@@ -7,6 +7,7 @@
 //
 
 #import "EventsViewController.h"
+#import "EventCell.h"
 
 @interface EventsViewController ()
 
@@ -22,6 +23,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   
+  
+
   /*
    
    TODO:
@@ -35,6 +38,27 @@
    */
   
 }
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//warning Incomplete method implementation.
+  // Return the number of rows in the section.
+  return 0;
+  //return self.EVENTS.count;
+}
+
+
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EVENT_CELL" forIndexPath:indexPath];
+ 
+ // Configure the cell... SEE EVENTCELL.M
+ 
+ return cell;
+ }
+ 
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
