@@ -20,7 +20,6 @@
 		9C95257B1A9C4E2800FF9174 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257A1A9C4E2800FF9174 /* UIKit.framework */; };
 		9C95257D1A9C4E3200FF9174 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257C1A9C4E3200FF9174 /* Foundation.framework */; };
 		9C95257F1A9C4E3C00FF9174 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C95257E1A9C4E3C00FF9174 /* CoreGraphics.framework */; };
-		AB28B00E1A9D1F6C00D86AF6 /* FetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = AB28B00D1A9D1F6C00D86AF6 /* FetchService.m */; };
 		AB28B0101A9D266D00D86AF6 /* testSeed.json in Resources */ = {isa = PBXBuildFile; fileRef = AB28B00F1A9D266D00D86AF6 /* testSeed.json */; };
 		AB3CC85E1A9BDDB4005DFDA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CC85D1A9BDDB4005DFDA7 /* main.m */; };
 		AB3CC8611A9BDDB4005DFDA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3CC8601A9BDDB4005DFDA7 /* AppDelegate.m */; };
@@ -89,8 +88,6 @@
 		9C95257A1A9C4E2800FF9174 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9C95257C1A9C4E3200FF9174 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C95257E1A9C4E3C00FF9174 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AB28B00C1A9D1F6C00D86AF6 /* FetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchService.h; sourceTree = "<group>"; };
-		AB28B00D1A9D1F6C00D86AF6 /* FetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchService.m; sourceTree = "<group>"; };
 		AB28B00F1A9D266D00D86AF6 /* testSeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testSeed.json; sourceTree = "<group>"; };
 		AB3CC8581A9BDDB4005DFDA7 /* VolunCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolunCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3CC85C1A9BDDB4005DFDA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -307,8 +304,6 @@
 				AB4B55601A9E823400B2893A /* Volunteer.m */,
 				AB6FF9E31A9D039C0044E442 /* CoreDataStack.h */,
 				AB6FF9E41A9D039C0044E442 /* CoreDataStack.m */,
-				AB28B00C1A9D1F6C00D86AF6 /* FetchService.h */,
-				AB28B00D1A9D1F6C00D86AF6 /* FetchService.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -430,7 +425,6 @@
 				AB4B55641A9E823500B2893A /* Event.m in Sources */,
 				79AA94371A9CFA29002C6177 /* VolunteerSignUpTableViewController.m in Sources */,
 				AB4B556A1A9E823500B2893A /* Messenge.m in Sources */,
-				AB28B00E1A9D1F6C00D86AF6 /* FetchService.m in Sources */,
 				AB3CC8671A9BDDB4005DFDA7 /* LoginViewController.m in Sources */,
 				9C6994381A9E50AB00A584A1 /* OrgMessagesViewController.m in Sources */,
 				AB3CC88D1A9BE097005DFDA7 /* UserDetailViewController.m in Sources */,
