@@ -132,6 +132,7 @@
           NSDictionary *jsonVolunteerResults = [[NSDictionary alloc] init];
           jsonVolunteerResults = [NSJSONSerialization JSONObjectWithData:data options:0 error:0];
           // generate a volunteer in Core Data
+          NSLog(@"jsonVolunteerResults Dictionary = %@", jsonVolunteerResults);
           [[FetchService sharedServices]parseForVolunteer:jsonVolunteerResults];
               dispatch_async(dispatch_get_main_queue(), ^{
             if (jsonVolunteerResults) {
