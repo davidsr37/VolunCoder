@@ -1,69 +1,13 @@
-userSchema = new mongoose.Schema({
-       basic: {
-           email: String,
-           password: String
-       },
-       username: String,
-       role: {type: String, enum: ['volunteer', 'organizer']} // volunteer or organizer
-   });
-
-"volunteerSchema" {
-
-    "email" : "Clint",
-    "name" : {
-        "firstname" : "Clint",
-        "lastname" : "Akins"
-    },
-    "ageReq" : true,
-    "city" : "Seattle",
-    "avatar" : null,
-    "bio" : null,
-    "causes" : {
-      "type" : [String]},
-     skills: {type:[String]},
-     events: {type:[String]}
-});
-
-
-organizerSchema = new mongoose.Schema({
-       email: String,
-       orgName: String,
-       firstname: String,
-       lastname: String,
-       mission: String,
-       address: String,
-       city: String,
-       phone: String,
-       type: String,
-       website: String,
-       createdSince: {type: Date, default: Date.now},
-       events: [String]
-   });
-
-eventSchema = new mongoose.Schema({
-    eventId: String,
-    orgEmail: String,
-    volEmails: [String],
-    title: String,
-    date: Date,
-    time: Date,
-    location: String,
-    description: String,
-    volunteerJobs: [{
-        _id: false,
-        title: String,
-        number: Number,
-        skills: [String]
-    }],
-    messages: [{
-        _id: false,
-        username: String,
-        body: String,
-        date: Date
-    }],
-    createdSince: {
-        type: Date,
-        default: Date.now
-    },
-    closed: Boolean
-});
+{
+  "email": "liz@example.com",
+  "role": "organizer",
+  "orgName": "Green Peace",
+  "firstname": "Liz",
+  "lastname": "Hill",
+  "mission": "Greenpeace is the largest independent direct-action environmental organization in the world",
+  "address": "123 Hill St ",
+  "city": "Seattle",
+  "phone": "123-123-1234",
+  "type": "animal",
+  "website": "http://www.greenpeace.org/usa/en/campaigns/"
+}
